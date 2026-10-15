@@ -275,6 +275,251 @@ export default function About() {
       </section>
 
       {/* =========================================================================
+          SECTORAL ADVISORY LEADERSHIP (MR. K. K. HOTA SHOWCASE)
+          ========================================================================= */}
+      <section 
+        className="section-full section-py" 
+        style={{ 
+          background: 'linear-gradient(180deg, #FDFBF7 0%, #FAF6EE 50%, #F5EFE1 100%)', 
+          borderTop: '1px solid rgba(197, 155, 39, 0.28)',
+          borderBottom: '1px solid rgba(197, 155, 39, 0.28)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        {/* Subtle Decorative Golden Watermark */}
+        <div 
+          style={{
+            position: 'absolute',
+            right: '-60px',
+            bottom: '-60px',
+            opacity: 0.04,
+            pointerEvents: 'none',
+            width: '420px',
+            height: '420px'
+          }}
+        >
+          <img src="/assets/nuventraa-emblem.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          {/* Section Header */}
+          <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto clamp(2rem, 3.5vw, 3rem)' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: '#FFFFFF', border: '1px solid rgba(197, 155, 39, 0.4)', padding: '0.25rem 0.75rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 800, color: '#886411', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.5rem', boxShadow: '0 2px 6px rgba(197, 155, 39, 0.08)' }}>
+              <Sparkles size={12} color="#C59B27" />
+              <span>Institutional Policy & Governance</span>
+            </div>
+            <h2 
+              style={{ 
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontSize: 'clamp(1.85rem, 3vw, 2.5rem)', 
+                color: '#0F2744', 
+                fontWeight: 800, 
+                marginBottom: '0.65rem',
+                lineHeight: 1.25
+              }}
+            >
+              Sectoral Advisory Leadership
+            </h2>
+            <p style={{ fontSize: '0.975rem', color: '#64748B', lineHeight: 1.65 }}>
+              Guiding industrial enterprises with senior institutional wisdom, central ministry experience, and four decades of manufacturing governance across India.
+            </p>
+          </div>
+
+          {/* Master Executive Card */}
+          <div 
+            className="card-3d"
+            style={{
+              background: '#FFFFFF',
+              borderRadius: '1.25rem',
+              border: '1.5px solid rgba(197, 155, 39, 0.35)',
+              boxShadow: '0 20px 45px -12px rgba(15, 39, 68, 0.08), 0 0 0 1px rgba(197, 155, 39, 0.15)',
+              padding: 'clamp(1.75rem, 3.5vw, 3rem)',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(2rem, 4vw, 3.5rem)',
+              alignItems: 'center'
+            }}
+          >
+            {/* Left Column: Portrait Framing */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div 
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  maxWidth: '300px',
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  background: '#FAF6EE',
+                  border: '2px solid rgba(197, 155, 39, 0.45)',
+                  boxShadow: '0 15px 35px rgba(15, 39, 68, 0.12)',
+                  aspectRatio: '0.9'
+                }}
+              >
+                <img 
+                  src="/assets/mr-kk-hota.jpg" 
+                  alt="Mr. K. K. Hota - Senior Industry Advisor" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    display: 'block',
+                    transition: 'transform 0.4s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                />
+
+                {/* Corner Experience Ribbon Badge */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    top: '0.85rem',
+                    right: '0.85rem',
+                    background: 'linear-gradient(135deg, #0F2744 0%, #163B66 100%)',
+                    color: '#FFFFFF',
+                    padding: '0.35rem 0.75rem',
+                    borderRadius: '0.45rem',
+                    fontSize: '0.725rem',
+                    fontWeight: 700,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.35rem',
+                    border: '1px solid rgba(197, 155, 39, 0.5)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                  }}
+                >
+                  <Award size={13} color="#DFB757" />
+                  <span>42+ Years Exp</span>
+                </div>
+
+                {/* Bottom Designation Plaque */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    background: 'linear-gradient(180deg, transparent 0%, rgba(15, 39, 68, 0.88) 35%, #0F2744 100%)',
+                    padding: '1.5rem 1rem 0.85rem 1rem',
+                    textAlign: 'center',
+                    color: '#FFFFFF'
+                  }}
+                >
+                  <div style={{ fontSize: '0.825rem', fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#DFB757' }}>
+                    Senior Advisor
+                  </div>
+                  <div style={{ fontSize: '0.725rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                    Sectoral Policy & Development
+                  </div>
+                </div>
+              </div>
+
+              {/* Verified Authority Pill */}
+              <div 
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: '#FAF6EE',
+                  border: '1px solid rgba(197, 155, 39, 0.3)',
+                  padding: '0.35rem 0.75rem',
+                  borderRadius: '999px',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  color: '#886411',
+                  marginTop: '0.85rem'
+                }}
+              >
+                <CheckCircle2 size={13} color="#059669" />
+                <span>Statutory & Ministry Veteran</span>
+              </div>
+            </div>
+
+            {/* Right Column: Bio, Roles, and Value Proposition */}
+            <div>
+              <div style={{ marginBottom: '1.25rem' }}>
+                <div style={{ fontSize: '0.85rem', color: '#886411', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.25rem' }}>
+                  Distinguished Leadership
+                </div>
+                <h3 
+                  style={{ 
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', 
+                    color: '#0F2744', 
+                    fontWeight: 800, 
+                    margin: '0 0 0.35rem 0',
+                    lineHeight: 1.2
+                  }}
+                >
+                  Mr. K. K. Hota
+                </h3>
+                <div style={{ fontSize: '1rem', color: '#C59B27', fontWeight: 700 }}>
+                  Senior Industry Advisor
+                </div>
+              </div>
+
+              {/* Executive Summary Cards */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginBottom: '1.35rem' }}>
+                <div style={{ background: '#FAF6EE', border: '1px solid rgba(197, 155, 39, 0.3)', padding: '0.75rem 1rem', borderRadius: '0.65rem' }}>
+                  <div style={{ fontSize: '0.75rem', color: '#886411', fontWeight: 700, textTransform: 'uppercase' }}>Government Association</div>
+                  <div style={{ fontSize: '0.85rem', color: '#0F2744', fontWeight: 700, marginTop: '0.15rem' }}>Ministry of Textiles</div>
+                  <div style={{ fontSize: '0.725rem', color: '#64748B' }}>Former Senior Institutional Official</div>
+                </div>
+
+                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '0.75rem 1rem', borderRadius: '0.65rem' }}>
+                  <div style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>Industry Track Record</div>
+                  <div style={{ fontSize: '0.85rem', color: '#0F2744', fontWeight: 700, marginTop: '0.15rem' }}>Over 42 Years</div>
+                  <div style={{ fontSize: '0.725rem', color: '#64748B' }}>Textile & Manufacturing Ecosystem</div>
+                </div>
+              </div>
+
+              {/* Bio Narrative */}
+              <p style={{ fontSize: '0.925rem', color: '#475569', lineHeight: 1.65, marginBottom: '1.35rem' }}>
+                A distinguished former senior official associated with premier institutions under the <strong>Ministry of Textiles, Government of India</strong>, Mr. K. K. Hota brings over <strong>42 years of unparalleled hands-on experience</strong> in advancing India's textile, manufacturing, and industrial development landscape.
+              </p>
+
+              {/* Role & Value Creation Pillars */}
+              <div style={{ background: '#FAF6EE', borderRadius: '0.85rem', padding: '1.25rem', border: '1px solid rgba(197, 155, 39, 0.25)', marginBottom: '1.5rem' }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#0F2744', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <ShieldCheck size={16} color="#C59B27" />
+                  <span>Role & Strategic Value:</span>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
+                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#C59B27', marginTop: '0.55rem', flexShrink: 0 }} />
+                    <p style={{ fontSize: '0.875rem', color: '#334155', lineHeight: 1.55, margin: 0 }}>
+                      <strong>Expertise in sectoral policy and development initiatives:</strong> Deep command over national and state-level manufacturing initiatives, industrial incentive frameworks, and policy roadmaps.
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
+                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#C59B27', marginTop: '0.55rem', flexShrink: 0 }} />
+                    <p style={{ fontSize: '0.875rem', color: '#334155', lineHeight: 1.55, margin: 0 }}>
+                      <strong>Strategic project alignment:</strong> Provides strategic guidance in aligning industrial projects with sector policies and institutional frameworks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Link */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                <Link to="/contact" className="btn btn-gold" style={{ padding: '0.65rem 1.45rem', fontSize: '0.85rem', fontWeight: 700 }}>
+                  <span>Consult with Senior Advisory</span>
+                  <ArrowRight size={14} />
+                </Link>
+                <div style={{ fontSize: '0.775rem', color: '#64748B' }}>
+                  Direct strategic advisory on complex industrial filings & policy alignment.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
           BOTTOM CTA
           ========================================================================= */}
       <section style={{ background: '#FAF6EE', padding: '3.5rem 0', borderTop: '1px solid rgba(197, 155, 39, 0.25)' }}>

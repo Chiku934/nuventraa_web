@@ -241,8 +241,8 @@ export default function Process() {
               <span>Initiate Stage 01 Diagnostic</span>
               <ArrowRight size={15} />
             </Link>
-            <a href="tel:+917873007666" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
-              <span>Call Helpline: +91 78730 07666</span>
+            <a href="tel:+919437041019" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
+              <span>Call Helpline: +91 94370 41019</span>
             </a>
           </div>
         </div>

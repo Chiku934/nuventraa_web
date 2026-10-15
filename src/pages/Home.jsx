@@ -563,7 +563,7 @@ export default function Home() {
                 Corporate Advisory Office
               </span>
               <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.75rem, 2.8vw, 2.2rem)', color: '#0F2744', fontWeight: 800, marginBottom: '0.85rem' }}>
-                Visit Us at Rasulgarh, Bhubaneswar
+                Visit Us at Saheed Nagar, Bhubaneswar
               </h2>
               <p style={{ fontSize: '0.975rem', color: '#475569', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                 Our corporate headquarters is strategically situated in Bhubaneswar to interface directly with the Directorate of Industries, IPICOL, and the State Pollution Control Board on behalf of our client units.
@@ -572,7 +572,7 @@ export default function Home() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginBottom: '1.75rem', fontSize: '0.9rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#334155' }}>
                   <MapPin size={16} color="#C59B27" />
-                  <span>Plot No: 3956, 1st Floor, Pandra, Rasulgarh, Bhubaneswar – 751010</span>
+                  <span>Plot No 462, Saheed Nagar, Bhubaneswar – 751007</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#334155' }}>
                   <Award size={16} color="#C59B27" />
@@ -580,7 +580,7 @@ export default function Home() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#334155' }}>
                   <Phone size={16} color="#C59B27" />
-                  <span>Helplines: +91 73810 46111 / +91 78730 07666</span>
+                  <span>Helplines: +91 90901 23562 / +91 94370 41019</span>
                 </div>
               </div>
 
@@ -589,7 +589,7 @@ export default function Home() {
                   <span>Book In-Person Consultation</span>
                   <ArrowRight size={15} />
                 </Link>
-                <a href="tel:+917381046111" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
+                <a href="tel:+919090123562" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
                   <span>Call Headquarters</span>
                 </a>
               </div>
@@ -597,7 +597,7 @@ export default function Home() {
 
             {/* Headquarters Photo Frame */}
             <div className="photo-frame" style={{ height: '320px', width: '100%' }}>
-              <img src="/assets/rasulgarh-tower.jpg" alt="Rasulgarh Business Tower, Bhubaneswar" />
+              <img src="/assets/rasulgarh-tower.jpg" alt="Saheed Nagar Corporate Office, Bhubaneswar" />
               <div 
                 style={{
                   position: 'absolute',
@@ -611,7 +611,7 @@ export default function Home() {
                 }}
               >
                 <div style={{ fontSize: '0.825rem', fontWeight: 800, color: '#0F2744' }}>
-                  Rasulgarh Business Tower
+                  Saheed Nagar Corporate Office
                 </div>
                 <div style={{ fontSize: '0.725rem', color: '#64748B' }}>
                   Bhubaneswar Central Corporate Office

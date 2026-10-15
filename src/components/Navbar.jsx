@@ -108,7 +108,7 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', color: '#64748B', fontSize: '0.725rem' }}>
               <MapPin size={12} color="#C59B27" />
-              <span>Rasulgarh, Bhubaneswar</span>
+              <span>Saheed Nagar, Bhubaneswar</span>
             </div>
 
             <span style={{ color: '#E2E8F0' }}>|</span>
@@ -116,21 +116,21 @@ export default function Navbar() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
               <Phone size={12} color="#C59B27" />
               <a 
-                href="tel:+917381046111" 
+                href="tel:+919090123562" 
                 style={{ fontWeight: 700, color: '#0F2744', fontSize: '0.75rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}
               >
-                +91 73810 46111
+                +91 90901 23562
               </a>
               <span style={{ color: '#CBD5E1' }}>/</span>
               <a 
-                href="tel:+917873007666" 
+                href="tel:+919437041019" 
                 style={{ fontWeight: 700, color: '#0F2744', fontSize: '0.75rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}
               >
-                +91 78730 07666
+                +91 94370 41019
               </a>
             </div>
           </div>
@@ -361,10 +361,10 @@ export default function Navbar() {
 
               <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid #E2E8F0' }}>
                 <a 
-                  href="tel:+917381046111" 
+                  href="tel:+919090123562" 
                   style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#0F2744', fontWeight: 700, fontSize: '0.85rem' }}
                 >
-                  <Phone size={14} color="#C59B27" /> Helpline: +91 73810 46111
+                  <Phone size={14} color="#C59B27" /> Helpline: +91 90901 23562 / 94370 41019
                 </a>
               </div>
             </div>

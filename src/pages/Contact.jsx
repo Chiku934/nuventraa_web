@@ -85,7 +85,7 @@ export default function Contact() {
         badge="Bhubaneswar Headquarters"
         title="Connect with Our"
         titleHighlight="Advisory Team"
-        description="Direct executive access to our regulatory specialists and statutory consultants at Rasulgarh Business Tower, Bhubaneswar."
+        description="Direct executive access to our regulatory specialists and statutory consultants at Saheed Nagar, Bhubaneswar."
       />
 
       {/* =========================================================================
@@ -101,7 +101,7 @@ export default function Contact() {
               alignItems: 'flex-start'
             }}
           >
-            {/* Left Column: Rasulgarh Office Details & Photography */}
+            {/* Left Column: Saheed Nagar Office Details & Photography */}
             <div>
               <span className="badge badge-navy" style={{ marginBottom: '0.5rem', fontSize: '0.725rem' }}>
                 Corporate Headquarters
@@ -118,12 +118,12 @@ export default function Contact() {
                 Nuventraa Consulting
               </h2>
               <p style={{ fontSize: '0.925rem', color: '#475569', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                Headquartered in Rasulgarh, Bhubaneswar, our regulatory specialists interface daily with key government directorates, District Industries Centres (DIC), IPICOL, and statutory inspectorates across Odisha.
+                Headquartered in Saheed Nagar, Bhubaneswar, our regulatory specialists interface daily with key government directorates, District Industries Centres (DIC), IPICOL, and statutory inspectorates across Odisha.
               </p>
 
               {/* Compact Photo Frame with Official Address Plaque */}
               <div className="photo-frame" style={{ height: '210px', width: '100%', marginBottom: '1.5rem' }}>
-                <img src="/assets/rasulgarh-tower.jpg" alt="Rasulgarh Business Tower, Bhubaneswar" />
+                <img src="/assets/rasulgarh-tower.jpg" alt="Saheed Nagar Corporate Office, Bhubaneswar" />
                 <div 
                   style={{
                     position: 'absolute',
@@ -139,7 +139,7 @@ export default function Contact() {
                     boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
                   }}
                 >
-                  Rasulgarh Business Tower, Bhubaneswar
+                  Saheed Nagar Corporate Office, Bhubaneswar
                 </div>
               </div>
 
@@ -163,7 +163,7 @@ export default function Contact() {
                       Registered Office
                     </h4>
                     <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
-                      Plot No: 3956, 1st Floor, Pandra, Rasulgarh, Bhubaneswar, Odisha – 751010
+                      Plot No 462, Saheed Nagar, Bhubaneswar, Odisha – 751007
                     </p>
                   </div>
                 </div>
@@ -191,11 +191,11 @@ export default function Contact() {
                       </span>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.9rem' }}>
-                      <a href="tel:+917381046111" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                        +91 73810 46111
+                      <a href="tel:+919090123562" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
+                        +91 90901 23562
                       </a>
-                      <a href="tel:+917873007666" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                        +91 78730 07666
+                      <a href="tel:+919437041019" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
+                        +91 94370 41019
                       </a>
                     </div>
                   </div>

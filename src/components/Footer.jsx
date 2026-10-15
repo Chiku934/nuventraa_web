@@ -134,7 +134,7 @@ export default function Footer() {
 
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/917381046111" 
+                href="https://wa.me/919090123562" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-btn" 
@@ -266,9 +266,8 @@ export default function Footer() {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem' }}>
                 <MapPin size={15} color="#C59B27" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <span style={{ fontSize: '0.8rem', color: '#334155', lineHeight: 1.4 }}>
-                  Plot No: 3956, 1st Floor,<br />
-                  Pandra, Rasulgarh,<br />
-                  Bhubaneswar, Odisha – 751010
+                  Plot No: 462, Saheed Nagar,<br />
+                  Bhubaneswar, Odisha – 751007
                 </span>
               </div>
 
@@ -276,11 +275,11 @@ export default function Footer() {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem' }}>
                 <Phone size={15} color="#C59B27" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', fontSize: '0.825rem', fontWeight: 800, lineHeight: 1.35 }}>
-                  <a href="tel:+917381046111" style={{ color: '#0F2744', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                    +91 73810 46111
+                  <a href="tel:+919090123562" style={{ color: '#0F2744', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
+                    +91 90901 23562
                   </a>
-                  <a href="tel:+917873007666" style={{ color: '#0F2744', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                    +91 78730 07666
+                  <a href="tel:+919437041019" style={{ color: '#0F2744', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
+                    +91 94370 41019
                   </a>
                 </div>
               </div>

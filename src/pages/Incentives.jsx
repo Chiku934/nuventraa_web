@@ -463,8 +463,8 @@ export default function Incentives() {
               <span>Request Pre-Submission Subsidy Audit</span>
               <ArrowRight size={15} />
             </Link>
-            <a href="tel:+917381046111" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
-              <span>Speak to Subsidy Lead: +91 73810 46111</span>
+            <a href="tel:+919090123562" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem', fontSize: '0.875rem' }}>
+              <span>Speak to Subsidy Lead: +91 90901 23562</span>
             </a>
           </div>
         </div>

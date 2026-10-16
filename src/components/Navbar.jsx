@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { 
-  Phone, 
-  ArrowRight, 
-  Menu, 
-  X, 
-  MapPin, 
-  FileText, 
-  TrendingUp, 
-  Calendar,
-  Building,
-  Sparkles,
+import {
+  Phone,
+  ArrowRight,
+  Menu,
+  X,
+  MapPin,
+  ChevronDown,
   ShieldCheck,
-  Calculator
+  Send
 } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [consultingOpen, setConsultingOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -30,23 +27,31 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setConsultingOpen(false);
   }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About us', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Govt. Subsidies', path: '/incentives', tag: 'IPR-2022' },
-    { name: 'Our Process', path: '/process' },
-    { name: 'Contact', path: '/contact' },
+    {
+      name: 'Consulting',
+      path: '/consulting',
+      hasDropdown: true,
+      submenu: [
+        { name: 'Industry Consulting', path: '/consulting' },
+        { name: 'Software Consulting', path: '/software-consulting' }
+      ]
+    },
+    { name: 'Contact us', path: '/contact' },
   ];
 
   return (
     <>
       {/* =========================================================================
-          COMPACT TOP EXECUTIVE STRIP (Sleek Small Height)
+          COMPACT TOP EXECUTIVE STRIP
           ========================================================================= */}
-      <div 
+      <div
         style={{
           background: 'linear-gradient(90deg, #FBF9F5 0%, #FFFFFF 50%, #FAF6EE 100%)',
           borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
@@ -57,20 +62,20 @@ export default function Navbar() {
           zIndex: 1001,
         }}
       >
-        <div 
-          className="container" 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center', 
-            flexWrap: 'wrap', 
-            gap: '0.35rem' 
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '0.35rem'
           }}
         >
           {/* Left Side: Live Interface & Statutory Credentials */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontWeight: 600, color: '#0F2744' }}>
-              <span 
+              <span
                 style={{
                   width: '6px',
                   height: '6px',
@@ -80,16 +85,16 @@ export default function Navbar() {
                   display: 'inline-block'
                 }}
               />
-              <span>Direct Govt. Interface (Odisha DIC • IPICOL • SPCB)</span>
+              <span>Nuventraa • Delivering Technology Solutions</span>
             </div>
 
             <span style={{ color: '#E2E8F0', display: 'none', md: 'inline' }}>|</span>
 
-            <div 
-              style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '0.3rem', 
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.3rem',
                 color: '#64748B',
                 background: '#FFFFFF',
                 border: '1px solid rgba(197, 155, 39, 0.25)',
@@ -100,7 +105,7 @@ export default function Navbar() {
               }}
             >
               <ShieldCheck size={12} color="#C59B27" />
-              <span>GSTIN: <strong style={{ color: '#0F2744' }}>21AFPFS3041D1ZC</strong></span>
+              <span>Mail: <strong style={{ color: '#0F2744' }}>info@nuventraa.com</strong></span>
             </div>
           </div>
 
@@ -108,15 +113,15 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', color: '#64748B', fontSize: '0.725rem' }}>
               <MapPin size={12} color="#C59B27" />
-              <span>Saheed Nagar, Bhubaneswar</span>
+              <span>Plot No 462, Saheed Nagar, Bhubaneswar</span>
             </div>
 
             <span style={{ color: '#E2E8F0' }}>|</span>
 
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
               <Phone size={12} color="#C59B27" />
-              <a 
-                href="tel:+919090123562" 
+              <a
+                href="tel:+919090123562"
                 style={{ fontWeight: 700, color: '#0F2744', fontSize: '0.75rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}
@@ -124,8 +129,8 @@ export default function Navbar() {
                 +91 90901 23562
               </a>
               <span style={{ color: '#CBD5E1' }}>/</span>
-              <a 
-                href="tel:+919437041019" 
+              <a
+                href="tel:+919437041019"
                 style={{ fontWeight: 700, color: '#0F2744', fontSize: '0.75rem' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}
@@ -138,152 +143,214 @@ export default function Navbar() {
       </div>
 
       {/* =========================================================================
-          COMPACT MAIN NAVBAR (Reduced Height ~62px)
+          MAIN NAVBAR
           ========================================================================= */}
       <header
         style={{
           position: 'sticky',
           top: 0,
           zIndex: 1000,
-          background: scrolled ? 'rgba(255, 255, 255, 0.97)' : 'rgba(255, 255, 255, 0.94)',
+          background: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           borderBottom: '1px solid rgba(226, 232, 240, 0.85)',
-          boxShadow: scrolled 
-            ? '0 6px 20px -8px rgba(15, 29, 51, 0.08), 0 1px 0 rgba(197, 155, 39, 0.15)' 
+          boxShadow: scrolled
+            ? '0 6px 20px -8px rgba(15, 29, 51, 0.08), 0 1px 0 rgba(197, 155, 39, 0.15)'
             : '0 2px 10px -5px rgba(15, 29, 51, 0.03)',
           transition: 'all 0.25s ease',
         }}
       >
-        <div 
-          className="container" 
-          style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
             justifyContent: 'space-between',
-            height: '62px'
+            height: '64px'
           }}
         >
-          {/* Logo with Compact 36px Height */}
-          <Link 
-            to="/" 
-            style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
+          {/* Logo */}
+          <Link
+            to="/"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
               textDecoration: 'none',
-              transition: 'transform 0.2s ease' 
+              transition: 'transform 0.2s ease'
             }}
           >
-            <img 
-              src="/assets/nuventraa-logo.png" 
-              alt="Nuventraa Logo" 
-              style={{ 
-                height: '38px', 
-                maxWidth: '170px',
-                objectFit: 'contain' 
-              }} 
+            <img
+              src="/assets/nuventraa-logo.png"
+              alt="Nuventraa Logo"
+              style={{
+                height: '42px',
+                maxWidth: '180px',
+                objectFit: 'contain'
+              }}
             />
           </Link>
 
-          {/* Desktop Nav Links (Compact Size) */}
-          <nav style={{ display: 'none', alignItems: 'center', gap: '0.2rem' }} className="desktop-nav">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                style={({ isActive }) => ({
-                  padding: '0.4rem 0.8rem',
-                  fontSize: '0.875rem',
-                  fontWeight: isActive ? 700 : 500,
-                  color: isActive ? '#0F2744' : '#475569',
-                  borderRadius: '0.4rem',
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  textDecoration: 'none',
-                  transition: 'color 0.2s ease',
-                  letterSpacing: '-0.01em',
-                })}
-              >
-                {({ isActive }) => (
-                  <>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                      <span>{link.name}</span>
-                      {link.tag && (
-                        <span 
-                          style={{ 
-                            fontSize: '0.625rem', 
-                            background: '#FAF3E0', 
-                            color: '#886411', 
-                            border: '1px solid rgba(197, 155, 39, 0.3)',
-                            fontWeight: 800, 
-                            padding: '0.08rem 0.35rem', 
-                            borderRadius: '0.25rem',
-                            letterSpacing: '0.03em'
-                          }}
-                        >
-                          {link.tag}
-                        </span>
+          {/* Desktop Nav Links */}
+          <nav style={{ display: 'none', alignItems: 'center', gap: '0.35rem' }} className="desktop-nav">
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                return (
+                  <div
+                    key={link.name}
+                    style={{ position: 'relative' }}
+                    className="nav-dropdown-wrapper"
+                    onMouseEnter={() => setConsultingOpen(true)}
+                    onMouseLeave={() => setConsultingOpen(false)}
+                  >
+                    <NavLink
+                      to={link.path}
+                      style={({ isActive }) => ({
+                        padding: '0.45rem 0.85rem',
+                        fontSize: '0.875rem',
+                        fontWeight: isActive ? 700 : 500,
+                        color: isActive ? '#0F2744' : '#475569',
+                        borderRadius: '0.4rem',
+                        position: 'relative',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.3rem',
+                        textDecoration: 'none',
+                        transition: 'all 0.2s ease',
+                        letterSpacing: '-0.01em',
+                      })}
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <span>{link.name}</span>
+                          <ChevronDown size={14} style={{ transition: 'transform 0.2s ease', transform: consultingOpen ? 'rotate(180deg)' : 'none' }} />
+                          {isActive ? (
+                            <span
+                              style={{
+                                position: 'absolute',
+                                bottom: '-0.1rem',
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                height: '2px',
+                                width: '60%',
+                                background: 'linear-gradient(90deg, #E6C265, #C59B27)',
+                                borderRadius: '999px',
+                              }}
+                            />
+                          ) : null}
+                        </>
                       )}
-                    </div>
+                    </NavLink>
 
-                    {isActive ? (
-                      <span 
+                    {/* Dropdown Menu */}
+                    {consultingOpen && (
+                      <div
                         style={{
                           position: 'absolute',
-                          bottom: '-0.1rem',
-                          height: '2px',
-                          width: '55%',
-                          background: 'linear-gradient(90deg, #E6C265, #C59B27)',
-                          borderRadius: '999px',
+                          top: '100%',
+                          left: 0,
+                          minWidth: '210px',
+                          background: '#FFFFFF',
+                          borderRadius: '0.5rem',
+                          boxShadow: '0 12px 30px rgba(0, 0, 0, 0.12)',
+                          border: '1px solid rgba(226, 232, 240, 0.9)',
+                          padding: '0.5rem 0',
+                          zIndex: 1100,
+                          animation: 'fadeInUp 0.2s ease'
                         }}
-                      />
-                    ) : null}
-                  </>
-                )}
-              </NavLink>
-            ))}
+                      >
+                        {link.submenu.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.path}
+                            style={{
+                              display: 'block',
+                              padding: '0.55rem 1.15rem',
+                              fontSize: '0.85rem',
+                              fontWeight: 600,
+                              color: '#1E293B',
+                              textDecoration: 'none',
+                              transition: 'all 0.15s ease'
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.backgroundColor = '#F8FAFC';
+                              e.currentTarget.style.color = '#2439ff';
+                              e.currentTarget.style.paddingLeft = '1.35rem';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.backgroundColor = 'transparent';
+                              e.currentTarget.style.color = '#1E293B';
+                              e.currentTarget.style.paddingLeft = '1.15rem';
+                            }}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  style={({ isActive }) => ({
+                    padding: '0.45rem 0.85rem',
+                    fontSize: '0.875rem',
+                    fontWeight: isActive ? 700 : 500,
+                    color: isActive ? '#0F2744' : '#475569',
+                    borderRadius: '0.4rem',
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease',
+                    letterSpacing: '-0.01em',
+                  })}
+                >
+                  {({ isActive }) => (
+                    <>
+                      <span>{link.name}</span>
+                      {isActive ? (
+                        <span
+                          style={{
+                            position: 'absolute',
+                            bottom: '-0.1rem',
+                            height: '2px',
+                            width: '55%',
+                            background: 'linear-gradient(90deg, #E6C265, #C59B27)',
+                            borderRadius: '999px',
+                          }}
+                        />
+                      ) : null}
+                    </>
+                  )}
+                </NavLink>
+              );
+            })}
           </nav>
 
-          {/* Right Action Buttons (Compact Height) */}
+          {/* Right Action Button: Get A Quote */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-            <Link 
-              to="/incentives" 
-              style={{
-                display: 'none',
-                alignItems: 'center',
-                gap: '0.35rem',
-                padding: '0.45rem 0.85rem',
-                borderRadius: '0.5rem',
-                fontSize: '0.8rem',
-                fontWeight: 700,
-                color: '#0F2744',
-                background: '#FFFFFF',
-                border: '1px solid rgba(197, 155, 39, 0.35)',
-                textDecoration: 'none'
-              }}
-              className="calc-link-desktop"
-            >
-              <Calculator size={14} color="#C59B27" />
-              <span>Estimate Subsidy</span>
-            </Link>
-
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="btn btn-gold"
               style={{
                 fontSize: '0.825rem',
-                padding: '0.45rem 1rem',
+                padding: '0.5rem 1.15rem',
                 borderRadius: '0.5rem',
-                gap: '0.35rem',
+                gap: '0.4rem',
                 fontWeight: 700,
                 color: '#0A192F',
-                boxShadow: '0 4px 12px rgba(197, 155, 39, 0.22)',
+                boxShadow: '0 4px 14px rgba(197, 155, 39, 0.22)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                textDecoration: 'none'
               }}
             >
-              <Calendar size={14} />
-              <span>Consultation</span>
+              <span>Get A Quote</span>
               <ArrowRight size={14} />
             </Link>
 
@@ -293,8 +360,8 @@ export default function Navbar() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '36px',
-                height: '36px',
+                width: '38px',
+                height: '38px',
                 borderRadius: '0.5rem',
                 border: '1px solid #E2E8F0',
                 background: '#FFFFFF',
@@ -311,7 +378,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div 
+          <div
             style={{
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
@@ -320,48 +387,86 @@ export default function Navbar() {
               boxShadow: '0 12px 24px rgba(15, 29, 51, 0.1)',
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={({ isActive }) => ({
-                    padding: '0.65rem 0.85rem',
-                    fontSize: '0.925rem',
-                    fontWeight: isActive ? 700 : 500,
-                    color: isActive ? '#0F2744' : '#334155',
-                    borderRadius: '0.5rem',
-                    background: isActive ? '#FAF6EE' : 'transparent',
-                    borderLeft: isActive ? '3px solid #C59B27' : '3px solid transparent',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    textDecoration: 'none'
-                  })}
-                >
-                  <span>{link.name}</span>
-                  {link.tag && (
-                    <span 
-                      style={{ 
-                        fontSize: '0.675rem', 
-                        background: '#FCF9EE', 
-                        color: '#886411', 
-                        fontWeight: 700, 
-                        padding: '0.15rem 0.4rem', 
-                        borderRadius: '0.3rem',
-                        border: '1px solid rgba(197, 155, 39, 0.3)'
-                      }}
-                    >
-                      {link.tag}
-                    </span>
-                  )}
-                </NavLink>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+              {navLinks.map((link) => {
+                if (link.hasDropdown) {
+                  return (
+                    <div key={link.name} style={{ display: 'flex', flexDirection: 'column' }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '0.65rem 0.85rem',
+                          borderRadius: '0.5rem',
+                          color: '#0F2744',
+                          fontWeight: 600,
+                          fontSize: '0.925rem'
+                        }}
+                      >
+                        <NavLink
+                          to={link.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                          style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
+                          {link.name}
+                        </NavLink>
+                        <ChevronDown
+                          size={16}
+                          onClick={() => setConsultingOpen(!consultingOpen)}
+                          style={{ cursor: 'pointer', transform: consultingOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
+                        />
+                      </div>
+                      {consultingOpen && (
+                        <div style={{ paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                          {link.submenu.map((sub) => (
+                            <NavLink
+                              key={sub.name}
+                              to={sub.path}
+                              onClick={() => setMobileMenuOpen(false)}
+                              style={{
+                                padding: '0.45rem 0.75rem',
+                                fontSize: '0.85rem',
+                                color: '#475569',
+                                textDecoration: 'none'
+                              }}
+                            >
+                              • {sub.name}
+                            </NavLink>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <NavLink
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    style={({ isActive }) => ({
+                      padding: '0.65rem 0.85rem',
+                      fontSize: '0.925rem',
+                      fontWeight: isActive ? 700 : 500,
+                      color: isActive ? '#0F2744' : '#334155',
+                      borderRadius: '0.5rem',
+                      background: isActive ? '#FAF6EE' : 'transparent',
+                      borderLeft: isActive ? '3px solid #C59B27' : '3px solid transparent',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      textDecoration: 'none'
+                    })}
+                  >
+                    <span>{link.name}</span>
+                  </NavLink>
+                );
+              })}
 
               <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid #E2E8F0' }}>
-                <a 
-                  href="tel:+919090123562" 
+                <a
+                  href="tel:+919090123562"
                   style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#0F2744', fontWeight: 700, fontSize: '0.85rem' }}
                 >
                   <Phone size={14} color="#C59B27" /> Helpline: +91 90901 23562 / 94370 41019
@@ -377,9 +482,6 @@ export default function Navbar() {
         @media (min-width: 992px) {
           .desktop-nav {
             display: flex !important;
-          }
-          .calc-link-desktop {
-            display: inline-flex !important;
           }
           .mobile-toggle {
             display: none !important;

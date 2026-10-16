@@ -1,0 +1,431 @@
+/* ==========================================================================
+   SERVICE DETAILS PAGE STYLES (NUVENTRAA SERVICE DETAILS)
+   ========================================================================== */
+
+.nuventraa-service-detail-section {
+  padding: clamp(3rem, 5.5vw, 5rem) 0;
+  background-color: #FFFFFF;
+}
+
+.nuventraa-service-detail-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+  .nuventraa-service-detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------- SIDEBAR ----------------- */
+.nuventraa-service-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 90px;
+}
+
+.nuventraa-sidebar-widget {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+}
+
+.nuventraa-sidebar-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #08203A;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nuventraa-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nuventraa-sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nuventraa-sidebar-link:hover {
+  background: #FFFFFF;
+  color: #2439ff;
+  border-color: #2439ff;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(36, 57, 255, 0.08);
+}
+
+.nuventraa-sidebar-link.active {
+  background: linear-gradient(90deg, #2439ff 0%, #9000ff 100%);
+  color: #FFFFFF !important;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(36, 57, 255, 0.25);
+}
+
+.nuventraa-sidebar-link.active svg {
+  color: #FFFFFF !important;
+}
+
+/* Sidebar Help Card */
+.nuventraa-sidebar-help-widget {
+  background: linear-gradient(135deg, #08203A 0%, #0F2744 100%);
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(8, 32, 58, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.nuventraa-sidebar-help-widget::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(36, 57, 255, 0.2);
+  filter: blur(25px);
+}
+
+.nuventraa-sidebar-help-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2439ff 0%, #9000ff 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  box-shadow: 0 6px 16px rgba(36, 57, 255, 0.4);
+}
+
+.nuventraa-sidebar-help-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.nuventraa-sidebar-help-desc {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.nuventraa-sidebar-help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #FFFFFF;
+  color: #08203A;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nuventraa-sidebar-help-btn:hover {
+  background: #F8FAFC;
+  transform: translateY(-2px);
+  color: #2439ff;
+}
+
+/* ----------------- MAIN CONTENT ----------------- */
+.nuventraa-service-main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.nuventraa-service-hero-img-wrap {
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(8, 32, 58, 0.08);
+  border: 1px solid #E2E8F0;
+}
+
+@media (max-width: 640px) {
+  .nuventraa-service-hero-img-wrap {
+    height: 240px;
+  }
+}
+
+.nuventraa-service-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nuventraa-service-subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2439ff;
+  text-transform: uppercase;
+  letter-spacing: '0.12em';
+  margin-bottom: 0.5rem;
+}
+
+.nuventraa-service-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #08203A;
+  line-height: 1.25;
+  margin: 0 0 1.25rem 0;
+}
+
+.nuventraa-service-intro-quote {
+  background: #F8FAFC;
+  border-left: 4px solid #2439ff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1E293B;
+  line-height: 1.7;
+}
+
+.nuventraa-service-body-p {
+  font-size: 0.95rem;
+  color: #64748B;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+/* Feature Boxes Grid (What We Offer) */
+.nuventraa-features-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #EEF2F6;
+}
+
+.nuventraa-features-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #08203A;
+  margin-bottom: 1.5rem;
+}
+
+.nuventraa-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .nuventraa-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nuventraa-feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  padding: 1.35rem 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(8, 32, 58, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nuventraa-feature-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(36, 57, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(36, 57, 255, 0.08);
+}
+
+.nuventraa-feature-box-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 8px;
+  background: rgba(36, 57, 255, 0.08);
+  color: #2439ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nuventraa-feature-box:hover .nuventraa-feature-box-icon {
+  background: linear-gradient(135deg, #2439ff 0%, #9000ff 100%);
+  color: #FFFFFF;
+}
+
+.nuventraa-feature-box-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #08203A;
+  margin: 0 0 0.35rem 0;
+}
+
+.nuventraa-feature-box-desc {
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Why Choose Us Grid */
+.nuventraa-why-section {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.nuventraa-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .nuventraa-why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nuventraa-why-card {
+  padding: 1.75rem 1.35rem;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nuventraa-why-card:hover {
+  background: #FFFFFF;
+  transform: translateY(-4px);
+  border-color: #2439ff;
+  box-shadow: 0 8px 24px rgba(36, 57, 255, 0.1);
+}
+
+.nuventraa-why-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2439ff 0%, #9000ff 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 14px rgba(36, 57, 255, 0.3);
+}
+
+.nuventraa-why-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #08203A;
+  margin: 0 0 0.45rem 0;
+}
+
+.nuventraa-why-desc {
+  font-size: 0.825rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Bottom CTA Banner (xs_cta_style_15) */
+.nuventraa-service-bottom-cta {
+  background: linear-gradient(135deg, #08203A 0%, #0F2744 100%);
+  border-radius: 12px;
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(8, 32, 58, 0.12);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nuventraa-service-bottom-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.nuventraa-service-bottom-cta-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 550px;
+  line-height: 1.4;
+}
+
+.nuventraa-service-bottom-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(90deg, #2439ff 0%, #9000ff 100%);
+  color: #FFFFFF !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(36, 57, 255, 0.35);
+  transition: all 0.25s ease;
+}
+
+.nuventraa-service-bottom-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(36, 57, 255, 0.5);
+}

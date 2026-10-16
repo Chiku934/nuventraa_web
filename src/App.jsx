@@ -11,6 +11,10 @@ import Services from './pages/Services';
 import Incentives from './pages/Incentives';
 import Process from './pages/Process';
 import Contact from './pages/Contact';
+import Consulting from './pages/Consulting';
+import SoftwareConsulting from './pages/SoftwareConsulting';
+import ServiceDetails from './pages/ServiceDetails';
+import BlogDetails from './pages/BlogDetails';
 
 export default function App() {
   return (
@@ -32,9 +36,15 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/service/:slug" element={<ServiceDetails />} />
+            <Route path="/services/:slug" element={<ServiceDetails />} />
+            <Route path="/consulting" element={<Consulting />} />
+            <Route path="/software-consulting" element={<SoftwareConsulting />} />
             <Route path="/incentives" element={<Incentives />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog/:slug" element={<BlogDetails />} />
+            <Route path="/blog" element={<BlogDetails />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

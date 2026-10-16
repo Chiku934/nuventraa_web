@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "erp-solutions",
+    "altSlug": "erp-development",
+    "title": "ERP Development",
+    "url": "https://nuventraa.com/service/erp-solutions/",
+    "cardImage": "/assets/nuventraa/enterprise-resource-planning-holographic-interface-220x220.jpg",
+    "heroImage": "/assets/nuventraa/enterprise-resource-planning-holographic-interface-220x220.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let’s transform your business with a smarter ERP solution"
+  },
+  {
+    "slug": "custom-software-development",
+    "altSlug": "custom-software",
+    "title": "Custom Software Development",
+    "url": "https://nuventraa.com/service/custom-software-development/",
+    "cardImage": "/assets/nuventraa/person-front-computer-working-html-1-scaled-220x220.jpg",
+    "heroImage": "/assets/nuventraa/person-front-computer-working-html-1-scaled-220x220.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let's transform your business with our expertise"
+  },
+  {
+    "slug": "industry-specific-solutions",
+    "altSlug": "web-app-development",
+    "title": "Industry-Specific Solutions",
+    "url": "https://nuventraa.com/service/web-app-development/",
+    "cardImage": "/assets/nuventraa/standard-quality-control-concept-m-scaled-220x220.jpg",
+    "heroImage": "/assets/nuventraa/standard-quality-control-concept-m-scaled-220x220.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let's transform your business with our expertise"
+  },
+  {
+    "slug": "co-operative-society-software",
+    "altSlug": "mobile-app-development",
+    "title": "Co-operative Society Software",
+    "url": "https://nuventraa.com/service/mobile-app-development/",
+    "cardImage": "/assets/nuventraa/5f8b7e99-45f7-488b-ad14-d2b8ef42ce7f-220x220.jpg",
+    "heroImage": "/assets/nuventraa/5f8b7e99-45f7-488b-ad14-d2b8ef42ce7f-220x220.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let's transform your business with our expertise"
+  },
+  {
+    "slug": "learning-management-systems",
+    "altSlug": "business-process-automation",
+    "title": "Learning Management Systems (LMS)",
+    "url": "https://nuventraa.com/service/business-process-automation/",
+    "cardImage": "/assets/nuventraa/service-lms.jpg",
+    "heroImage": "/assets/nuventraa/service-lms.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let's transform your business with our expertise"
+  },
+  {
+    "slug": "consulting-and-maintenance",
+    "altSlug": "cloud-services",
+    "title": "Consulting & Maintenance",
+    "url": "https://nuventraa.com/service/cloud-services/",
+    "cardImage": "/assets/nuventraa/service-consulting.jpg",
+    "heroImage": "/assets/nuventraa/service-consulting.jpg",
+    "introText": "",
+    "features": [],
+    "whyChooseUs": [],
+    "ctaTitle": "Let's transform your business with our expertise"
+  }
+]

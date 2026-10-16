@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Coins, 
-  Users, 
-  Receipt, 
-  Zap, 
-  FileCheck, 
-  ShieldAlert, 
-  CheckCircle, 
-  ArrowRight, 
-  Sparkles, 
-  FileSpreadsheet, 
-  Award, 
-  Building2, 
-  Scale, 
+import {
+  Coins,
+  Users,
+  Receipt,
+  Zap,
+  FileCheck,
+  ShieldAlert,
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+  FileSpreadsheet,
+  Award,
+  Building2,
+  Scale,
   ChevronRight,
   Clock,
   Briefcase
@@ -79,8 +79,8 @@ export default function Incentives() {
     },
   ];
 
-  const filteredIncentives = activeCategory === 'all' 
-    ? eligibleIncentives 
+  const filteredIncentives = activeCategory === 'all'
+    ? eligibleIncentives
     : eligibleIncentives.filter(item => item.category === activeCategory);
 
   return (
@@ -88,7 +88,7 @@ export default function Incentives() {
       {/* =========================================================================
           PAGE BANNER (Clean Minimalist Architectural Backdrop)
           ========================================================================= */}
-      <PageBanner 
+      <PageBanner
         breadcrumbCurrent="Government Subsidies"
         badge="Odisha IPR-2022 & OATTP-2022"
         title="Industrial Incentives &"
@@ -101,7 +101,7 @@ export default function Incentives() {
           ========================================================================= */}
       <section className="section-full" style={{ padding: 'clamp(2.25rem, 3.5vw, 3rem) 0', background: '#FFFFFF' }}>
         <div className="container">
-          <div 
+          <div
             style={{
               background: 'linear-gradient(135deg, #FAF6EE 0%, #FFFFFF 100%)',
               border: '1.5px solid rgba(197, 155, 39, 0.4)',
@@ -112,7 +112,7 @@ export default function Incentives() {
             }}
           >
             {/* Top Row: Executive Scope Narrative + Compact Photo Frame */}
-            <div 
+            <div
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
@@ -125,13 +125,13 @@ export default function Incentives() {
                 <span className="badge badge-gold" style={{ marginBottom: '0.5rem', fontSize: '0.725rem' }}>
                   Statutory Consulting Protocol
                 </span>
-                <h2 
-                  style={{ 
+                <h2
+                  style={{
                     fontFamily: "'Playfair Display', Georgia, serif",
-                    fontSize: 'clamp(1.5rem, 2.4vw, 1.95rem)', 
-                    color: '#0F2744', 
-                    fontWeight: 800, 
-                    marginBottom: '0.65rem' 
+                    fontSize: 'clamp(1.5rem, 2.4vw, 1.95rem)',
+                    color: '#0F2744',
+                    fontWeight: 800,
+                    marginBottom: '0.65rem'
                   }}
                 >
                   Strategic Incentive Realization Framework
@@ -144,7 +144,7 @@ export default function Incentives() {
               {/* Compact Photo Frame with Official Audit Badge */}
               <div className="photo-frame" style={{ height: '200px' }}>
                 <img src="/assets/audit-desk.jpg" alt="Invoice-Level Due Diligence Desk" />
-                <div 
+                <div
                   style={{
                     position: 'absolute',
                     bottom: '0.75rem',
@@ -167,7 +167,7 @@ export default function Incentives() {
             {/* Two Compact Phase Dossier Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '1.25rem' }}>
               {/* Phase 1 Box */}
-              <div 
+              <div
                 style={{
                   background: '#FFFFFF',
                   borderRadius: '1rem',
@@ -204,7 +204,7 @@ export default function Incentives() {
               </div>
 
               {/* Phase 2 Box */}
-              <div 
+              <div
                 style={{
                   background: '#FFFFFF',
                   borderRadius: '1rem',
@@ -249,13 +249,13 @@ export default function Incentives() {
             <span className="badge badge-navy" style={{ marginBottom: '0.45rem', fontSize: '0.725rem' }}>
               Statutory Incentive Streams
             </span>
-            <h2 
-              style={{ 
+            <h2
+              style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                fontSize: 'clamp(1.75rem, 2.8vw, 2.25rem)', 
-                color: '#0F2744', 
-                fontWeight: 800, 
-                marginBottom: '0.5rem' 
+                fontSize: 'clamp(1.75rem, 2.8vw, 2.25rem)',
+                color: '#0F2744',
+                fontWeight: 800,
+                marginBottom: '0.5rem'
               }}
             >
               Eligible Incentive Streams Under IPR-2022
@@ -283,11 +283,11 @@ export default function Incentives() {
                     fontWeight: 700,
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: activeCategory === tab.id 
-                      ? '1.5px solid #C59B27' 
+                    border: activeCategory === tab.id
+                      ? '1.5px solid #C59B27'
                       : '1px solid #E2E8F0',
-                    background: activeCategory === tab.id 
-                      ? 'linear-gradient(135deg, #FAF6EE, #FFFFFF)' 
+                    background: activeCategory === tab.id
+                      ? 'linear-gradient(135deg, #FAF6EE, #FFFFFF)'
                       : '#FFFFFF',
                     color: activeCategory === tab.id ? '#886411' : '#475569',
                     boxShadow: activeCategory === tab.id ? '0 2px 8px rgba(197, 155, 39, 0.15)' : 'none'
@@ -302,7 +302,7 @@ export default function Incentives() {
           {/* Incentive Grid with Compact Human Hand-Crafted Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
             {filteredIncentives.map((inc) => (
-              <div 
+              <div
                 key={inc.id}
                 className="card-3d"
                 style={{
@@ -316,7 +316,7 @@ export default function Incentives() {
                 {/* Photo Header with Badge */}
                 <div style={{ height: '160px', width: '100%', position: 'relative' }}>
                   <img src={inc.image} alt={inc.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div 
+                  <div
                     style={{
                       position: 'absolute',
                       top: '0.65rem',
@@ -370,7 +370,7 @@ export default function Incentives() {
           {/* =========================================================================
               STATUTORY ELIGIBILITY & DISBURSEMENT MATRIX (Human Hand-Crafted Table)
               ========================================================================= */}
-          <div 
+          <div
             style={{
               background: '#FFFFFF',
               border: '1px solid #E2E8F0',
@@ -444,13 +444,13 @@ export default function Incentives() {
           ========================================================================= */}
       <section style={{ background: '#FAF6EE', padding: '3rem 0', borderTop: '1px solid rgba(197, 155, 39, 0.25)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '740px' }}>
-          <h3 
-            style={{ 
+          <h3
+            style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: 'clamp(1.6rem, 2.6vw, 2.1rem)', 
-              color: '#0F2744', 
-              fontWeight: 800, 
-              marginBottom: '0.65rem' 
+              fontSize: 'clamp(1.6rem, 2.6vw, 2.1rem)',
+              color: '#0F2744',
+              fontWeight: 800,
+              marginBottom: '0.65rem'
             }}
           >
             Don't Leave Millions in Government Subsidies on the Table

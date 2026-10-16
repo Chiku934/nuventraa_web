@@ -12,7 +12,7 @@ export default function Card3D() {
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     // Normalize to -1 to +1
     const xPct = (x / rect.width) * 2 - 1;
     const yPct = (y / rect.height) * 2 - 1;
@@ -34,8 +34,8 @@ export default function Card3D() {
   };
 
   return (
-    <div 
-      className="perspective-container" 
+    <div
+      className="perspective-container"
       style={{ perspective: '1000px', display: 'flex', justifyContent: 'center', width: '100%' }}
     >
       <div
@@ -72,17 +72,17 @@ export default function Card3D() {
         />
 
         {/* Top Row (Compact) */}
-        <div 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
             alignItems: 'center',
             marginBottom: '1rem',
             transform: 'translateZ(15px)'
           }}
         >
-          <div 
-            style={{ 
+          <div
+            style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.35rem',
@@ -101,13 +101,13 @@ export default function Card3D() {
             <span>STATUTORY ADVISORY</span>
           </div>
 
-          <div 
-            style={{ 
-              fontSize: '0.7rem', 
-              fontWeight: 700, 
-              color: '#0F2744', 
-              background: '#F1F5F9', 
-              padding: '0.25rem 0.6rem', 
+          <div
+            style={{
+              fontSize: '0.7rem',
+              fontWeight: 700,
+              color: '#0F2744',
+              background: '#F1F5F9',
+              padding: '0.25rem 0.6rem',
               borderRadius: '999px',
               border: '1px solid #E2E8F0',
               lineHeight: 1.2
@@ -118,14 +118,14 @@ export default function Card3D() {
         </div>
 
         {/* Center: Monogram & Brand (Compact Size) */}
-        <div 
-          style={{ 
-            transform: 'translateZ(25px)', 
+        <div
+          style={{
+            transform: 'translateZ(25px)',
             textAlign: 'center',
             marginBottom: '1.15rem'
           }}
         >
-          <div 
+          <div
             style={{
               width: '74px',
               height: '74px',
@@ -140,9 +140,9 @@ export default function Card3D() {
               justifyContent: 'center',
             }}
           >
-            <img 
-              src="/assets/nuventraa-emblem.png" 
-              alt="Nuventraa Emblem" 
+            <img
+              src="/assets/nuventraa-emblem.png"
+              alt="Nuventraa Emblem"
               style={{
                 width: '100%',
                 height: '100%',
@@ -151,17 +151,17 @@ export default function Card3D() {
             />
           </div>
 
-          <h3 
+          <h3
             className="font-serif-brand"
-            style={{ 
-              fontSize: '1.25rem', 
-              color: '#0F2744', 
+            style={{
+              fontSize: '1.25rem',
+              color: '#0F2744',
               marginBottom: '0.15rem',
               letterSpacing: '0.08em',
               fontWeight: 800
             }}
           >
-            NUVENTRAA
+            Nuventraa
           </h3>
           <p style={{ fontSize: '0.675rem', color: '#9A761C', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             AUDIT-READY INDUSTRIAL CONSULTING
@@ -169,8 +169,8 @@ export default function Card3D() {
         </div>
 
         {/* Stats Grid: 2 Columns (Compact) */}
-        <div 
-          style={{ 
+        <div
+          style={{
             transform: 'translateZ(18px)',
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
@@ -179,7 +179,7 @@ export default function Card3D() {
           }}
         >
           {/* Zero Risk Box */}
-          <div 
+          <div
             style={{
               background: '#FFFFFF',
               border: '1px solid #E2E8F0',
@@ -197,7 +197,7 @@ export default function Card3D() {
           </div>
 
           {/* Maximum Subsidy CIS Box */}
-          <div 
+          <div
             style={{
               background: '#FFFFFF',
               border: '1px solid rgba(197, 155, 39, 0.3)',
@@ -216,8 +216,8 @@ export default function Card3D() {
         </div>
 
         {/* Bottom Strip (Compact) */}
-        <div 
-          style={{ 
+        <div
+          style={{
             transform: 'translateZ(15px)',
             background: '#F8FAFC',
             border: '1px solid #E2E8F0',

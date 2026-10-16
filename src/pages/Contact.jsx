@@ -1,504 +1,271 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Send, 
-  CheckCircle2, 
-  Clock, 
-  Award, 
-  ShieldCheck,
-  ChevronDown,
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Send,
+  CheckCircle2,
   Sparkles,
-  Building2,
-  FileCheck,
-  CheckCircle,
-  MessageCircle
+  ArrowRight
 } from 'lucide-react';
-
 import PageBanner from '../components/PageBanner';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    companyName: '',
-    contactPerson: '',
-    phone: '',
+    name: '',
     email: '',
-    sector: 'Textiles & Garments',
-    estimatedCapex: '₹5 - 25 Cr',
-    serviceInterest: 'subsidies',
-    location: '',
+    phone: '',
+    country: 'India',
     message: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+
+  const countries = [
+    'India', 'United States', 'United Kingdom', 'Australia', 'Canada',
+    'Singapore', 'United Arab Emirates', 'Germany', 'Japan', 'Other'
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.companyName || !formData.phone) return;
-    setSubmitted(true);
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill in all required fields (Name, Email, Message)');
+      return;
+    }
+    setSubmitting(true);
+    setTimeout(() => {
+      setSubmitting(false);
+      setSubmitted(true);
+    }, 800);
   };
 
-  const sectors = [
-    'Textiles & Garments',
-    'Steel & Fabrication',
-    'Agro & Food Processing',
-    'Chemicals & Plastics',
-    'Renewable Energy',
-    'Other Manufacturing'
-  ];
-
-  const capexRanges = [
-    '₹1 - 5 Cr',
-    '₹5 - 25 Cr',
-    '₹25 - 100 Cr',
-    '₹100+ Cr'
-  ];
-
-  const faqs = [
-    {
-      q: 'When should an industrial unit initiate IPR-2022 subsidy planning?',
-      a: 'Ideally before civil construction begins or prior to placing purchase orders for Plant & Machinery. Nuventraa’s Phase 1 ensures that machine specifications, vendor contracts, and bank loan sanctions are structured in strict compliance with statutory policy definitions to avoid line-item disqualification during government audit.'
-    },
-    {
-      q: 'How long does it take to secure Pollution Control Board (CTO) clearances?',
-      a: 'With audit-ready documentation and proper effluent/emission management drawings, SPCB approvals are typically processed within 30 to 45 working days through GO-SWIFT single-window routing.'
-    },
-    {
-      q: 'Are textile and apparel units entitled to higher subsidies in Odisha?',
-      a: 'Yes. Under the Odisha Apparel and Technical Textiles Policy (OATTP-2022), textile, apparel, and technical textile units are designated as priority sectors eligible for up to 30% Capital Investment Subsidy (CIS), 100% EPF/ESI employer contribution reimbursement, and concessional power tariffs.'
-    },
-    {
-      q: 'What is Nuventraa’s zero-rejection policy for documentation?',
-      a: 'We conduct rigorous pre-audits of machinery invoices, supplier GST compliance, bank payment proofs, and statutory registrations before file submission, proactively resolving red flags before departmental submission.'
-    }
-  ];
-
   return (
-    <div style={{ background: '#FFFFFF', minHeight: '100vh', width: '100%' }}>
-      {/* =========================================================================
-          PAGE BANNER (Clean Minimalist Architectural Backdrop)
-          ========================================================================= */}
-      <PageBanner 
-        breadcrumbCurrent="Contact & Consultation"
-        badge="Bhubaneswar Headquarters"
-        title="Connect with Our"
-        titleHighlight="Advisory Team"
-        description="Direct executive access to our regulatory specialists and statutory consultants at Saheed Nagar, Bhubaneswar."
+    <div className="nuventraa-page-wrapper">
+      {/* Page Banner */}
+      <PageBanner
+        title="Contact us"
+        titleHighlight="Contact us"
+        description="Get in touch with our expert team to accelerate your business with enterprise software solutions."
+        breadcrumbCurrent="Contact us"
       />
 
-      {/* =========================================================================
-          MAIN CONTACT & INTAKE GRID (Compact & Balanced Proportions)
-          ========================================================================= */}
-      <section className="section-full" style={{ padding: 'clamp(2.25rem, 3.5vw, 3rem) 0', background: '#FFFFFF' }}>
+      {/* Main Section: Grow Your Business With Our Expertise */}
+      <section className="nuventraa-contact-section">
         <div className="container">
-          <div 
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 440px), 1fr))',
-              gap: 'clamp(2rem, 3.5vw, 3rem)',
-              alignItems: 'flex-start'
-            }}
-          >
-            {/* Left Column: Saheed Nagar Office Details & Photography */}
-            <div>
-              <span className="badge badge-navy" style={{ marginBottom: '0.5rem', fontSize: '0.725rem' }}>
-                Corporate Headquarters
-              </span>
-              <h2 
-                style={{ 
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(1.6rem, 2.5vw, 2.1rem)', 
-                  color: '#0F2744', 
-                  fontWeight: 800, 
-                  marginBottom: '0.65rem' 
+          {/* Section Header */}
+          <div style={{ maxWidth: '850px', marginBottom: '2.5rem' }}>
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '0.85rem',
+                fontWeight: 700,
+                color: '#2439ff',
+                textTransform: 'uppercase',
+                letterSpacing: '0.12em',
+                marginBottom: '0.5rem'
+              }}
+            >
+              <span>═</span>
+              <span>Contact us</span>
+              <span>═</span>
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: 'clamp(2rem, 3.8vw, 2.75rem)',
+                fontWeight: 800,
+                color: '#08203A',
+                lineHeight: 1.25,
+                margin: '0.35rem 0 0.85rem 0'
+              }}
+            >
+              Grow Your Business With{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(90deg, #2439ff 0%, #9000ff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
                 }}
               >
-                Nuventraa Consulting
-              </h2>
-              <p style={{ fontSize: '0.925rem', color: '#475569', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                Headquartered in Saheed Nagar, Bhubaneswar, our regulatory specialists interface daily with key government directorates, District Industries Centres (DIC), IPICOL, and statutory inspectorates across Odisha.
-              </p>
+                Our Expertise
+              </span>
+            </h2>
 
-              {/* Compact Photo Frame with Official Address Plaque */}
-              <div className="photo-frame" style={{ height: '210px', width: '100%', marginBottom: '1.5rem' }}>
-                <img src="/assets/rasulgarh-tower.jpg" alt="Saheed Nagar Corporate Office, Bhubaneswar" />
-                <div 
-                  style={{
-                    position: 'absolute',
-                    bottom: '0.75rem',
-                    left: '0.75rem',
-                    background: 'rgba(255, 255, 255, 0.95)',
-                    padding: '0.35rem 0.75rem',
-                    borderRadius: '0.4rem',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    color: '#0F2744',
-                    border: '1px solid rgba(197, 155, 39, 0.4)',
-                    boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
-                  }}
-                >
-                  Saheed Nagar Corporate Office, Bhubaneswar
+            <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.6, margin: 0, maxWidth: '640px' }}>
+              We understand the importance of approaching each work integrally and believe in the power of simple.
+            </p>
+          </div>
+
+          {/* 2-Column Layout: Left Info Cards, Right Contact Form */}
+          <div className="nuventraa-contact-layout">
+            {/* Left Column: Contact Information Cards */}
+            <div className="nuventraa-contact-cards-col">
+              {/* Card 1: Corporate Office */}
+              <div className="nuventraa-contact-info-card">
+                <div className="nuventraa-contact-info-icon">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <h4 className="nuventraa-contact-info-title">Corporate Office</h4>
+                  <p className="nuventraa-contact-info-desc">
+                    Plot No 462, Saheed Nagar, Bhubaneswar, Odisha
+                  </p>
                 </div>
               </div>
 
-              {/* Direct Info Cards (Compact 3D) */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                <div 
-                  className="card-3d"
-                  style={{
-                    padding: '1.15rem 1.25rem',
-                    background: '#FFFFFF',
-                    border: '1px solid #E2E8F0',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '0.85rem',
-                    borderRadius: '0.85rem'
-                  }}
-                >
-                  <MapPin size={20} color="#C59B27" style={{ flexShrink: 0, marginTop: '0.15rem' }} />
-                  <div>
-                    <h4 style={{ fontSize: '0.95rem', color: '#0F2744', fontWeight: 700, marginBottom: '0.2rem' }}>
-                      Registered Office
-                    </h4>
-                    <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
-                      Plot No 462, Saheed Nagar, Bhubaneswar, Odisha – 751007
-                    </p>
-                  </div>
+              {/* Card 2: Call us */}
+              <div className="nuventraa-contact-info-card">
+                <div className="nuventraa-contact-info-icon">
+                  <Phone size={24} />
                 </div>
-
-                <div 
-                  className="card-3d"
-                  style={{
-                    padding: '1.15rem 1.25rem',
-                    background: '#FFFFFF',
-                    border: '1px solid #E2E8F0',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '0.85rem',
-                    borderRadius: '0.85rem'
-                  }}
-                >
-                  <Phone size={20} color="#C59B27" style={{ flexShrink: 0, marginTop: '0.15rem' }} />
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
-                      <h4 style={{ fontSize: '0.95rem', color: '#0F2744', fontWeight: 700 }}>
-                        Direct Executive Helplines
-                      </h4>
-                      <span style={{ fontSize: '0.7rem', color: '#059669', fontWeight: 700, background: '#ECFDF5', padding: '0.15rem 0.5rem', borderRadius: '0.3rem' }}>
-                        Active 9:30 AM - 7:30 PM
-                      </span>
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.9rem' }}>
-                      <a href="tel:+919090123562" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                        +91 90901 23562
-                      </a>
-                      <a href="tel:+919437041019" style={{ color: '#0F2744', fontWeight: 700, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#C59B27'} onMouseLeave={(e) => e.currentTarget.style.color = '#0F2744'}>
-                        +91 94370 41019
-                      </a>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="nuventraa-contact-info-title">Call us</h4>
+                  <p className="nuventraa-contact-info-desc">
+                    <a href="tel:+919090123562" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>
+                      +91 90901 23562
+                    </a>
+                    {' / '}
+                    <a href="tel:+919437041019" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>
+                      +91 94370 41019
+                    </a>
+                  </p>
                 </div>
+              </div>
 
-                <div 
-                  className="card-3d"
-                  style={{
-                    padding: '1.15rem 1.25rem',
-                    background: '#FAF6EE',
-                    border: '1px solid rgba(197, 155, 39, 0.4)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    borderRadius: '0.85rem'
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <Award size={20} color="#C59B27" />
-                    <div>
-                      <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#886411', textTransform: 'uppercase' }}>
-                        Statutory Accreditation
-                      </div>
-                      <div style={{ fontSize: '0.9rem', color: '#0F2744', fontWeight: 800 }}>
-                        GSTIN: 21AFPFS3041D1ZC
-                      </div>
-                    </div>
-                  </div>
-                  <span style={{ fontSize: '0.75rem', background: '#FFFFFF', padding: '0.2rem 0.6rem', borderRadius: '0.4rem', border: '1px solid rgba(197, 155, 39, 0.3)', color: '#886411', fontWeight: 700 }}>
-                    Verified
-                  </span>
+              {/* Card 3: Mail address */}
+              <div className="nuventraa-contact-info-card">
+                <div className="nuventraa-contact-info-icon">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h4 className="nuventraa-contact-info-title">Mail address</h4>
+                  <p className="nuventraa-contact-info-desc">
+                    <a href="mailto:info@nuventraa.com" style={{ color: '#2439ff', textDecoration: 'none', fontWeight: 600 }}>
+                      info@nuventraa.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Hand-Crafted Pre-Consultation Intake Form */}
-            <div 
-              className="card-3d-gold"
-              style={{
-                padding: 'clamp(1.5rem, 2.5vw, 2.25rem)',
-                background: '#FFFFFF',
-                borderRadius: '1.25rem',
-                border: '1.5px solid rgba(197, 155, 39, 0.4)',
-                boxShadow: '0 10px 30px -10px rgba(197, 155, 39, 0.12)'
-              }}
-            >
+            {/* Right Column: Contact Form */}
+            <div className="nuventraa-contact-form-wrap">
               {submitted ? (
-                <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
-                  <div 
+                <div style={{ textAlign: 'center', padding: '2.5rem 1rem' }}>
+                  <div
                     style={{
-                      width: '60px',
-                      height: '60px',
+                      width: '64px',
+                      height: '64px',
                       borderRadius: '50%',
-                      background: '#ECFDF5',
-                      border: '2px solid #059669',
-                      display: 'flex',
+                      background: 'rgba(16, 185, 129, 0.1)',
+                      color: '#10B981',
+                      display: 'inline-flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      margin: '0 auto 1.25rem',
-                      color: '#059669'
+                      marginBottom: '1rem'
                     }}
                   >
-                    <CheckCircle2 size={32} />
+                    <CheckCircle2 size={36} />
                   </div>
-                  <h3 style={{ fontSize: '1.45rem', color: '#0F2744', fontWeight: 800, marginBottom: '0.5rem' }}>
-                    Consultation Request Registered
+                  <h3 style={{ fontFamily: "'Poppins', sans-serif", fontSize: '1.4rem', fontWeight: 700, color: '#08203A', marginBottom: '0.5rem' }}>
+                    Thank you for reaching out!
                   </h3>
-                  <p style={{ fontSize: '0.925rem', color: '#475569', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                    Thank you, <strong>{formData.contactPerson || 'Sir/Madam'}</strong>. Your inquiry for <strong>{formData.companyName}</strong> has been logged with our regulatory desk. A senior consultant will contact you within 4 business hours.
+                  <p style={{ color: '#64748B', fontSize: '0.925rem', maxWidth: '420px', margin: '0 auto 1.5rem auto' }}>
+                    We have received your message and our technical advisory team will contact you shortly.
                   </p>
-                  <button 
-                    onClick={() => setSubmitted(false)}
-                    className="btn btn-outline"
-                    style={{ padding: '0.65rem 1.25rem', fontSize: '0.85rem' }}
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({ name: '', email: '', phone: '', country: 'India', message: '' });
+                    }}
+                    className="nuventraa-submit-btn"
                   >
-                    Submit Another Inquiry
+                    Send Another Message
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <div>
-                    <span className="badge badge-gold" style={{ marginBottom: '0.35rem', fontSize: '0.7rem' }}>
-                      Intake Dossier
-                    </span>
-                    <h3 style={{ fontSize: '1.35rem', color: '#0F2744', fontWeight: 800, marginBottom: '0.25rem' }}>
-                      Request Project Consultation
-                    </h3>
-                    <p style={{ fontSize: '0.825rem', color: '#64748B' }}>
-                      Provide brief details for a tailored regulatory & subsidy roadmap.
-                    </p>
-                  </div>
-
-                  {/* Company & Person */}
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem' }}>
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                        Enterprise / Company Name *
-                      </label>
-                      <input 
+                <form onSubmit={handleSubmit}>
+                  <div className="nuventraa-form-row">
+                    <div className="nuventraa-form-group">
+                      <label htmlFor="contact-name">Name *</label>
+                      <input
+                        id="contact-name"
                         type="text"
                         required
-                        placeholder="e.g. Utkal Industries Ltd"
-                        value={formData.companyName}
-                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '0.65rem 0.85rem',
-                          borderRadius: '0.5rem',
-                          border: '1px solid #CBD5E1',
-                          fontSize: '0.85rem',
-                          fontFamily: 'inherit',
-                          outline: 'none',
-                        }}
+                        placeholder="Your name*"
+                        className="nuventraa-form-control"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       />
                     </div>
 
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                        Contact Person & Role *
-                      </label>
-                      <input 
-                        type="text"
-                        required
-                        placeholder="e.g. Managing Director"
-                        value={formData.contactPerson}
-                        onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '0.65rem 0.85rem',
-                          borderRadius: '0.5rem',
-                          border: '1px solid #CBD5E1',
-                          fontSize: '0.85rem',
-                          fontFamily: 'inherit',
-                          outline: 'none',
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Phone & Email */}
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem' }}>
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                        Mobile Phone Number *
-                      </label>
-                      <input 
-                        type="tel"
-                        required
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '0.65rem 0.85rem',
-                          borderRadius: '0.5rem',
-                          border: '1px solid #CBD5E1',
-                          fontSize: '0.85rem',
-                          fontFamily: 'inherit',
-                          outline: 'none',
-                        }}
-                      />
-                    </div>
-
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                        Corporate Email
-                      </label>
-                      <input 
+                    <div className="nuventraa-form-group">
+                      <label htmlFor="contact-email">Email address *</label>
+                      <input
+                        id="contact-email"
                         type="email"
-                        placeholder="promoter@enterprise.com"
+                        required
+                        placeholder="Mail*"
+                        className="nuventraa-form-control"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '0.65rem 0.85rem',
-                          borderRadius: '0.5rem',
-                          border: '1px solid #CBD5E1',
-                          fontSize: '0.85rem',
-                          fontFamily: 'inherit',
-                          outline: 'none',
-                        }}
                       />
                     </div>
                   </div>
 
-                  {/* Sector Quick Pills */}
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.35rem' }}>
-                      Industrial Sector
-                    </label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
-                      {sectors.map((sec) => (
-                        <button
-                          key={sec}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, sector: sec })}
-                          style={{
-                            padding: '0.3rem 0.65rem',
-                            borderRadius: '0.4rem',
-                            fontSize: '0.75rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            border: formData.sector === sec ? '1px solid #C59B27' : '1px solid #E2E8F0',
-                            background: formData.sector === sec ? '#FAF6EE' : '#FFFFFF',
-                            color: formData.sector === sec ? '#886411' : '#475569',
-                          }}
-                        >
-                          {sec}
-                        </button>
-                      ))}
+                  <div className="nuventraa-form-row">
+                    <div className="nuventraa-form-group">
+                      <label htmlFor="contact-phone">Phone</label>
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        placeholder="Your phone"
+                        className="nuventraa-form-control"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      />
+                    </div>
+
+                    <div className="nuventraa-form-group">
+                      <label htmlFor="contact-country">Country</label>
+                      <select
+                        id="contact-country"
+                        className="nuventraa-form-control"
+                        value={formData.country}
+                        onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                      >
+                        {countries.map((c) => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
                     </div>
                   </div>
 
-                  {/* Capex Range Quick Pills */}
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.35rem' }}>
-                      Estimated Capex / Plant & Machinery Investment
-                    </label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
-                      {capexRanges.map((range) => (
-                        <button
-                          key={range}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, estimatedCapex: range })}
-                          style={{
-                            padding: '0.3rem 0.65rem',
-                            borderRadius: '0.4rem',
-                            fontSize: '0.75rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            border: formData.estimatedCapex === range ? '1px solid #C59B27' : '1px solid #E2E8F0',
-                            background: formData.estimatedCapex === range ? '#FAF6EE' : '#FFFFFF',
-                            color: formData.estimatedCapex === range ? '#886411' : '#475569',
-                          }}
-                        >
-                          {range}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Scope of Interest Dropdown */}
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                      Primary Scope of Interest
-                    </label>
-                    <select
-                      value={formData.serviceInterest}
-                      onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
-                      style={{
-                        width: '100%',
-                        padding: '0.65rem 0.85rem',
-                        borderRadius: '0.5rem',
-                        border: '1px solid #CBD5E1',
-                        fontSize: '0.85rem',
-                        fontFamily: 'inherit',
-                        background: '#FFFFFF',
-                        outline: 'none',
-                      }}
-                    >
-                      <option value="subsidies">Odisha IPR-2022 & OATTP Subsidy Realization (Phase 1 & 2)</option>
-                      <option value="pollution">Pollution Control Board Clearance (CTE / CTO)</option>
-                      <option value="boilers">Indian Boilers Permit & Steam Piping Registration</option>
-                      <option value="full">End-to-End Compliance Retainership & Licensing</option>
-                    </select>
-                  </div>
-
-                  {/* Brief Message */}
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#0F2744', marginBottom: '0.25rem' }}>
-                      Plant Location or Specific Requirement
-                    </label>
-                    <textarea 
-                      rows={2}
-                      placeholder="e.g. 50-loom weaving unit in Khordha; seeking Phase 1 IPR-2022 pre-audit..."
+                  <div className="nuventraa-form-group">
+                    <label htmlFor="contact-message">Your message *</label>
+                    <textarea
+                      id="contact-message"
+                      rows={5}
+                      required
+                      placeholder="Type message*"
+                      className="nuventraa-form-control"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      style={{
-                        width: '100%',
-                        padding: '0.65rem 0.85rem',
-                        borderRadius: '0.5rem',
-                        border: '1px solid #CBD5E1',
-                        fontSize: '0.85rem',
-                        fontFamily: 'inherit',
-                        outline: 'none',
-                        resize: 'none'
-                      }}
                     />
                   </div>
 
-                  {/* Confidentiality Guarantee */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.725rem', color: '#64748B' }}>
-                    <ShieldCheck size={14} color="#059669" />
-                    <span>Non-Disclosure & Client Confidentiality Protocol Assured.</span>
-                  </div>
-
-                  <button 
-                    type="submit" 
-                    className="btn btn-gold"
-                    style={{ width: '100%', padding: '0.8rem', fontSize: '0.925rem', fontWeight: 700 }}
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="nuventraa-submit-btn"
                   >
+                    <span>{submitting ? 'Sending...' : 'Send Message'}</span>
                     <Send size={16} />
-                    <span>Submit Consultation Dossier</span>
                   </button>
                 </form>
               )}
@@ -507,81 +274,14 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* =========================================================================
-          COMPACT FREQUENTLY ASKED QUESTIONS ACCORDION
-          ========================================================================= */}
-      <section className="section-full bg-3d-grid" style={{ padding: 'clamp(2.25rem, 3.5vw, 3rem) 0', background: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
-        <div className="container" style={{ maxWidth: '840px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <span className="badge badge-navy" style={{ marginBottom: '0.45rem', fontSize: '0.725rem' }}>
-              Common Inquiries
-            </span>
-            <h2 
-              style={{ 
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontSize: 'clamp(1.65rem, 2.6vw, 2.15rem)', 
-                color: '#0F2744', 
-                fontWeight: 800 
-              }}
-            >
-              Industrial Compliance & Subsidies FAQ
-            </h2>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            {faqs.map((faq, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div 
-                  key={i}
-                  className="card-3d"
-                  style={{
-                    background: '#FFFFFF',
-                    border: isOpen ? '1.5px solid #C59B27' : '1px solid #E2E8F0',
-                    borderRadius: '0.75rem',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <button
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
-                    style={{
-                      width: '100%',
-                      padding: '1.1rem 1.35rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      background: 'transparent',
-                      border: 'none',
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                      fontSize: '0.95rem',
-                      fontWeight: 700,
-                      color: '#0F2744'
-                    }}
-                  >
-                    <span>{faq.q}</span>
-                    <ChevronDown 
-                      size={18} 
-                      color="#C59B27" 
-                      style={{
-                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.25s ease',
-                        flexShrink: 0,
-                        marginLeft: '0.75rem'
-                      }}
-                    />
-                  </button>
-
-                  {isOpen && (
-                    <div style={{ padding: '0 1.35rem 1.15rem', color: '#475569', fontSize: '0.875rem', lineHeight: 1.6, borderTop: '1px solid #F1F5F9', paddingTop: '0.85rem' }}>
-                      {faq.a}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
+      {/* Google Maps Embed Section - Exact Section from nuventraa.com/contact/ */}
+      <section className="nuventraa-map-section">
+        <iframe
+          title="Nuventraa Location"
+          className="nuventraa-map-iframe"
+          loading="lazy"
+          src="https://maps.google.com/maps?q=Plot%20No%20462%2C%20Saheed%20Nagar%2C%20Bhubaneswar&t=m&z=15&output=embed&iwloc=near"
+        />
       </section>
     </div>
   );

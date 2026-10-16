@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NUVENTRAA DESIGN SYSTEM - 100% LIGHT LUXURY CORPORATE THEME
+   Nuventraa DESIGN SYSTEM - 100% LIGHT LUXURY CORPORATE THEME
    Bespoke Human Hand-Crafted Agency Aesthetics
    ========================================================================== */
 
@@ -14,9 +14,12 @@
   --bg-glass: rgba(255, 255, 255, 0.92);
 
   /* Typography Colors (High Contrast, Human Editorial) */
-  --text-primary: #0F1D33;     /* Deep executive navy */
-  --text-secondary: #2C3E50;   /* Slate editorial body */
-  --text-muted: #64748B;       /* Neutral muted text */
+  --text-primary: #0F1D33;
+  /* Deep executive navy */
+  --text-secondary: #2C3E50;
+  /* Slate editorial body */
+  --text-muted: #64748B;
+  /* Neutral muted text */
   --text-light: #94A3B8;
   --text-gold: #9A761C;
 
@@ -26,7 +29,8 @@
   --gold-200: #EEDD9E;
   --gold-300: #E3C669;
   --gold-400: #D8AF3E;
-  --gold-500: #C59B27;        /* Core Imperial Gold */
+  --gold-500: #C59B27;
+  /* Core Imperial Gold */
   --gold-600: #A87F18;
   --gold-700: #886411;
   --gold-gradient: linear-gradient(135deg, #E6C265 0%, #C59B27 50%, #9B7517 100%);
@@ -34,7 +38,8 @@
 
   /* Royal Navy Accents */
   --navy-900: #0A192F;
-  --navy-800: #0F2744;        /* Official Nuventraa Navy */
+  --navy-800: #0F2744;
+  /* Official Nuventraa Navy */
   --navy-700: #163B66;
   --navy-600: #1E4E8C;
   --navy-gradient: linear-gradient(135deg, #0F2744 0%, #163B66 100%);
@@ -85,7 +90,12 @@ body {
 }
 
 /* Responsive Fluid Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   font-weight: 700;
@@ -135,7 +145,7 @@ a {
 /* 3D Texture & Tactile Backgrounds */
 .bg-3d-mesh {
   background-color: #FAFAFC;
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(223, 183, 87, 0.09) 0px, transparent 55%),
     radial-gradient(at 100% 10%, rgba(15, 39, 68, 0.05) 0px, transparent 50%),
     radial-gradient(at 50% 100%, rgba(223, 183, 87, 0.07) 0px, transparent 65%);
@@ -143,7 +153,7 @@ a {
 
 .bg-3d-grid {
   background-size: 36px 36px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(15, 39, 68, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(15, 39, 68, 0.035) 1px, transparent 1px);
 }
@@ -328,10 +338,12 @@ a {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   }
+
   70% {
     transform: scale(1.05);
     box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
   }
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
@@ -342,6 +354,7 @@ a {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -632,13 +645,23 @@ a {
 }
 
 @keyframes preloaderSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes preloaderSpinReverse {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes luxuryPulseAura {
@@ -646,10 +669,12 @@ a {
     transform: scale(0.92);
     box-shadow: 0 0 35px 10px rgba(197, 155, 39, 0.12), inset 0 0 20px rgba(197, 155, 39, 0.08);
   }
+
   50% {
     transform: scale(1.06);
     box-shadow: 0 0 70px 24px rgba(197, 155, 39, 0.28), inset 0 0 30px rgba(197, 155, 39, 0.15);
   }
+
   100% {
     transform: scale(0.92);
     box-shadow: 0 0 35px 10px rgba(197, 155, 39, 0.12), inset 0 0 20px rgba(197, 155, 39, 0.08);
@@ -660,9 +685,11 @@ a {
   0% {
     transform: translateY(0px) scale(1);
   }
+
   50% {
     transform: translateY(-4px) scale(1.025);
   }
+
   100% {
     transform: translateY(0px) scale(1);
   }
@@ -673,10 +700,12 @@ a {
     left: -40%;
     width: 30%;
   }
+
   50% {
     left: 25%;
     width: 60%;
   }
+
   100% {
     left: 100%;
     width: 30%;
@@ -687,6 +716,7 @@ a {
   0% {
     transform: translateX(-150%) rotate(25deg);
   }
+
   100% {
     transform: translateX(250%) rotate(25deg);
   }

@@ -2257,16 +2257,16 @@
 }
 
 /* ==========================================================================
-   SERVICES PAGE: EXACT NuventraaTEC CT-SERVICE-GRID2
+   SERVICES PAGE: EXACT NUVENTRAA CT-SERVICE-GRID2
    ========================================================================== */
 
-.nuventraa-services-section {
+.nuventraa-services-page-section {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
   background-color: #F8FAFC;
   position: relative;
 }
 
-.nuventraa-services-grid {
+.nuventraa-services-page-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -2274,13 +2274,13 @@
 }
 
 @media (max-width: 1024px) {
-  .nuventraa-services-grid {
+  .nuventraa-services-page-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .nuventraa-services-grid {
+  .nuventraa-services-page-grid {
     grid-template-columns: 1fr;
   }
 }

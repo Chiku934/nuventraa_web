@@ -74,7 +74,7 @@ export default function Services() {
       />
 
       {/* Main Services Grid Section - Exact Section from nuventraa.com/services/ */}
-      <section className="nuventraa-services-section">
+      <section className="nuventraa-services-page-section">
         <div className="container">
           {/* Section Header */}
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
@@ -111,7 +111,7 @@ export default function Services() {
           </div>
 
           {/* 6 Grid Cards */}
-          <div className="nuventraa-services-grid">
+          <div className="nuventraa-services-page-grid">
             {servicesList.map((service) => {
               const IconComp = service.icon;
               return (

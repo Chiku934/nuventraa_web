@@ -75,7 +75,7 @@ export default function Home() {
     }
   ];
 
-  const [activeServiceImg, setActiveServiceImg] = useState('/assets/nuventraa/modern-equipped-computer-lab-scaled-600x473.jpg');
+  const [activeServiceImg, setActiveServiceImg] = useState('/assets/nuventraa/portrait-happy-young-colleagues-using-digital-tablet-scaled-840x630.jpg');
 
   // =========================================================================
   // CASE STUDIES FILTER STATE
@@ -382,7 +382,7 @@ export default function Home() {
           SECTION 2: CONSULTING & POLICY ADVISORY SERVICES (Exact Nuventraa Style)
           ========================================================================= */}
       <section className="nuventraa-services-section">
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1240px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div className="nuventraa-services-grid">
 
             {/* Left Column: Image Collage & Interactive Gallery */}
@@ -430,7 +430,7 @@ export default function Home() {
 
               {/* Description */}
               <p className="nuventraa-services-desc">
-                Nuventraa Softtech offers <strong>consulting and policy advisory services</strong> to help industries align with regulatory frameworks &amp; unlock government incentives.
+                Nuventraa offers <strong>consulting and policy advisory services</strong> to help industries align with regulatory frameworks &amp; unlock government incentives.
               </p>
 
               {/* 4 Vertical Stacked Service Cards (ct-fancy-box.style2) */}

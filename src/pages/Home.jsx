@@ -76,7 +76,7 @@ export default function Home() {
       category: 'subsidies',
       categoryLabel: 'Subsidies & Claims',
       image: '/assets/textile-plant.jpg',
-      desc: 'Fixed capital realization on Plant & Machinery for manufacturing units under Odisha IPR-2022 & OATTP-2022.'
+      desc: '30% CIS with no upper cap under IPR-2022 & 40% CIS up to ₹50 Crore under OATTP-2022 on Plant & Machinery (5-year phased disbursement).'
     },
     {
       id: 2,
@@ -116,7 +116,7 @@ export default function Home() {
       category: 'subsidies',
       categoryLabel: 'Subsidies & Claims',
       image: '/assets/solar-park.jpg',
-      desc: 'Multi-year fiscal tax reimbursements (up to 100% Net SGST) and electrical duty waivers for active industrial plants.'
+      desc: '100% Net SGST refund (up to 200% P&M), ₹2.00/unit power tariff reimbursement & 100% electricity duty exemption for 10 years, plus 100% EPF/ESI support.'
     }
   ];
 
@@ -589,7 +589,7 @@ export default function Home() {
               {
                 phase: 'Stage 03',
                 title: 'Subsidy & Fiscal Realization',
-                desc: 'Capital Investment Subsidy (CIS up to 30% on Plant & Machinery), 100% Net SGST Reimbursement, 100% EPF/ESI Support, and Treasury Bank Disbursement tracking.',
+                desc: 'Capital Investment Subsidy (30% under IPR-22 with no cap & 40% up to ₹50 Cr under OATTP-22), 100% Net SGST Reimbursement (up to 200% P&M), 100% EPF/ESI & wage support, and ₹2/unit power tariff relief for 10 years.',
                 icon: <Banknote size={36} color="#C59B27" />
               }
             ].map((mandate, idx) => (

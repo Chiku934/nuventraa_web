@@ -68,23 +68,27 @@ export const servicesData = [
     features: [
       {
         title: 'Capital Investment Subsidy (CIS)',
-        desc: 'Up to 30% reimbursement on eligible Plant & Machinery investments through rigorous invoice-level asset scrutiny.'
+        desc: '30% CIS with no upper cap under IPR-2022 and 40% CIS up to ₹50 Crore under Sectoral Policy OATTP-2022 on eligible Plant & Machinery (5-year phased disbursement).'
       },
       {
         title: 'Net SGST Tax Reimbursement',
-        desc: 'Up to 100% refund of net State GST paid on intra-state sales of finished goods for 5 to 7 operational years.'
+        desc: '100% reimbursement of net SGST paid on intra-state sales of finished goods, with an overall ceiling of 200% of Plant & Machinery cost.'
       },
       {
-        title: 'Employment Cost Subsidy (EPF/ESI)',
-        desc: '100% reimbursement of employer statutory contributions towards EPF and ESI for domicile workforce.'
+        title: 'Employment Cost Subsidy (EPF/ESI & Wage)',
+        desc: '100% employer EPF/ESI contribution reimbursement for 7 years (domicile workforce under IPR-22) and monthly wage support @ ₹7,000/female & ₹6,000/male worker for 5 years (OATTP-22).'
       },
       {
-        title: 'Power Tariff Relief & Duty Waiver',
-        desc: 'Concessional power tariff (₹1–2 per unit) and 100% exemption from Electricity Duty during the eligible operative window.'
+        title: 'Power Tariff Relief & Duty Exemption',
+        desc: 'Concessional power tariff reimbursement of ₹2.00 per unit from local DISCOMs and 100% exemption from Electricity Duty for 10 years.'
+      },
+      {
+        title: 'Renewable Energy Surcharge Benefits',
+        desc: '100% exemption / reimbursement of Cross Subsidy Surcharge, Additional Surcharge & State Transmission Charges for 10 years on green energy.'
       },
       {
         title: 'Treasury Disbursement Tracking',
-        desc: 'Continuous follow-up through single-window portals and finance departments until funds hit client commercial bank accounts.'
+        desc: 'Continuous follow-up through single-window portals, DIC, and finance departments until funds credit into client commercial bank accounts.'
       }
     ],
     whyChooseTitle: 'Why Choose Us for Incentive Realization',

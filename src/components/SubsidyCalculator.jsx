@@ -8,16 +8,18 @@ export default function SubsidyCalculator() {
   const [sector, setSector] = useState('textile'); // 'textile' or 'manufacturing'
 
   // Calculations based on Odisha IPR-2022 & OATTP-2022 norms
-  const cisPercentage = sector === 'textile' ? 0.30 : 0.20; // 30% under OATTP-2022, 20% general
-  const maxCis = sector === 'textile' ? 1000 : 500; // Cap in Lakhs
+  const cisPercentage = sector === 'textile' ? 0.40 : 0.30; // 40% under OATTP-2022, 30% under IPR-2022
+  const maxCis = sector === 'textile' ? 5000 : 99999; // 50 Crore (5000 Lakhs) cap under OATTP-22; no upper cap under IPR-22
   const estimatedCis = Math.min(capex * cisPercentage, maxCis);
 
-  // EPF / ESI reimbursement ~ ₹24,000/employee/year for 5 years
-  const annualEpf = (employees * 24000) / 100000; // In Lakhs per year
-  const fiveYearEpf = annualEpf * 5;
+  // EPF / ESI & Wage subsidy: OATTP-22 avg ₹6,500/mo = ₹78,000/yr; IPR-22 100% EPF/ESI for 7 yrs
+  const annualEpf = sector === 'textile' 
+    ? (employees * 78000) / 100000 
+    : (employees * 30000) / 100000;
+  const fiveYearEpf = annualEpf * (sector === 'textile' ? 5 : 7);
 
-  // Estimated Power & SGST reimbursement benefits
-  const estimatedPower = (capex * 0.05);
+  // Estimated Power tariff (₹2.00/unit relief) & 100% Net SGST reimbursement benefits
+  const estimatedPower = (capex * 0.08);
   const totalEstimatedBenefits = estimatedCis + fiveYearEpf + estimatedPower;
 
   return (

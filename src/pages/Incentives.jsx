@@ -30,25 +30,25 @@ export default function Incentives() {
       category: 'capex',
       title: 'Capital Investment Subsidy (CIS)',
       code: 'Fixed Capital Realization',
-      badge: 'Up to 30% on Plant & Machinery',
+      badge: '30% (No Cap) / 40% up to ₹50 Cr',
       image: '/assets/textile-plant.jpg',
-      statutoryRef: 'Odisha IPR-2022 § Clause 12.1 & OATTP-2022',
-      rate: 'Up to 30%',
-      desc: 'Direct reimbursement on eligible Plant & Machinery investments for new industrial units, expansion, and diversification under Odisha IPR-2022 & OATTP-2022.',
-      deliverable: 'Rigorous invoice scrutiny and eligible component isolation to maximize approved claim quantum.',
-      eligibility: ['Manufacturing Units', 'Textiles & Garments', 'Food Processing', 'Engineering']
+      statutoryRef: 'Odisha IPR-2022 § Clause 12.1 & OATTP-2022 § Clause 3',
+      rate: '30% - 40%',
+      desc: '30% Capital Investment Subsidy on actual investment in Plant & Machinery (excluding land & building) with no upper cap under IPR-2022; 40% CIS up to INR 50 Crore under Sectoral Policy OATTP-2022, disbursed in a phased manner over 5 years from commercial production.',
+      deliverable: 'Rigorous invoice scrutiny, plant inspection coordination, and eligible component isolation to maximize approved claim quantum.',
+      eligibility: ['Manufacturing Units', 'Textiles & Garments', 'Food Processing', 'Engineering Units']
     },
     {
       id: 'epf',
       category: 'payroll',
-      title: 'Employment Cost Subsidy (EPF/ESI)',
+      title: 'Employment Cost Subsidy (EPF/ESI & Wage)',
       code: 'Statutory Payroll Reimbursement',
-      badge: '100% Employer Contribution',
+      badge: '100% EPF/ESI (7 Yrs) | ₹7,000/mo Wage (5 Yrs)',
       image: '/assets/agro-plant.jpg',
-      statutoryRef: 'Odisha IPR-2022 § Clause 14.3 (Domicile Workers)',
-      rate: '100% Support',
-      desc: 'Reimbursement of employer contribution towards Employees Provident Fund (EPF) and ESI for domicile workers employed in the manufacturing unit.',
-      deliverable: 'Monthly muster roll alignment, domicile verification, and statutory ledger compilation.',
+      statutoryRef: 'Odisha IPR-2022 § Clause 14.3 & OATTP-2022 § Clause 4',
+      rate: '100% EPF/ESI + ECS',
+      desc: '100% exemption / reimbursement of employer contribution towards EPF and ESI for 7 years for skilled/semi-skilled domicile workers (IPR-2022); Employment Cost Subsidy (ECS) @ INR 7,000/female & INR 6,000/male worker per month for 5 years (OATTP-2022).',
+      deliverable: 'Monthly muster roll alignment, domicile verification, ESI/EPF challan reconciliation, and statutory ledger compilation.',
       eligibility: ['Domicile Employees', 'Min. 50% Local Workforce', 'PF/ESI Compliant Units']
     },
     {
@@ -56,12 +56,12 @@ export default function Incentives() {
       category: 'tax',
       title: 'SGST Net Tax Reimbursement',
       code: 'Fiscal Offset Mechanism',
-      badge: '100% Net SGST for 5-7 Years',
+      badge: '100% Net SGST (Up to 200% P&M)',
       image: '/assets/cnc-precision.jpg',
       statutoryRef: 'Odisha IPR-2022 § Clause 13.2 (Net SGST Refund)',
-      rate: 'Up to 100%',
-      desc: 'Reimbursement of net State Goods and Services Tax (SGST) paid on sale of finished goods manufactured within the Odisha facility for up to 5–7 years.',
-      deliverable: 'GST return reconciliation (GSTR-1, GSTR-3B) with production records and invoice audit.',
+      rate: '100% Net SGST',
+      desc: 'Policy provision for 100% reimbursement of net SGST paid on sale of finished goods manufactured within Odisha, with an overall ceiling of 200% of Plant & Machinery cost (and up to 300% on special priority sectors).',
+      deliverable: 'GST return reconciliation (GSTR-1, GSTR-3B) with production records, treasury challan audit, and departmental filing.',
       eligibility: ['Active Production Units', 'Intra-state Sales', 'Clean GSTR Ledger']
     },
     {
@@ -69,14 +69,27 @@ export default function Incentives() {
       category: 'utility',
       title: 'Power Tariff Relief & Duty Exemption',
       code: 'Operational Energy Subsidies',
-      badge: '₹1-2/unit + 100% Duty Waiver',
+      badge: '₹2.00 / Unit + 100% Duty Waiver (10 Yrs)',
       image: '/assets/solar-park.jpg',
-      statutoryRef: 'Odisha IPR-2022 § Clause 15.1 (Energy & Discom)',
-      rate: '₹1-2/unit Off',
-      desc: 'Concessional power tariff per unit of electricity consumed and complete 100% exemption from Electricity Duty for eligible operative period under IPR-2022.',
-      deliverable: 'Energy consumption audit, sub-meter logbook verification, and Discom interface.',
+      statutoryRef: 'Odisha IPR-2022 § Clauses 15.1 & 15.2',
+      rate: '₹2.00/unit + 100% Duty',
+      desc: '100% exemption from payment of electricity duty for 10 years, plus power tariff reimbursement of Rs 2.00 per unit consumed and purchased from local DISCOMs for a period of 10 years from commercial production.',
+      deliverable: 'Energy consumption audit, sub-meter logbook verification, DISCOM billing reconciliation, and electricity duty waiver certification.',
       eligibility: ['HT / LT Connections', 'Captive / Grid Supply', 'Industrial Tariffs']
     },
+    {
+      id: 'renewable',
+      category: 'utility',
+      title: 'Renewable Energy Surcharge Benefits',
+      code: 'Green Power Transmission Relief',
+      badge: '100% Surcharge & Transmission Waiver',
+      image: '/assets/solar-park.jpg',
+      statutoryRef: 'State Renewable Energy Policy & IPR-2022 § Clause 15.3',
+      rate: '100% Waiver (10 Yrs)',
+      desc: '100% exemption / reimbursement of Cross Subsidy Surcharge, Additional Surcharge & State Transmission Charges on Renewable Energy procured from State-based energy plants / GRIDCO for a period of 10 years.',
+      deliverable: 'Green energy open access certification, wheeling charge audit, and GRIDCO surcharge reimbursement documentation.',
+      eligibility: ['Captive Solar / Wind', 'GRIDCO Power Procurement', 'Open Access Industrial Consumers']
+    }
   ];
 
   const filteredIncentives = activeCategory === 'all'

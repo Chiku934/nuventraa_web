@@ -239,27 +239,59 @@ export default function Consulting() {
   const incentiveItems = [
     {
       num: '01',
-      title: 'Capital Investment Subsidy on plant and machinery'
+      title: 'Capital Investment Subsidy (CIS)',
+      badge: '30% (No Cap) / 40% up to ₹50 Cr',
+      policy: 'IPR-2022 & OATTP-2022',
+      desc: '30% CIS on actual investment in Plant & Machinery (excluding land & building) with no upper cap under IPR-2022; 40% CIS up to ₹50 Crore under Sectoral Policy OATTP-2022, disbursed in a phased manner over 5 years from commercial production.'
     },
     {
       num: '02',
-      title: 'SGST reimbursement for eligible industrial units'
+      title: 'Employment & Payroll Cost Subsidy',
+      badge: '100% EPF/ESI (7 Yrs) | ₹7,000/mo Wage (5 Yrs)',
+      policy: 'IPR-2022 & OATTP-2022',
+      desc: '100% exemption / reimbursement of employer EPF & ESI contribution for 7 years for state domicile workers (IPR-22); monthly Employment Cost Subsidy (ECS) @ ₹7,000/female & ₹6,000/male worker for 5 years (OATTP-22).'
     },
     {
       num: '03',
-      title: 'Electricity duty exemptions and power cost incentives'
+      title: 'Electricity Duty Exemption',
+      badge: '100% Exemption for 10 Years',
+      policy: 'Odisha IPR-2022',
+      desc: '100% complete exemption from payment of electricity duty for a period of 10 years from the date of commencement of commercial production.'
     },
     {
       num: '04',
-      title: 'Employment cost subsidies (EPF/ESI support)'
+      title: 'Reimbursement of Power Tariff',
+      badge: '₹2.00 / Unit Reimbursed for 10 Years',
+      policy: 'Odisha IPR-2022',
+      desc: 'Reimbursement of power tariffs at ₹2.00 per unit consumed and purchased from local DISCOMs for a period of 10 years from commercial production.'
     },
     {
       num: '05',
-      title: 'Interest subsidies and MSME financial support'
+      title: 'Renewable Energy Benefits',
+      badge: '100% Surcharge & Transmission Waiver',
+      policy: 'State Renewable Energy Policy & IPR-2022',
+      desc: '100% exemption / reimbursement of Cross Subsidy Surcharge, Additional Surcharge & State Transmission Charges on Renewable Energy procured from State plants / GRIDCO for 10 years.'
     },
     {
       num: '06',
-      title: 'Concessional land allotment in industrial parks'
+      title: 'Reimbursement of Net SGST',
+      badge: '100% Net SGST Refund (Up to 200% P&M)',
+      policy: 'Odisha IPR-2022',
+      desc: 'Policy provision for 100% reimbursement of net SGST paid on sale of finished goods, with an overall ceiling of 200% of Plant & Machinery cost (and up to 300% on special priority categories).'
+    },
+    {
+      num: '07',
+      title: 'Stamp Duty Exemption & IDCO Land',
+      badge: '100% Stamp Duty Waiver | Concessional Land',
+      policy: 'Odisha IPR-2022 & IDCO',
+      desc: '100% exemption from payment of stamp duty on land/lease deed execution, and prioritized concessional land allotment across designated IDCO industrial parks and corridors.'
+    },
+    {
+      num: '08',
+      title: 'Interest Subsidies & MSME Financial Support',
+      badge: 'Term Loan Interest Relief & Tech Grants',
+      policy: 'Odisha MSME Policy & Central Schemes',
+      desc: 'Concessional interest subvention on term loans, quality certification assistance, patent registration grants, and capital subsidies for eligible MSME manufacturing enterprises.'
     }
   ];
 
@@ -758,12 +790,12 @@ export default function Consulting() {
             </h4>
           </div>
 
-          {/* 6 Grid Cards */}
+          {/* 8 Grid Cards matching official policy document */}
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
-              gap: '1.75rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
+              gap: '1.5rem',
               marginBottom: '3rem'
             }}
           >
@@ -772,19 +804,19 @@ export default function Consulting() {
                 key={idx}
                 style={{
                   backgroundColor: '#FFFFFF',
-                  borderRadius: '12px',
-                  padding: '1.75rem 1.5rem',
+                  borderRadius: '14px',
+                  padding: '1.75rem 1.6rem',
                   border: '1px solid #E2E8F0',
                   boxShadow: '0 4px 18px rgba(8, 32, 58, 0.04)',
                   display: 'flex',
-                  alignItems: 'center',
-                  gap: '1.25rem',
-                  transition: 'transform 0.25s ease, box-shadow 0.25s ease'
+                  flexDirection: 'column',
+                  gap: '0.75rem',
+                  transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.boxShadow = '0 12px 25px rgba(36, 57, 255, 0.08)';
-                  e.currentTarget.style.borderColor = '#2439ff';
+                  e.currentTarget.style.boxShadow = '0 12px 25px rgba(197, 155, 39, 0.12)';
+                  e.currentTarget.style.borderColor = '#C59B27';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'none';
@@ -792,36 +824,67 @@ export default function Consulting() {
                   e.currentTarget.style.borderColor = '#E2E8F0';
                 }}
               >
-                {/* Arrow in circle with number */}
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    color: '#6e5355',
-                    fontSize: '1.2rem',
-                    fontWeight: 800,
-                    fontFamily: "'Poppins', sans-serif",
-                    flexShrink: 0
-                  }}
-                >
-                  <ArrowRightCircle size={22} color="#6e5355" />
-                  <span>{item.num}</span>
+                {/* Header row with Number & Specific Pill Badge */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.45rem',
+                      color: '#C59B27',
+                      fontSize: '1.15rem',
+                      fontWeight: 800,
+                      fontFamily: "'Poppins', sans-serif",
+                      flexShrink: 0
+                    }}
+                  >
+                    <ArrowRightCircle size={22} color="#C59B27" />
+                    <span>{item.num}</span>
+                  </div>
+
+                  {item.badge && (
+                    <span
+                      style={{
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        color: '#0F2744',
+                        background: 'rgba(197, 155, 39, 0.1)',
+                        border: '1px solid rgba(197, 155, 39, 0.25)',
+                        padding: '0.2rem 0.6rem',
+                        borderRadius: '20px'
+                      }}
+                    >
+                      {item.badge}
+                    </span>
+                  )}
                 </div>
 
                 {/* Title */}
                 <h4
                   style={{
                     fontFamily: "'Poppins', sans-serif",
-                    fontSize: '0.95rem',
-                    fontWeight: 600,
-                    color: '#1E293B',
-                    lineHeight: 1.45,
+                    fontSize: '1.05rem',
+                    fontWeight: 700,
+                    color: '#08203A',
+                    lineHeight: 1.35,
                     margin: 0
                   }}
                 >
                   {item.title}
                 </h4>
+
+                {/* Specific Policy Provision Details from Gazette */}
+                <p
+                  style={{
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    fontSize: '0.86rem',
+                    color: '#64748B',
+                    lineHeight: 1.55,
+                    margin: 0
+                  }}
+                >
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>

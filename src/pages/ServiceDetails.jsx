@@ -37,7 +37,6 @@ export default function ServiceDetails() {
       {/* Page Banner with Dynamic Service Title */}
       <PageBanner
         title={service.title}
-        titleHighlight={service.title}
         description={service.intro}
         breadcrumbCurrent={service.title}
       />

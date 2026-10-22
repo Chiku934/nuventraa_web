@@ -257,8 +257,8 @@ export default function Consulting() {
     <div className="nuventraa-page-wrapper">
       {/* Page Banner */}
       <PageBanner
-        title="Industry Consulting"
-        titleHighlight="Industry Consulting"
+        title="Industry"
+        titleHighlight="Consulting"
         description="Technology, Policy & Investment Advisory for forward-thinking enterprises and manufacturing hubs."
         breadcrumbCurrent="Industry Consulting"
       />

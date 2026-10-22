@@ -114,7 +114,7 @@ export default function PageBanner({
             }}
           >
             {title}{' '}
-            {titleHighlight && (
+            {titleHighlight && titleHighlight.trim().toLowerCase() !== title?.trim().toLowerCase() && (
               <span 
                 style={{
                   background: 'linear-gradient(135deg, #DFB757 0%, #C59B27 50%, #9B7517 100%)',

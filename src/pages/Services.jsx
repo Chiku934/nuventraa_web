@@ -67,7 +67,7 @@ export default function Services() {
     <div className="nuventraa-page-wrapper">
       {/* Page Banner */}
       <PageBanner
-        title="Industrial Services"
+        title="Industrial"
         titleHighlight="Services"
         description="Comprehensive industrial investment advisory, regulatory licensing, government subsidies, and project execution support."
         breadcrumbCurrent="Services"

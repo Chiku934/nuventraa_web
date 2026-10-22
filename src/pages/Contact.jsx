@@ -44,8 +44,8 @@ export default function Contact() {
     <div className="nuventraa-page-wrapper">
       {/* Page Banner */}
       <PageBanner
-        title="Contact us"
-        titleHighlight="Contact us"
+        title="Contact"
+        titleHighlight="Us"
         description="Get in touch with our expert team to accelerate your industrial clearances, statutory licensing, and government subsidy claims."
         breadcrumbCurrent="Contact us"
       />

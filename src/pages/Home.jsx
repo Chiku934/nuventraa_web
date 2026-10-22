@@ -12,7 +12,6 @@ import {
   User,
   ChevronLeft,
   ChevronRight,
-  Quote,
   Calendar,
   MessageSquare,
   ExternalLink,
@@ -125,35 +124,6 @@ export default function Home() {
     ? portfolioItems
     : portfolioItems.filter(item => item.category === activeFilter);
 
-  // =========================================================================
-  // TESTIMONIALS DATA (Real Clients from Silvercrest Consulting)
-  // =========================================================================
-  const testimonials = [
-    {
-      name: 'Chirag Industries',
-      role: 'Manufacturing & Engineering',
-      quote: 'Their expertise in licensing and documentation processes streamlined our compliance efforts. We saved time and avoided costly errors across our industrial approvals.',
-      avatar: '/assets/nuventraa/grid-testimonial-03-140x140.png'
-    },
-    {
-      name: 'Highland Agro',
-      role: 'Agro & Food Processing Unit',
-      quote: 'Thanks to their detailed guidance, our licensing applications were approved quickly, and our statutory documentation is now thoroughly audit-ready and organized.',
-      avatar: '/assets/nuventraa/grid-testimonial-04-140x140.png'
-    },
-    {
-      name: 'Panda Infrastructures',
-      role: 'Industrial Infrastructure & Utilities',
-      quote: 'They provided clear, expert advice on complex licensing regulations and Single Window clearances, which made the entire process seamless for our engineering team.',
-      avatar: '/assets/nuventraa/grid-testimonial-05-140x140.png'
-    },
-    {
-      name: 'Eastern Manufacturing Hub',
-      role: 'Textiles & Apparel Cluster',
-      quote: 'Nuventraa helped us unlock maximum Capital Investment Subsidy and complete all single window and OSPCB clearances ahead of our plant commissioning schedule.',
-      avatar: '/assets/nuventraa/grid-testimonial-06-140x140.png'
-    }
-  ];
 
   // =========================================================================
   // BLOGS STATE
@@ -987,87 +957,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =========================================================================
-          SECTION 9: TESTIMONIALS (Real Client Testimonials)
-          ========================================================================= */}
-      <section className="section-full section-py" style={{ background: '#FFFFFF' }}>
-        <div className="container">
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
-              gap: '1.5rem',
-              alignItems: 'center',
-              marginBottom: '2.75rem'
-            }}
-          >
-            <div>
-              <div className="ct-sub-title style-line-right">
-                <span>Client Feedback</span>
-              </div>
-              <h2 className="nuventraa-section-title" style={{ margin: 0 }}>
-                What Industry Leaders Say
-              </h2>
-            </div>
-            <div>
-              <p style={{ fontSize: '0.94rem', color: '#64748B', lineHeight: 1.65, margin: 0 }}>
-                Trusted by manufacturing enterprises, agro-processing units, and industrial investors to navigate complex state regulations and deliver maximum approved claims.
-              </p>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
-              gap: '1.5rem'
-            }}
-          >
-            {testimonials.map((t, idx) => (
-              <div
-                key={idx}
-                className="nuventraa-card"
-                style={{
-                  padding: '2.25rem 1.75rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <div style={{ marginBottom: '1.25rem' }}>
-                  <Quote size={28} color="#2439ff" style={{ opacity: 0.8, marginBottom: '0.75rem' }} />
-                  <p style={{ fontSize: '0.88rem', color: '#334155', fontStyle: 'italic', lineHeight: 1.6, margin: 0 }}>
-                    "{t.quote}"
-                  </p>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', borderTop: '1px solid #E2E8F0', paddingTop: '1rem' }}>
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      border: '2px solid #2439ff'
-                    }}
-                  />
-                  <div>
-                    <h3 style={{ fontSize: '0.92rem', fontWeight: 800, color: '#0F1D33', margin: 0 }}>
-                      {t.name}
-                    </h3>
-                    <div style={{ fontSize: '0.72rem', color: '#9000ff', fontWeight: 700 }}>
-                      {t.role}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
       {/* =========================================================================
@@ -1084,6 +973,9 @@ export default function Home() {
               <h2 className="nuventraa-section-title" style={{ margin: 0 }}>
                 Industrial Policy, <cite className="ct-text-highlight">Subsidies</cite> &amp; Regulatory Updates
               </h2>
+              <p style={{ margin: '8px 0 0 0', color: '#64748B', fontSize: '0.96rem', maxWidth: '640px', lineHeight: 1.55 }}>
+                Authoritative policy briefings, capital subsidy roadmaps, and regulatory advisories dedicated to textile, apparel, and technical textiles manufacturing.
+              </p>
             </div>
 
             <div className="nuventraa-blog-nav-btns">
@@ -1156,6 +1048,24 @@ export default function Home() {
                           </span>
                           <span>{blog.comments}</span>
                         </div>
+                      </div>
+
+                      <div style={{ marginBottom: '8px' }}>
+                        <span
+                          style={{
+                            display: 'inline-block',
+                            fontSize: '0.72rem',
+                            fontWeight: 700,
+                            color: '#0284c7',
+                            background: 'rgba(2, 132, 199, 0.08)',
+                            border: '1px solid rgba(2, 132, 199, 0.2)',
+                            padding: '2px 8px',
+                            borderRadius: '4px',
+                            letterSpacing: '0.02em'
+                          }}
+                        >
+                          {blog.category}
+                        </span>
                       </div>
 
                       <h3 className="nuventraa-blog-title">

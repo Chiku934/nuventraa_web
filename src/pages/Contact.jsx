@@ -19,6 +19,7 @@ export default function Contact() {
     message: ''
   });
 
+  const [phoneError, setPhoneError] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -27,12 +28,34 @@ export default function Contact() {
     'Singapore', 'United Arab Emirates', 'Germany', 'Japan', 'Other'
   ];
 
+  const handlePhoneChange = (e) => {
+    // Only accept numeric digits and strictly limit to 10 digits
+    const digitsOnly = e.target.value.replace(/\D/g, '').slice(0, 10);
+    setFormData((prev) => ({ ...prev, phone: digitsOnly }));
+
+    if (digitsOnly.length === 0) {
+      setPhoneError('Mobile number is required.');
+    } else if (digitsOnly.length < 10) {
+      setPhoneError(`Please enter a complete 10-digit mobile number (${digitsOnly.length}/10 entered).`);
+    } else {
+      setPhoneError('');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       alert('Please fill in all required fields (Name, Email, Message)');
       return;
     }
+
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (!phoneDigits || phoneDigits.length !== 10) {
+      setPhoneError('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    setPhoneError('');
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
@@ -182,6 +205,7 @@ export default function Contact() {
                     onClick={() => {
                       setSubmitted(false);
                       setFormData({ name: '', email: '', phone: '', country: 'India', message: '' });
+                      setPhoneError('');
                     }}
                     className="nuventraa-submit-btn"
                   >
@@ -220,15 +244,48 @@ export default function Contact() {
 
                   <div className="nuventraa-form-row">
                     <div className="nuventraa-form-group">
-                      <label htmlFor="contact-phone">Phone</label>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
+                        <label htmlFor="contact-phone" style={{ margin: 0 }}>Mobile Number *</label>
+                        {formData.phone && (
+                          <span
+                            style={{
+                              fontSize: '0.75rem',
+                              fontWeight: 700,
+                              color: formData.phone.length === 10 ? '#10B981' : '#F59E0B'
+                            }}
+                          >
+                            {formData.phone.length}/10 digits
+                          </span>
+                        )}
+                      </div>
                       <input
                         id="contact-phone"
                         type="tel"
-                        placeholder="Your phone"
+                        inputMode="numeric"
+                        pattern="[0-9]{10}"
+                        maxLength={10}
+                        required
+                        placeholder="Enter 10-digit mobile number*"
                         className="nuventraa-form-control"
+                        style={{
+                          borderColor: phoneError ? '#EF4444' : formData.phone.length === 10 ? '#10B981' : undefined
+                        }}
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        onChange={handlePhoneChange}
                       />
+                      {phoneError && (
+                        <span
+                          style={{
+                            display: 'block',
+                            color: '#EF4444',
+                            fontSize: '0.8rem',
+                            marginTop: '0.35rem',
+                            fontWeight: 600
+                          }}
+                        >
+                          {phoneError}
+                        </span>
+                      )}
                     </div>
 
                     <div className="nuventraa-form-group">

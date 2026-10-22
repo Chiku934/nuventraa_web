@@ -8,7 +8,7 @@
   background-color: #070E28;
   background-image:
     linear-gradient(rgba(7, 14, 40, 0.88), rgba(7, 14, 40, 0.94)),
-    url("/assets/nuventraa/h3-bg-section-03.jpg");
+    url("/assets/nuventraa/industrial-cta-bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -161,6 +161,53 @@
 
 .blog-article-content p {
   margin-bottom: 1.45rem;
+}
+
+.blog-article-content .lead-text {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #1E293B;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  border-left: 3px solid #0284c7;
+  padding-left: 1.25rem;
+}
+
+.blog-article-content .blog-advisory-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #2439ff;
+  transition: all 0.2s ease;
+}
+
+.blog-article-content .blog-advisory-box:hover {
+  background: #F1F5F9;
+  box-shadow: 0 4px 12px rgba(8, 32, 58, 0.05);
+}
+
+.blog-article-content .blog-advisory-box h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 0.5rem 0;
+}
+
+.blog-article-content .blog-advisory-box p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.blog-article-content .blog-advisory-box ul,
+.blog-article-content .blog-advisory-box ol {
+  margin: 0.5rem 0 0 1.25rem;
+  padding: 0;
+  font-size: 0.96rem;
+  line-height: 1.7;
 }
 
 .blog-article-content h3,

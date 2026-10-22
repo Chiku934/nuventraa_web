@@ -74,7 +74,7 @@ export default function Navbar() {
                   display: 'inline-block'
                 }}
               />
-              <span>Nuventraa • Delivering Technology Solutions</span>
+              <span>Nuventraa • Strategic Industrial & Regulatory Advisory</span>
             </div>
 
             <span style={{ color: '#E2E8F0', display: 'none', md: 'inline' }}>|</span>

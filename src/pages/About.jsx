@@ -391,28 +391,6 @@ export default function About() {
         </div>
       </section>
 
-
-
-      {/* =========================================================================
-          SECTION 5: CLIENT RECOGNITION
-          ========================================================================= */}
-      <section className="nuventraa-clients-section" style={{ background: '#F8FAFC', padding: '2.5rem 0' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '1rem', fontSize: '0.8rem', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-            Trusted by Forward-Thinking Manufacturing Enterprises
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 'clamp(2rem, 5vw, 4rem)', flexWrap: 'wrap' }}>
-            <span style={{ fontWeight: 800, color: '#475569', fontSize: '1.1rem', letterSpacing: '-0.01em' }}>Chirag Industries</span>
-            <span style={{ color: '#CBD5E1' }}>•</span>
-            <span style={{ fontWeight: 800, color: '#475569', fontSize: '1.1rem', letterSpacing: '-0.01em' }}>Highland Agro</span>
-            <span style={{ color: '#CBD5E1' }}>•</span>
-            <span style={{ fontWeight: 800, color: '#475569', fontSize: '1.1rem', letterSpacing: '-0.01em' }}>Panda Infrastructures</span>
-            <span style={{ color: '#CBD5E1' }}>•</span>
-            <span style={{ fontWeight: 800, color: '#475569', fontSize: '1.1rem', letterSpacing: '-0.01em' }}>Kalinga Textile Hub</span>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

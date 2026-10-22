@@ -106,7 +106,7 @@ export const leadershipData = [
     name: 'CA. Manoranjan Behera',
     title: 'CA. Manoranjan Behera',
     designation: 'Chartered Accountant | Audit, Taxation, Governance & Financial Advisory',
-    domain: 'Financial Governance, Audit & Statutory Taxation',
+    domain: 'Corporate Governance, Audit & Statutory Taxation',
     tagline: 'Bringing a practical, business-focused approach to audit, taxation, corporate governance, and regulatory compliance for scaling enterprises.',
     experienceYears: '19+ Years',
     credentials: 'B.Com. | FCA | LL.B. | DISA | FAFD | Ind AS',

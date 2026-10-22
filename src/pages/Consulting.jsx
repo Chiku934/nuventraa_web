@@ -12,7 +12,11 @@ import {
   TrendingUp,
   Cog,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  BarChart3,
+  Settings,
+  Headphones,
+  Network
 } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 
@@ -23,23 +27,38 @@ export default function Consulting() {
   const engagementModels = [
     {
       title: 'Advisory & Consulting',
-      desc: 'Strategic guidance and expert insights'
+      desc: 'Strategic guidance and expert insights',
+      icon: Users,
+      bg: '#FEF3C7',
+      color: '#D97706'
     },
     {
       title: 'Program Management Support',
-      desc: 'End-to-end project execution'
+      desc: 'End-to-end project execution',
+      icon: BarChart3,
+      bg: '#E0F2FE',
+      color: '#0284C7'
     },
     {
       title: 'Technology Implementation',
-      desc: 'Deployment of digital platforms'
+      desc: 'Deployment of digital platforms',
+      icon: Settings,
+      bg: '#DCFCE7',
+      color: '#16A34A'
     },
     {
       title: 'Managed Services',
-      desc: 'Ongoing system operations and support'
+      desc: 'Ongoing system operations and support',
+      icon: Headphones,
+      bg: '#F3E8FF',
+      color: '#9333EA'
     },
     {
       title: 'Build-Operate-Transfer (BOT)',
-      desc: 'Development, operation, and capability transfer'
+      desc: 'Development, operation, and capability transfer',
+      icon: Network,
+      bg: '#FFE4E6',
+      color: '#E11D48'
     }
   ];
 
@@ -259,37 +278,30 @@ export default function Consulting() {
           ========================================================================= */}
       <section
         style={{
-          padding: 'clamp(3.5rem, 6vw, 5.5rem) 0',
+          padding: 'clamp(3.5rem, 5.5vw, 5.5rem) 0',
           backgroundColor: '#FFFFFF',
           position: 'relative',
           overflow: 'hidden'
         }}
       >
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))',
               gap: 'clamp(2.5rem, 5vw, 4.5rem)',
               alignItems: 'center'
             }}
           >
             {/* Left Content Column */}
             <div>
-              {/* Subtitle with exact wave flourish SVG */}
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-                  gap: '8px',
-                  marginBottom: '1rem'
-                }}
-              >
+              {/* Eyebrow with gold accent bar */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.85rem' }}>
+                <span style={{ width: '28px', height: '2px', background: '#DF9E1D', display: 'inline-block' }} />
                 <span
                   style={{
-                    fontFamily: "'Poppins', sans-serif",
-                    fontSize: 'clamp(0.85rem, 1.1vw, 0.98rem)',
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    fontSize: '0.85rem',
                     fontWeight: 600,
                     color: '#475569',
                     letterSpacing: '-0.01em'
@@ -297,68 +309,32 @@ export default function Consulting() {
                 >
                   Enabling Industrial Growth &amp; Government-Linked Transformation
                 </span>
-
-                {/* Nuventraa wave flourish SVG */}
-                <svg
-                  width="33"
-                  height="21"
-                  viewBox="0 0 33 21"
-                  fill="none"
-                  style={{ display: 'inline-block', flexShrink: 0 }}
-                >
-                  <path
-                    d="M-0.117,8.9 H27.036 s5.078-3.073, 0-6.517"
-                    stroke="url(#nuventraa-consult-grad)"
-                    strokeWidth="2.75"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M-9.991,14.594 H17.352 s5.114,3.027, 0,6.422"
-                    stroke="url(#nuventraa-consult-grad)"
-                    strokeWidth="2.75"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                  <defs>
-                    <linearGradient id="nuventraa-consult-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#2439ff" />
-                      <stop offset="100%" stopColor="#9000ff" />
-                    </linearGradient>
-                  </defs>
-                </svg>
               </div>
 
-              {/* Main Heading */}
+              {/* Main Heading with Playfair Display & gold Advisory highlight */}
               <h2
                 style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 'clamp(2.2rem, 4vw, 3.25rem)',
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: 'clamp(2.5rem, 4vw, 3.6rem)',
                   fontWeight: 800,
-                  color: '#08203A',
-                  lineHeight: 1.18,
+                  color: '#0A1C33',
+                  lineHeight: 1.15,
                   margin: '0 0 1.5rem 0',
                   letterSpacing: '-0.02em'
                 }}
               >
-                Technology, Policy &amp; Investment<br />
-                <span
-                  style={{
-                    color: '#6e5355',
-                    display: 'inline-block',
-                    position: 'relative'
-                  }}
-                >
-                  Advisory
-                </span>
+                Technology, Policy &amp;<br />
+                <span style={{ color: '#0A1C33' }}>Investment </span>
+                <span style={{ color: '#DF9E1D' }}>Advisory</span>
               </h2>
 
               {/* Paragraph 1 */}
               <p
                 style={{
-                  fontSize: '1.025rem',
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontSize: '1rem',
                   color: '#4B5563',
-                  lineHeight: 1.75,
+                  lineHeight: 1.72,
                   marginBottom: '1.25rem'
                 }}
               >
@@ -368,9 +344,10 @@ export default function Consulting() {
               {/* Paragraph 2 */}
               <p
                 style={{
-                  fontSize: '1.025rem',
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontSize: '1rem',
                   color: '#4B5563',
-                  lineHeight: 1.75,
+                  lineHeight: 1.72,
                   margin: 0
                 }}
               >
@@ -378,7 +355,7 @@ export default function Consulting() {
               </p>
             </div>
 
-            {/* Right Column: Illustration Graphic from Screenshot */}
+            {/* Right Column: High-Res Framed Illustration Graphic matching Mockup */}
             <div
               style={{
                 display: 'flex',
@@ -388,15 +365,14 @@ export default function Consulting() {
               }}
             >
               <img
-                src="/assets/nuventraa/industry-consulting-illustration.png"
-                alt="Technology, Policy & Investment Advisory Illustration"
+                src="/assets/nuventraa/tech-policy-advisory-graphic.png"
+                alt="Technology, Policy & Investment Advisory"
                 style={{
                   width: '100%',
-                  maxWidth: '580px',
+                  maxWidth: '620px',
                   height: 'auto',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 35px rgba(8, 32, 58, 0.08))',
-                  display: 'block'
+                  display: 'block',
+                  objectFit: 'contain'
                 }}
               />
             </div>
@@ -1002,78 +978,209 @@ export default function Consulting() {
       {/* =========================================================================
           SECTION 7: ENGAGEMENT MODELS (EXACT SCREENSHOT MATCH)
           ========================================================================= */}
+      {/* =========================================================================
+          SECTION 7: ENGAGEMENT MODELS (EXACT SCREENSHOT MATCH)
+          ========================================================================= */}
       <section
         style={{
-          padding: 'clamp(4.5rem, 6.5vw, 6.5rem) 0',
+          padding: 'clamp(3rem, 5vw, 4.5rem) 0',
           backgroundColor: '#FFFFFF',
           position: 'relative',
           overflow: 'hidden'
         }}
       >
-        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div className="container" style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))',
               gap: 'clamp(2.5rem, 5vw, 4.5rem)',
               alignItems: 'center'
             }}
           >
-            {/* Left Column: Engagement Models Graphic */}
+            {/* Left Column: Asymmetrical Executive Graphic Frame matching Screenshot */}
             <div
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative'
+                position: 'relative',
+                maxWidth: '600px',
+                width: '100%',
+                margin: '0 auto'
               }}
             >
-              <img
-                src="/assets/nuventraa/engagement-models-illustration.png"
-                alt="Engagement Models Illustration"
+              {/* Amber Curve Tab at Top-Left */}
+              <div
                 style={{
-                  width: '100%',
-                  maxWidth: '560px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 35px rgba(8, 32, 58, 0.08))',
-                  display: 'block'
+                  position: 'absolute',
+                  top: '-18px',
+                  left: '16px',
+                  width: '190px',
+                  height: '65px',
+                  background: '#DF9E1D',
+                  borderRadius: '32px 32px 0 0',
+                  zIndex: 1
                 }}
               />
+
+              {/* Top-Center Gold Dot Grid */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '-32px',
+                  left: '52%',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 5px)',
+                  gap: '14px',
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              >
+                {Array.from({ length: 20 }).map((_, i) => (
+                  <span
+                    key={i}
+                    style={{
+                      width: '5px',
+                      height: '5px',
+                      borderRadius: '50%',
+                      background: '#DF9E1D',
+                      opacity: 0.45
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Top-Right Golden Outline Contour */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '-14px',
+                  right: '-16px',
+                  width: '64%',
+                  height: '64%',
+                  borderTop: '2px solid #F6D88E',
+                  borderRight: '2px solid #F6D88E',
+                  borderTopRightRadius: '140px',
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              />
+
+              {/* Bottom-Left Gold Dot Grid */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '-28px',
+                  left: '24px',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 5px)',
+                  gap: '14px',
+                  zIndex: 1,
+                  pointerEvents: 'none'
+                }}
+              >
+                {Array.from({ length: 20 }).map((_, i) => (
+                  <span
+                    key={i}
+                    style={{
+                      width: '5px',
+                      height: '5px',
+                      borderRadius: '50%',
+                      background: '#DF9E1D',
+                      opacity: 0.45
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Bottom Golden Accent Line */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '-14px',
+                  left: '42%',
+                  width: '48%',
+                  height: '2px',
+                  background: '#DF9E1D',
+                  zIndex: 1
+                }}
+              />
+
+              {/* Main Photo with Asymmetrical Curved Corners (32px / 130px) */}
+              <div
+                style={{
+                  position: 'relative',
+                  zIndex: 2,
+                  width: '100%',
+                  borderRadius: '32px 130px 32px 32px',
+                  overflow: 'hidden',
+                  boxShadow: '0 25px 60px -15px rgba(8, 32, 58, 0.2), 0 10px 25px -10px rgba(0, 0, 0, 0.08)',
+                  border: '4px solid #FFFFFF'
+                }}
+              >
+                <img
+                  src="/assets/nuventraa/consulting-engagement-models.jpg"
+                  alt="Nuventraa Industrial Consulting & Engagement Models"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
             </div>
 
             {/* Right Column: Heading, Subtitle & 5 Models List */}
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              {/* Eyebrow with gold accent bar */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.25rem' }}>
+                <span style={{ width: '26px', height: '2px', background: '#DF9E1D', display: 'inline-block' }} />
+                <span
+                  style={{
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    fontSize: '0.74rem',
+                    fontWeight: 700,
+                    color: '#475569',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  ENABLING INDUSTRIAL GROWTH
+                </span>
+              </div>
+
+              {/* Serif Headline matching Image */}
               <h2
                 style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 'clamp(2.2rem, 3.8vw, 2.9rem)',
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: 'clamp(2.1rem, 3.2vw, 2.75rem)',
                   fontWeight: 800,
-                  color: '#08203A',
-                  lineHeight: 1.2,
-                  margin: '0 0 1rem 0',
+                  lineHeight: 1.05,
+                  margin: '0 0 0.5rem 0',
                   letterSpacing: '-0.02em'
                 }}
               >
-                Engagement Models
+                <span style={{ color: '#0A1C33', display: 'block' }}>Engagement</span>
+                <span style={{ color: '#DF9E1D', display: 'block' }}>Models</span>
               </h2>
 
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 'clamp(1rem, 1.2vw, 1.075rem)',
-                  color: '#475569',
-                  lineHeight: 1.7,
-                  margin: '0 0 2rem 0'
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontSize: '0.86rem',
+                  color: '#64748B',
+                  lineHeight: 1.45,
+                  margin: '0 0 0.85rem 0',
+                  maxWidth: '540px'
                 }}
               >
-                Nuventraa offers <strong style={{ color: '#08203A', fontWeight: 700 }}>flexible engagement models</strong> for both digital transformation and industrial initiatives.
+                Nuventraa offers <strong style={{ color: '#08203A', fontWeight: 700 }}>flexible</strong> engagement models for both digital transformation and industrial initiatives.
               </p>
 
-              {/* List of 5 items */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
+              {/* 5 Distinct Engagement Models with Colored Round Badges & Separator Lines */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {engagementModels.map((item, idx) => {
                   const isHovered = hoveredEngagement === idx;
+                  const IconComponent = item.icon;
                   return (
                     <div
                       key={idx}
@@ -1081,55 +1188,60 @@ export default function Consulting() {
                       onMouseLeave={() => setHoveredEngagement(null)}
                       style={{
                         display: 'flex',
-                        alignItems: 'flex-start',
-                        gap: '14px',
-                        padding: '8px 12px',
-                        borderRadius: '10px',
-                        backgroundColor: isHovered ? 'rgba(36, 57, 255, 0.04)' : 'transparent',
-                        transform: isHovered ? 'translateX(6px)' : 'none',
-                        transition: 'all 0.25s ease'
+                        alignItems: 'center',
+                        gap: '0.95rem',
+                        padding: '0.45rem 0.35rem',
+                        borderBottom: idx === engagementModels.length - 1 ? 'none' : '1px solid #EEF2F6',
+                        borderRadius: '6px',
+                        backgroundColor: isHovered ? 'rgba(223, 158, 29, 0.04)' : 'transparent',
+                        transform: isHovered ? 'translateX(4px)' : 'none',
+                        transition: 'all 0.2s ease',
+                        cursor: 'pointer'
                       }}
                     >
-                      {/* Circular arrow icon matching far fa-arrow-alt-circle-right */}
+                      {/* Circular Color-Coded Icon Badge */}
                       <div
                         style={{
+                          width: '40px',
+                          height: '40px',
+                          borderRadius: '50%',
+                          backgroundColor: item.bg,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
                           flexShrink: 0,
-                          width: '24px',
-                          height: '24px',
-                          marginTop: '2px',
-                          color: isHovered ? '#2439ff' : '#475569',
-                          transition: 'color 0.25s ease'
+                          boxShadow: isHovered ? '0 3px 8px rgba(0, 0, 0, 0.06)' : 'none',
+                          transition: 'all 0.2s ease'
                         }}
                       >
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <circle cx="12" cy="12" r="10" />
-                          <polyline points="12 16 16 12 12 8" />
-                          <line x1="8" y1="12" x2="16" y2="12" />
-                        </svg>
+                        <IconComponent size={19} color={item.color} strokeWidth={2.2} />
                       </div>
 
-                      <div
-                        style={{
-                          fontFamily: "'Inter', sans-serif",
-                          fontSize: 'clamp(0.95rem, 1.15vw, 1.025rem)',
-                          lineHeight: 1.6,
-                          color: '#475569'
-                        }}
-                      >
-                        <strong style={{ color: isHovered ? '#2439ff' : '#08203A', fontWeight: 700, transition: 'color 0.25s ease' }}>
+                      {/* Title & Description */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                        <h4
+                          style={{
+                            fontFamily: "'Plus Jakarta Sans', sans-serif",
+                            fontSize: '0.94rem',
+                            fontWeight: 700,
+                            color: '#08203A',
+                            margin: 0,
+                            lineHeight: 1.25
+                          }}
+                        >
                           {item.title}
-                        </strong>
-                        {' – '}
-                        <span>{item.desc}</span>
+                        </h4>
+                        <p
+                          style={{
+                            fontFamily: "'Plus Jakarta Sans', sans-serif",
+                            fontSize: '0.8rem',
+                            color: '#64748B',
+                            margin: 0,
+                            lineHeight: 1.3
+                          }}
+                        >
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
                   );

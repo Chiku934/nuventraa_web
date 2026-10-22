@@ -741,7 +741,7 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 8: SECTORAL ADVISORY & FINANCIAL GOVERNANCE LEADERSHIP
+          SECTION 8: SECTORAL ADVISORY & Corporate Governance LEADERSHIP
           ========================================================================= */}
       <section
         className="section-full"
@@ -776,7 +776,7 @@ export default function Home() {
               }}
             >
               <Sparkles size={12} color="#C59B27" />
-              <span>Institutional Policy &amp; Financial Governance</span>
+              <span>Institutional Policy &amp; Corporate Governance</span>
             </div>
 
             <h2

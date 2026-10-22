@@ -46,11 +46,11 @@ export default function Contact() {
       <PageBanner
         title="Contact us"
         titleHighlight="Contact us"
-        description="Get in touch with our expert team to accelerate your business with enterprise software solutions."
+        description="Get in touch with our expert team to accelerate your industrial clearances, statutory licensing, and government subsidy claims."
         breadcrumbCurrent="Contact us"
       />
 
-      {/* Main Section: Grow Your Business With Our Expertise */}
+      {/* Main Section: Accelerate Your Industrial Approvals */}
       <section className="nuventraa-contact-section">
         <div className="container">
           {/* Section Header */}
@@ -69,7 +69,7 @@ export default function Contact() {
               }}
             >
               <span>═</span>
-              <span>Contact us</span>
+              <span>Industrial Advisory Consultation</span>
               <span>═</span>
             </div>
 
@@ -83,7 +83,7 @@ export default function Contact() {
                 margin: '0.35rem 0 0.85rem 0'
               }}
             >
-              Grow Your Business With{' '}
+              Accelerate Your{' '}
               <span
                 style={{
                   background: 'linear-gradient(90deg, #2439ff 0%, #9000ff 100%)',
@@ -92,12 +92,12 @@ export default function Contact() {
                   display: 'inline-block'
                 }}
               >
-                Our Expertise
+                Industrial Clearances
               </span>
             </h2>
 
-            <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.6, margin: 0, maxWidth: '640px' }}>
-              We understand the importance of approaching each work integrally and believe in the power of simple.
+            <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.6, margin: 0, maxWidth: '680px' }}>
+              Speak directly with our senior industrial consultants regarding Single Window clearances (GO-SWIFT/IPICOL), OSPCB environmental licensing, DPR preparation, and state subsidy realization.
             </p>
           </div>
 

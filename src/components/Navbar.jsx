@@ -6,7 +6,6 @@ import {
   Menu,
   X,
   MapPin,
-  ChevronDown,
   ShieldCheck,
   Send
 } from 'lucide-react';
@@ -14,7 +13,6 @@ import {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [consultingOpen, setConsultingOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -27,22 +25,13 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setConsultingOpen(false);
   }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About us', path: '/about' },
     { name: 'Services', path: '/services' },
-    {
-      name: 'Consulting',
-      path: '/consulting',
-      hasDropdown: true,
-      submenu: [
-        { name: 'Industry Consulting', path: '/consulting' },
-        { name: 'Software Consulting', path: '/software-consulting' }
-      ]
-    },
+    { name: 'Industry Consulting', path: '/consulting' },
     { name: 'Contact us', path: '/contact' },
   ];
 
@@ -192,144 +181,46 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <nav style={{ display: 'none', alignItems: 'center', gap: '0.35rem' }} className="desktop-nav">
-            {navLinks.map((link) => {
-              if (link.hasDropdown) {
-                return (
-                  <div
-                    key={link.name}
-                    style={{ position: 'relative' }}
-                    className="nav-dropdown-wrapper"
-                    onMouseEnter={() => setConsultingOpen(true)}
-                    onMouseLeave={() => setConsultingOpen(false)}
-                  >
-                    <NavLink
-                      to={link.path}
-                      style={({ isActive }) => ({
-                        padding: '0.45rem 0.85rem',
-                        fontSize: '0.875rem',
-                        fontWeight: isActive ? 700 : 500,
-                        color: isActive ? '#0F2744' : '#475569',
-                        borderRadius: '0.4rem',
-                        position: 'relative',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.3rem',
-                        textDecoration: 'none',
-                        transition: 'all 0.2s ease',
-                        letterSpacing: '-0.01em',
-                      })}
-                    >
-                      {({ isActive }) => (
-                        <>
-                          <span>{link.name}</span>
-                          <ChevronDown size={14} style={{ transition: 'transform 0.2s ease', transform: consultingOpen ? 'rotate(180deg)' : 'none' }} />
-                          {isActive ? (
-                            <span
-                              style={{
-                                position: 'absolute',
-                                bottom: '-0.1rem',
-                                left: '50%',
-                                transform: 'translateX(-50%)',
-                                height: '2px',
-                                width: '60%',
-                                background: 'linear-gradient(90deg, #E6C265, #C59B27)',
-                                borderRadius: '999px',
-                              }}
-                            />
-                          ) : null}
-                        </>
-                      )}
-                    </NavLink>
-
-                    {/* Dropdown Menu */}
-                    {consultingOpen && (
-                      <div
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                style={({ isActive }) => ({
+                  padding: '0.45rem 0.85rem',
+                  fontSize: '0.875rem',
+                  fontWeight: isActive ? 700 : 500,
+                  color: isActive ? '#0F2744' : '#475569',
+                  borderRadius: '0.4rem',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s ease',
+                  letterSpacing: '-0.01em',
+                })}
+              >
+                {({ isActive }) => (
+                  <>
+                    <span>{link.name}</span>
+                    {isActive ? (
+                      <span
                         style={{
                           position: 'absolute',
-                          top: '100%',
-                          left: 0,
-                          minWidth: '210px',
-                          background: '#FFFFFF',
-                          borderRadius: '0.5rem',
-                          boxShadow: '0 12px 30px rgba(0, 0, 0, 0.12)',
-                          border: '1px solid rgba(226, 232, 240, 0.9)',
-                          padding: '0.5rem 0',
-                          zIndex: 1100,
-                          animation: 'fadeInUp 0.2s ease'
+                          bottom: '-0.1rem',
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          height: '2px',
+                          width: '60%',
+                          background: 'linear-gradient(90deg, #E6C265, #C59B27)',
+                          borderRadius: '999px',
                         }}
-                      >
-                        {link.submenu.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            to={sub.path}
-                            style={{
-                              display: 'block',
-                              padding: '0.55rem 1.15rem',
-                              fontSize: '0.85rem',
-                              fontWeight: 600,
-                              color: '#1E293B',
-                              textDecoration: 'none',
-                              transition: 'all 0.15s ease'
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.backgroundColor = '#F8FAFC';
-                              e.currentTarget.style.color = '#2439ff';
-                              e.currentTarget.style.paddingLeft = '1.35rem';
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.backgroundColor = 'transparent';
-                              e.currentTarget.style.color = '#1E293B';
-                              e.currentTarget.style.paddingLeft = '1.15rem';
-                            }}
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-
-              return (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  style={({ isActive }) => ({
-                    padding: '0.45rem 0.85rem',
-                    fontSize: '0.875rem',
-                    fontWeight: isActive ? 700 : 500,
-                    color: isActive ? '#0F2744' : '#475569',
-                    borderRadius: '0.4rem',
-                    position: 'relative',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textDecoration: 'none',
-                    transition: 'color 0.2s ease',
-                    letterSpacing: '-0.01em',
-                  })}
-                >
-                  {({ isActive }) => (
-                    <>
-                      <span>{link.name}</span>
-                      {isActive ? (
-                        <span
-                          style={{
-                            position: 'absolute',
-                            bottom: '-0.1rem',
-                            height: '2px',
-                            width: '55%',
-                            background: 'linear-gradient(90deg, #E6C265, #C59B27)',
-                            borderRadius: '999px',
-                          }}
-                        />
-                      ) : null}
-                    </>
-                  )}
-                </NavLink>
-              );
-            })}
+                      />
+                    ) : null}
+                  </>
+                )}
+              </NavLink>
+            ))}
           </nav>
 
           {/* Right Action Button: Get A Quote */}
@@ -388,81 +279,28 @@ export default function Navbar() {
             }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-              {navLinks.map((link) => {
-                if (link.hasDropdown) {
-                  return (
-                    <div key={link.name} style={{ display: 'flex', flexDirection: 'column' }}>
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'space-between',
-                          padding: '0.65rem 0.85rem',
-                          borderRadius: '0.5rem',
-                          color: '#0F2744',
-                          fontWeight: 600,
-                          fontSize: '0.925rem'
-                        }}
-                      >
-                        <NavLink
-                          to={link.path}
-                          onClick={() => setMobileMenuOpen(false)}
-                          style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                          {link.name}
-                        </NavLink>
-                        <ChevronDown
-                          size={16}
-                          onClick={() => setConsultingOpen(!consultingOpen)}
-                          style={{ cursor: 'pointer', transform: consultingOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
-                        />
-                      </div>
-                      {consultingOpen && (
-                        <div style={{ paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                          {link.submenu.map((sub) => (
-                            <NavLink
-                              key={sub.name}
-                              to={sub.path}
-                              onClick={() => setMobileMenuOpen(false)}
-                              style={{
-                                padding: '0.45rem 0.75rem',
-                                fontSize: '0.85rem',
-                                color: '#475569',
-                                textDecoration: 'none'
-                              }}
-                            >
-                              • {sub.name}
-                            </NavLink>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-
-                return (
-                  <NavLink
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setMobileMenuOpen(false)}
-                    style={({ isActive }) => ({
-                      padding: '0.65rem 0.85rem',
-                      fontSize: '0.925rem',
-                      fontWeight: isActive ? 700 : 500,
-                      color: isActive ? '#0F2744' : '#334155',
-                      borderRadius: '0.5rem',
-                      background: isActive ? '#FAF6EE' : 'transparent',
-                      borderLeft: isActive ? '3px solid #C59B27' : '3px solid transparent',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      textDecoration: 'none'
-                    })}
-                  >
-                    <span>{link.name}</span>
-                  </NavLink>
-                );
-              })}
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={({ isActive }) => ({
+                    padding: '0.65rem 0.85rem',
+                    fontSize: '0.925rem',
+                    fontWeight: isActive ? 700 : 500,
+                    color: isActive ? '#0F2744' : '#334155',
+                    borderRadius: '0.5rem',
+                    background: isActive ? '#FAF6EE' : 'transparent',
+                    borderLeft: isActive ? '3px solid #C59B27' : '3px solid transparent',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textDecoration: 'none'
+                  })}
+                >
+                  <span>{link.name}</span>
+                </NavLink>
+              ))}
 
               <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid #E2E8F0' }}>
                 <a

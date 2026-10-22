@@ -188,7 +188,7 @@ export default function Footer() {
               </Link>
               <Link to="/consulting" className="footer-link-exact">
                 <span style={{ color: '#C59B27', fontWeight: 800, marginRight: '0.45rem', fontSize: '0.9rem' }}>&rarr;</span>
-                <span>Consulting</span>
+                <span>Industry Consulting</span>
               </Link>
               <Link to="/contact" className="footer-link-exact">
                 <span style={{ color: '#C59B27', fontWeight: 800, marginRight: '0.45rem', fontSize: '0.9rem' }}>&rarr;</span>
@@ -214,29 +214,29 @@ export default function Footer() {
             <div style={{ width: '26px', height: '1.5px', background: '#C59B27', marginBottom: '0.75rem' }} />
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-              <Link to="/services" className="footer-service-exact">
+              <Link to="/service/industrial-investment-policy-advisory" className="footer-service-exact">
                 <FileText size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>Custom Software Dev</span>
+                <span>Industrial Policy Advisory</span>
               </Link>
-              <Link to="/services" className="footer-service-exact">
+              <Link to="/service/regulatory-incentive-enablement" className="footer-service-exact">
                 <Settings size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>Industry-Specific Solutions</span>
+                <span>Incentives & Subsidies (CIS)</span>
               </Link>
-              <Link to="/services" className="footer-service-exact">
+              <Link to="/service/project-consultancy-planning" className="footer-service-exact">
                 <Landmark size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>Co-operative Software</span>
+                <span>Project Consultancy & DPR</span>
               </Link>
-              <Link to="/services" className="footer-service-exact">
+              <Link to="/service/environmental-operational-licensing" className="footer-service-exact">
                 <Leaf size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>ERP Development</span>
+                <span>Environmental (OSPCB CTE/CTO)</span>
               </Link>
-              <Link to="/services" className="footer-service-exact">
+              <Link to="/service/factory-statutory-compliance" className="footer-service-exact">
                 <ShieldCheck size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>Learning Management (LMS)</span>
+                <span>Boiler & Factory Licensing</span>
               </Link>
-              <Link to="/consulting" className="footer-service-exact">
+              <Link to="/service/infrastructure-utility-clearances" className="footer-service-exact">
                 <Users size={14} color="#C59B27" style={{ flexShrink: 0 }} />
-                <span>Consulting & Maintenance</span>
+                <span>Infrastructure & IDCO Land</span>
               </Link>
             </div>
           </div>

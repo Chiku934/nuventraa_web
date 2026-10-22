@@ -20,7 +20,14 @@ import {
   Check,
   TrendingUp,
   Layers,
-  Briefcase
+  Briefcase,
+  Factory,
+  Banknote,
+  Workflow,
+  Building2,
+  FileCheck2,
+  Flame,
+  Zap
 } from 'lucide-react';
 import './NuventraaHomepage.css';
 import { blogsData } from '../data/blogs';
@@ -31,16 +38,16 @@ export default function Home() {
   // =========================================================================
   const heroGallerySlides = [
     {
-      img: '/assets/nuventraa/modern-equipped-computer-lab-scaled-840x630.jpg',
-      title: 'Modern Equipped Technology Lab'
+      img: '/assets/textile-plant.jpg',
+      title: 'Textile & Manufacturing Ecosystems'
     },
     {
-      img: '/assets/nuventraa/portrait-happy-young-colleagues-using-digital-tablet-scaled-840x630.jpg',
-      title: 'Young Tech Specialists & Engineers'
+      img: '/assets/consulting-boardroom.jpg',
+      title: 'Strategic Policy & Investment Advisory'
     },
     {
-      img: '/assets/nuventraa/pexels-rdne-7580710-scaled-840x630.jpg',
-      title: 'Digital Enterprise Development'
+      img: '/assets/heavy-steel-plant.jpg',
+      title: 'Industrial Infrastructure & Operational Clearances'
     }
   ];
 
@@ -55,29 +62,6 @@ export default function Home() {
 
 
   // =========================================================================
-  // SECTION 2: CONSULTING SERVICES GALLERY STATE
-  // =========================================================================
-  const serviceThumbs = [
-    {
-      id: 1,
-      img: '/assets/nuventraa/smiling-business-lady-working-with-colleagues-scaled-840x630.jpg',
-      alt: 'Smiling Business Lady Working with Colleagues'
-    },
-    {
-      id: 2,
-      img: '/assets/nuventraa/executives-preparing-meeting-scaled-840x630.jpg',
-      alt: 'Networking together'
-    },
-    {
-      id: 3,
-      img: '/assets/nuventraa/corporate-businessmen-working-tablet-office-scaled-840x630.jpg',
-      alt: 'Corporate businessmen working on tablet at office'
-    }
-  ];
-
-  const [activeServiceImg, setActiveServiceImg] = useState('/assets/nuventraa/portrait-happy-young-colleagues-using-digital-tablet-scaled-840x630.jpg');
-
-  // =========================================================================
   // CASE STUDIES FILTER STATE
   // =========================================================================
   const [activeFilter, setActiveFilter] = useState('all');
@@ -85,51 +69,51 @@ export default function Home() {
   const portfolioItems = [
     {
       id: 1,
-      title: 'Product Engineering',
-      category: 'engineering',
-      categoryLabel: 'Product Engineering',
-      image: '/assets/nuventraa/image-1-600x568.jpg',
-      desc: 'Scalable software architecture, modern microservices, and end-to-end digital platform development.'
+      title: 'Capital Investment Subsidy (CIS)',
+      category: 'subsidies',
+      categoryLabel: 'Subsidies & Claims',
+      image: '/assets/textile-plant.jpg',
+      desc: 'Fixed capital realization on Plant & Machinery for manufacturing units under Odisha IPR-2022 & OATTP-2022.'
     },
     {
       id: 2,
-      title: 'Firewall Advance',
-      category: 'cyber',
-      categoryLabel: 'Cyber Security',
-      image: '/assets/nuventraa/image-600x373.jpg',
-      desc: 'Robust threat detection, perimeter firewall protection, and enterprise compliance monitoring.'
+      title: 'Environmental Consents (CTE & CTO)',
+      category: 'licensing',
+      categoryLabel: 'Environmental',
+      image: '/assets/spcb-environmental.jpg',
+      desc: 'Comprehensive State Pollution Control Board (OSPCB) clearances from site vetting through stack monitoring to operational consent.'
     },
     {
       id: 3,
-      title: 'Data Management',
-      category: 'cloud',
-      categoryLabel: 'Cloud Services',
-      image: '/assets/nuventraa/image-2-600x568.jpg',
-      desc: 'Structured database management, continuous cloud synchronization, and enterprise governance.'
+      title: 'Single Window Approvals (GO-SWIFT)',
+      category: 'singlewindow',
+      categoryLabel: 'Single Window',
+      image: '/assets/consulting-boardroom.jpg',
+      desc: 'Facilitation across District (DLSWCA) and State (SLSWCA/HLCA) Single Window Committees via IPICOL and IDCO.'
     },
     {
       id: 4,
-      title: 'Big Data & Analytics',
-      category: 'cloud',
-      categoryLabel: 'Cloud Services',
-      image: '/assets/nuventraa/image-3-600x504.jpg',
-      desc: 'Real-time telemetry, predictive reporting dashboards, and large-scale analytical processing.'
+      title: 'Textile Sector Infrastructure',
+      category: 'sectoral',
+      categoryLabel: 'Sectoral Advisory',
+      image: '/assets/agro-plant.jpg',
+      desc: 'OATTP-2022 policy structuring, concessional land allocation, and fiscal incentive claims for modern garment parks.'
     },
     {
       id: 5,
-      title: 'Research & Energy',
-      category: 'networking',
-      categoryLabel: 'Networking',
-      image: '/assets/nuventraa/image-4-600x373.jpg',
-      desc: 'Connected IoT sensor frameworks, industrial energy monitoring, and telemetry network topology.'
+      title: 'Boiler & Factory Statutory Compliance',
+      category: 'licensing',
+      categoryLabel: 'Statutory Licensing',
+      image: '/assets/boiler-plant.jpg',
+      desc: 'Labour & ESI clearances, hydraulic testing coordination, and factory layout approvals under the Boilers Act.'
     },
     {
       id: 6,
-      title: 'Warranty Management',
-      category: 'security',
-      categoryLabel: 'IT Security',
-      image: '/assets/nuventraa/theme4-600x373.jpg',
-      desc: 'Automated service lifecycle management, digital claim verification, and lifecycle auditing.'
+      title: 'Net SGST & Power Tariff Relief',
+      category: 'subsidies',
+      categoryLabel: 'Subsidies & Claims',
+      image: '/assets/solar-park.jpg',
+      desc: 'Multi-year fiscal tax reimbursements (up to 100% Net SGST) and electrical duty waivers for active industrial plants.'
     }
   ];
 
@@ -138,40 +122,39 @@ export default function Home() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   // =========================================================================
-  // TESTIMONIALS DATA
+  // TESTIMONIALS DATA (Real Clients from Silvercrest Consulting)
   // =========================================================================
   const testimonials = [
     {
-      name: 'WALE OWESINI',
-      role: 'LEGAL SOFTNG',
-      quote: 'With frequent follow-ups and timely intervention, the final product was satisfying. I appreciate the tech team for incorporating everything in the right frame & place.',
+      name: 'Chirag Industries',
+      role: 'Manufacturing & Engineering',
+      quote: 'Their expertise in licensing and documentation processes streamlined our compliance efforts. We saved time and avoided costly errors across our industrial approvals.',
       avatar: '/assets/nuventraa/grid-testimonial-03-140x140.png'
     },
     {
-      name: 'SACHETAK',
-      role: 'BMC Office (Bhubaneswar Municipal Corporation)',
-      quote: 'Sachetak App is truly a friend for the elderly and people with comorbid conditions. A glance at its features tells how easy-to-use it has been made for everyone.',
+      name: 'Highland Agro',
+      role: 'Agro & Food Processing Unit',
+      quote: 'Thanks to their detailed guidance, our licensing applications were approved quickly, and our statutory documentation is now thoroughly audit-ready and organized.',
       avatar: '/assets/nuventraa/grid-testimonial-04-140x140.png'
     },
     {
-      name: 'SESHADEVA PANDA',
-      role: 'PROPERTYCUBES',
-      quote: "Nuventraa' team has done a phenomenal job in creating an apt website for our real estate business. They provide constant marketing support as well.",
+      name: 'Panda Infrastructures',
+      role: 'Industrial Infrastructure & Utilities',
+      quote: 'They provided clear, expert advice on complex licensing regulations and Single Window clearances, which made the entire process seamless for our engineering team.',
       avatar: '/assets/nuventraa/grid-testimonial-05-140x140.png'
     },
     {
-      name: 'MUNYANGANE OSCAR',
-      role: 'TIPTAP DELIVERY',
-      quote: 'For a smart business solution, this easy-to-use and robust app designed by Nuventraa is a pitch-perfect product. A quick turnaround has benefited our business during this Covid time.',
+      name: 'Eastern Manufacturing Hub',
+      role: 'Textiles & Apparel Cluster',
+      quote: 'Nuventraa helped us unlock maximum Capital Investment Subsidy and complete all single window and OSPCB clearances ahead of our plant commissioning schedule.',
       avatar: '/assets/nuventraa/grid-testimonial-06-140x140.png'
     }
   ];
 
   // =========================================================================
-  // SECTION 9: 9 BLOG POSTS DATA & CAROUSEL SLIDER STATE
+  // BLOGS STATE
   // =========================================================================
-  const blogPosts = blogsData;
-
+  const blogPosts = blogsData || [];
   const [blogSlideIndex, setBlogSlideIndex] = useState(0);
   const [blogSlidesToShow, setBlogSlidesToShow] = useState(3);
   const [isBlogHovered, setIsBlogHovered] = useState(false);
@@ -201,7 +184,6 @@ export default function Home() {
     setBlogSlideIndex((prev) => (prev <= 0 ? maxBlogIndex : prev - 1));
   };
 
-  // Autoplay with pause on hover
   useEffect(() => {
     if (isBlogHovered) return;
     const timer = setInterval(() => {
@@ -214,7 +196,7 @@ export default function Home() {
     <div style={{ background: '#FFFFFF', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
 
       {/* =========================================================================
-          SECTION 1: HERO SECTION (Exact 2-Column Layout with High-Tech Circuit BG)
+          SECTION 1: HERO SECTION
           ========================================================================= */}
       <section
         className="section-full nuventraa-hero-section"
@@ -227,7 +209,6 @@ export default function Home() {
           overflow: 'hidden'
         }}
       >
-        {/* Subtle Opacity Circuit Background Layer */}
         <div
           className="nuventraa-hero-bg-layer"
           style={{
@@ -237,7 +218,7 @@ export default function Home() {
             backgroundSize: 'cover',
             backgroundPosition: 'center right',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.72,
+            opacity: 0.5,
             zIndex: 0,
             pointerEvents: 'none'
           }}
@@ -252,10 +233,10 @@ export default function Home() {
               alignItems: 'center'
             }}
           >
-            {/* Left Column: Heading, Subtitle, and Buttons */}
+            {/* Left Column */}
             <div>
               <div className="ct-sub-title style-line-right">
-                <span>Welcome to Nuventraa Softtech</span>
+                <span>Industrial &amp; Policy Advisory Partner</span>
               </div>
 
               <h1
@@ -266,8 +247,8 @@ export default function Home() {
                   marginBottom: '1.25rem'
                 }}
               >
-                Building <cite className="ct-text-highlight">Reliable Solutions</cite><br />
-                for Real Business Needs
+                Enabling <cite className="ct-text-highlight">Industrial Growth</cite><br />
+                &amp; Government-Linked Transformation
               </h1>
 
               <p
@@ -279,44 +260,25 @@ export default function Home() {
                   marginBottom: '2.25rem'
                 }}
               >
-                Customized &amp; Scalable Solutions that simplify operations, improve efficiency, and grow with your business.
+                Operating at the intersection of technology, policy, and execution. We guide enterprises through single-window clearances, statutory environmental licensing, and government incentive realization.
               </p>
 
-              {/* Action Buttons (side by side with plus icons) */}
+              {/* Action Buttons */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem', flexWrap: 'wrap' }}>
-                <Link to="/about" className="ct-btn-secondary">
-                  <span>About Us</span>
+                <Link to="/consulting" className="ct-btn-primary">
+                  <span>Explore Advisory</span>
                   <Plus size={16} />
                 </Link>
 
-                <Link to="/services" className="ct-btn-primary">
+                <Link to="/services" className="ct-btn-secondary">
                   <span>Our Services</span>
                   <Plus size={16} />
                 </Link>
               </div>
             </div>
 
-            {/* Right Column: Carousel with Floating Particle Shape */}
+            {/* Right Column: Carousel */}
             <div style={{ position: 'relative' }}>
-              {/* Floating Shape from nuventraa.com (h3-shape1.png) */}
-              <div
-                className="shape-animate5"
-                style={{
-                  position: 'absolute',
-                  top: '-32px',
-                  left: '-28px',
-                  zIndex: 2,
-                  pointerEvents: 'none'
-                }}
-              >
-                <img
-                  src="/assets/nuventraa/h3-shape1.png"
-                  alt=""
-                  style={{ width: '48px', height: 'auto', display: 'block' }}
-                />
-              </div>
-
-              {/* Gallery Image Slider Frame */}
               <div
                 style={{
                   position: 'relative',
@@ -379,81 +341,59 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 2: CONSULTING & POLICY ADVISORY SERVICES (Exact Nuventraa Style)
+          SECTION 2: CONSULTING & POLICY ADVISORY SERVICES
           ========================================================================= */}
       <section className="nuventraa-services-section">
-        <div className="container" style={{ maxWidth: '1240px', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div className="container">
           <div className="nuventraa-services-grid">
 
-            {/* Left Column: Image Collage & Interactive Gallery */}
-            <div className="nuventraa-services-collage">
-              <div className="nuventraa-services-banner-wrap">
-                {/* Main Top Banner Image Frame */}
-                <div className="nuventraa-services-main-frame">
-                  <img
-                    src={activeServiceImg}
-                    alt="Consulting and Policy Advisory Services"
-                  />
-                </div>
-
-                {/* 3 Interactive Bottom Thumbnails */}
-                <div className="nuventraa-services-thumbs">
-                  {serviceThumbs.map((thumb) => (
-                    <button
-                      key={thumb.id}
-                      type="button"
-                      onClick={() => setActiveServiceImg(thumb.img)}
-                      className={`nuventraa-services-thumb-btn ${activeServiceImg === thumb.img ? 'active' : ''}`}
-                      aria-label={thumb.alt}
-                      title={thumb.alt}
-                    >
-                      <img src={thumb.img} alt={thumb.alt} />
-                    </button>
-                  ))}
-                </div>
+            {/* Left Column: Interactive Image Frame */}
+            <div className="nuventraa-services-left">
+              <div className="nuventraa-services-img-frame">
+                <img
+                  src="/assets/nuventraa/industry-consulting-illustration.png"
+                  alt="Industrial Consulting Framework"
+                  className="nuventraa-services-main-img"
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
             </div>
 
-            {/* Right Column: Title + Paragraph + 4 Stacked Horizontal Fancy Cards */}
+            {/* Right Column: 4 Vertical Stacked Service Cards */}
             <div className="nuventraa-services-right">
-
-              {/* Subtitle with lines */}
               <div>
-                <span className="nuventraa-services-sub">Services</span>
+                <span className="nuventraa-services-sub">Strategic Execution</span>
               </div>
 
-              {/* Main Heading */}
               <h2 className="nuventraa-services-heading">
                 <span className="highlight">Consulting</span> &amp; Policy<br />
                 Advisory Services
               </h2>
 
-              {/* Description */}
               <p className="nuventraa-services-desc">
-                Nuventraa offers <strong>consulting and policy advisory services</strong> to help industries align with regulatory frameworks &amp; unlock government incentives.
+                Nuventraa offers <strong>consulting and policy advisory services</strong> to help industries align with regulatory frameworks &amp; unlock government incentives under state and sectoral policies.
               </p>
 
-              {/* 4 Vertical Stacked Service Cards (ct-fancy-box.style2) */}
               <div className="nuventraa-services-list">
                 {[
                   {
                     title: 'Policy & Incentive Strategy',
-                    desc: 'Identify relevant policies and maximize eligible benefits',
+                    desc: 'Identify relevant policies and maximize eligible capital subsidies',
                     img: '/assets/nuventraa/Policy-Incentive-Strategy-1.png'
                   },
                   {
                     title: 'Project Structuring',
-                    desc: 'Align investments with compliance and financial viability',
+                    desc: 'Align investments with compliance, TEV viability, and banking norms',
                     img: '/assets/nuventraa/Project-Structuring.png'
                   },
                   {
                     title: 'Approvals & Coordination',
-                    desc: 'Support documentation and government clearances',
+                    desc: 'Support single-window documentation, OSPCB CTE/CTO, and departmental clearances',
                     img: '/assets/nuventraa/Approvals-Coordination.png'
                   },
                   {
                     title: 'Execution & Realization',
-                    desc: 'Enable smooth compliance and timely incentive claims',
+                    desc: 'Enable smooth statutory compliance and timely treasury incentive claims',
                     img: '/assets/nuventraa/Execution-Realization.png'
                   }
                 ].map((card, i) => (
@@ -477,7 +417,7 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 3: ABOUT US ("We Team of Experience It Specialities")
+          SECTION 3: ABOUT US
           ========================================================================= */}
       <section className="nuventraa-about-section">
         <div className="container">
@@ -486,34 +426,27 @@ export default function Home() {
             {/* Left Content */}
             <div className="nuventraa-about-left">
               <div>
-                <span className="nuventraa-about-sub">About Us</span>
+                <span className="nuventraa-about-sub">About Nuventraa</span>
               </div>
 
               <h2 className="nuventraa-about-heading">
-                We Team of <span className="highlight">Experience</span> It<br />
-                Specialities
+                Strategic Advisory Guided by <span className="highlight">Institutional Experience</span>
               </h2>
 
               <p className="nuventraa-about-desc">
-                At <strong>Nuventraa</strong>, we deliver robust software products and solutions by combining cutting-edge technology with a passion for innovation to guide businesses toward brighter horizons.
+                At <strong>Nuventraa</strong>, we support manufacturing units and commercial enterprises to establish, expand, and scale within policy-driven ecosystems with seamless government liaison and audit-ready governance.
               </p>
 
-              {/* 2 Feature Cards: Our Vision & Our Mission (ct-fancy-box.style2) */}
               <div className="nuventraa-about-cards">
                 {/* Vision Card */}
                 <div className="nuventraa-about-card">
                   <div className="about-icon">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2439ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                      <path d="M9 19v3" />
-                      <path d="M15 19v3" />
-                      <path d="M7 22h10" />
-                    </svg>
+                    <TrendingUp size={24} color="#2439ff" />
                   </div>
                   <div className="about-meta">
                     <h4 className="about-title">Our Vision</h4>
                     <p className="about-desc">
-                      To be a global leader in delivering transformative software solutions that revolutionize industries and drive sustainable growth.
+                      To be the trusted industrial transformation and policy advisory partner, unlocking state incentives and accelerating sustainable industrialization.
                     </p>
                   </div>
                 </div>
@@ -521,54 +454,43 @@ export default function Home() {
                 {/* Mission Card */}
                 <div className="nuventraa-about-card">
                   <div className="about-icon">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2439ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
+                    <ShieldCheck size={24} color="#2439ff" />
                   </div>
                   <div className="about-meta">
                     <h4 className="about-title">Our Mission</h4>
                     <p className="about-desc">
-                      To empower businesses by providing innovative, reliable, and scalable software solutions, driven by customer-centric values and a focus on excellence.
+                      To empower enterprises with structured statutory compliance, defect-free documentation, and end-to-end execution from concept to treasury disbursements.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Explore More Button */}
               <Link to="/about" className="nuventraa-explore-btn">
                 <span>Explore More</span>
                 <Plus size={16} />
               </Link>
             </div>
 
-            {/* Right Graphic: Exact ct-banner3 Composition */}
+            {/* Right Graphic */}
             <div className="nuventraa-banner3-wrap">
-              {/* Background Geometric Arc Shape */}
               <div className="nuventraa-banner3-bg" />
-
-              {/* Overlay Wave Pattern */}
               <div className="nuventraa-banner3-overlay" />
 
-              {/* Since 2019 Circular Badge */}
               <div className="nuventraa-banner3-counter">
-                <span className="counter-title">Since</span>
-                <span className="counter-num">2019</span>
+                <span className="counter-title">Experience</span>
+                <span className="counter-num">42+</span>
+                <span style={{ fontSize: '0.65rem', color: '#64748B', display: 'block', textTransform: 'uppercase' }}>Years Advisory</span>
               </div>
 
-              {/* Circular Center Image Frame */}
               <div className="nuventraa-banner3-img-frame">
                 <img
-                  src="/assets/nuventraa/portrait-happy-young-colleagues-using-digital-tablet-scaled-650x650.jpg"
-                  alt="Portrait of happy young colleagues using digital tablet"
+                  src="/assets/consulting-boardroom.jpg"
+                  alt="Industrial Consulting Boardroom"
                 />
               </div>
 
-              {/* Rotated Vertical Title */}
               <div className="nuventraa-banner3-vertical-text">
-                We are a certified IT Service company.
+                Strategic Industrial &amp; Policy Partner.
               </div>
             </div>
 
@@ -578,7 +500,7 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 4: WHAT WE DO (Exact ct-service-grid2 Circular Pop-Out Style)
+          SECTION 4: WHAT WE DO (Core Capabilities)
           ========================================================================= */}
       <section className="nuventraa-whatwedo-section">
         <div className="container">
@@ -591,79 +513,58 @@ export default function Home() {
             <h2
               style={{
                 fontFamily: "'Poppins', sans-serif",
-                fontSize: 'clamp(2rem, 1.4vw, 1.75rem)',
+                fontSize: 'clamp(2rem, 3.4vw, 2.75rem)',
                 fontWeight: 800,
                 color: '#08203A',
                 lineHeight: 1.25,
                 margin: '0.65rem auto 0',
-                maxWidth: '700px'
+                maxWidth: '750px'
               }}
             >
-              We are the one stop solution for<br />
-              everything related to<br />
-              <cite className="ct-text-highlight">Technology</cite>
+              Comprehensive Solutions for <cite className="ct-text-highlight">Industrial Enterprises</cite>
             </h2>
           </div>
 
-          {/* 4 Cards Grid (ct-service-grid2) */}
+          {/* 4 Cards Grid */}
           <div className="nuventraa-whatwedo-grid">
             {[
               {
-                title: 'Custom Software Development',
-                desc: 'At Nuventraa Softtech, we design and develop customized software...',
-                img: '/assets/nuventraa/person-front-computer-working-html-1-scaled-220x220.jpg',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                )
+                title: 'Industrial Investment & Policy Advisory',
+                desc: 'Single Window clearances via GO-SWIFT, IPICOL coordination, and policy alignment under Odisha IPR-2022 & OATTP-2022.',
+                img: '/assets/consulting-boardroom.jpg',
+                link: '/service/industrial-investment-policy-advisory',
+                icon: <Factory size={22} color="#FFFFFF" />
               },
               {
-                title: 'Industry-Specific Solutions',
-                desc: 'Specializing in diverse domains such as Education, Healthcare, Government,...',
-                img: '/assets/nuventraa/standard-quality-control-concept-m-scaled-220x220.jpg',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                )
+                title: 'Regulatory & Incentive Enablement',
+                desc: 'Maximizing capital investment subsidies (CIS up to 30%), 100% Net SGST reimbursement, and power duty exemptions.',
+                img: '/assets/textile-plant.jpg',
+                link: '/service/regulatory-incentive-enablement',
+                icon: <Banknote size={22} color="#FFFFFF" />
               },
               {
-                title: 'Co-operative Society Software',
-                desc: 'Simplify and enhance the management of your cooperative society...',
-                img: '/assets/nuventraa/5f8b7e99-45f7-488b-ad14-d2b8ef42ce7f-220x220.jpg',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                  </svg>
-                )
+                title: 'Project Consultancy & Planning',
+                desc: 'Bankable DPR preparation, CAPEX scheduling, plant & machinery invoice scrutiny, and operational readiness.',
+                img: '/assets/audit-desk.jpg',
+                link: '/service/project-consultancy-planning',
+                icon: <Workflow size={22} color="#FFFFFF" />
               },
               {
-                title: 'ERP Development',
-                desc: 'Transform the way your organization operates with our robust...',
-                img: '/assets/nuventraa/enterprise-resource-planning-holographic-interface-220x220.jpg',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                    <circle cx="12" cy="13" r="2" />
-                  </svg>
-                )
+                title: 'Environmental & Statutory Licensing',
+                desc: 'Consent to Establish (CTE) & Consent to Operate (CTO) from OSPCB, boiler permits, and factory safety licensing.',
+                img: '/assets/spcb-environmental.jpg',
+                link: '/service/environmental-operational-licensing',
+                icon: <ShieldCheck size={22} color="#FFFFFF" />
               }
             ].map((srv, idx) => (
               <div key={idx} className="nuventraa-service2-card">
-                {/* Featured Circular Image popping out of card top */}
                 <div className="nuventraa-service2-featured">
                   <img src={srv.img} alt={srv.title} />
-                  {/* Floating Circular Badge on the image */}
                   <div className="nuventraa-service2-icon-badge">
                     {srv.icon}
                   </div>
                 </div>
 
-                {/* Card Body */}
                 <div className="nuventraa-service2-body">
                   <h3 className="nuventraa-service2-title">
                     {srv.title}
@@ -673,7 +574,7 @@ export default function Home() {
                     {srv.desc}
                   </p>
 
-                  <Link to="/services" className="nuventraa-service2-btn">
+                  <Link to={srv.link} className="nuventraa-service2-btn">
                     <span>Know more</span>
                     <Plus size={14} />
                   </Link>
@@ -682,10 +583,9 @@ export default function Home() {
             ))}
           </div>
 
-          {/* More Service Button */}
           <div style={{ textAlign: 'center' }}>
             <Link to="/services" className="ct-btn-primary">
-              <span>More Service</span>
+              <span>View All Services</span>
               <Plus size={16} />
             </Link>
           </div>
@@ -694,40 +594,42 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 5: CTA BANNER ("BEST IT SOLUTIONS FOR YOUR BUSINESS")
+          SECTION 5: CTA BANNER
           ========================================================================= */}
       <section className="nuventraa-cta-banner">
         <div className="nuventraa-cta-container">
           <h2 className="nuventraa-cta-title">
-            BEST IT SOLUTIONS FOR YOUR BUSINESS
+            MAXIMIZE YOUR INDUSTRIAL INCENTIVES &amp; SUBSIDIES
           </h2>
           <p className="nuventraa-cta-subtitle">
-            Consult us to Automate your business Process
+            Consult our senior advisory team to structure bankable projects and secure single-window clearances
           </p>
           <Link to="/contact" className="nuventraa-cta-btn">
-            Request a Quote
+            Request Advisory Session
           </Link>
         </div>
       </section>
 
 
       {/* =========================================================================
-          SECTION 6: OUR PRODUCTS (Chambre, Co-optive, Cruzo)
+          SECTION 6: STATUTORY APPROVAL & LICENSING MANDATE
           ========================================================================= */}
       <section className="section-full section-py" style={{ background: '#FFFFFF' }}>
         <div className="container">
 
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.75rem' }}>
             <div className="nuventraa-products-subtitle">
-              <span>Our Products</span>
+              <span>Statutory Lifecycle</span>
             </div>
 
             <h2 className="nuventraa-section-title">
-              Our Innovative Products for your <cite className="ct-text-highlight">Business</cite>
+              End-to-End <cite className="ct-text-highlight">Regulatory Mandate</cite>
             </h2>
+            <p style={{ color: '#64748B', fontSize: '0.95rem', margin: '0.5rem auto 0', maxWidth: '640px' }}>
+              Structured execution across each phase of industrial enterprise establishment and operations.
+            </p>
           </div>
 
-          {/* 3 Product Logo Cards */}
           <div
             style={{
               display: 'grid',
@@ -737,24 +639,24 @@ export default function Home() {
           >
             {[
               {
-                name: 'Chambré',
-                category: 'Hospitality Management',
-                desc: 'Introduced Chambré, a hotel task management system to streamline hospitality operations and service workflows.',
-                logo: '/assets/nuventraa/Chambre.png'
+                phase: 'Stage 01',
+                title: 'Pre-Establishment Clearances',
+                desc: 'IEM Registration (DPIIT), IDCO Land Allocation, Water Drawl Recommendation, OSPCB Consent to Establish (CTE), and Building Plan Approval.',
+                icon: <Building2 size={36} color="#2439ff" />
               },
               {
-                name: 'Co-optive',
-                category: 'Fintech & Credit Society',
-                desc: 'Rolled out Co-optive, an advanced fintech solution designed for financial operations, deposits, and loan ledgers.',
-                logo: '/assets/nuventraa/Co-optive-Logo.png'
+                phase: 'Stage 02',
+                title: 'Pre-Operations Licensing',
+                desc: 'OSPCB Consent to Operate (CTO), Registration of Boilers under Boilers Act, Factories License under Labour & ESI, CEI Electrical Inspection, and Fire Safety Certificate.',
+                icon: <FileCheck2 size={36} color="#9000ff" />
               },
               {
-                name: 'Cruzo',
-                category: 'Ordering & Delivery Platform',
-                desc: 'Launched Cruzo, a white-labeled ordering and delivery management platform for retail and multi-branch food businesses.',
-                logo: '/assets/nuventraa/Cruzo-Logo_transparent-scaled.png'
+                phase: 'Stage 03',
+                title: 'Subsidy & Fiscal Realization',
+                desc: 'Capital Investment Subsidy (CIS up to 30% on Plant & Machinery), 100% Net SGST Reimbursement, 100% EPF/ESI Support, and Treasury Bank Disbursement tracking.',
+                icon: <Banknote size={36} color="#C59B27" />
               }
-            ].map((prod, idx) => (
+            ].map((mandate, idx) => (
               <div
                 key={idx}
                 className="nuventraa-card"
@@ -768,30 +670,26 @@ export default function Home() {
               >
                 <div
                   style={{
-                    height: '80px',
+                    height: '70px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '1.5rem'
+                    marginBottom: '1rem'
                   }}
                 >
-                  <img
-                    src={prod.logo}
-                    alt={prod.name}
-                    style={{ maxHeight: '100%', maxWidth: '200px', objectFit: 'contain' }}
-                  />
+                  {mandate.icon}
                 </div>
 
-                <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#9000ff', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.45rem' }}>
-                  {prod.category}
+                <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#2439ff', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.45rem' }}>
+                  {mandate.phase}
                 </div>
 
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F1D33', marginBottom: '0.75rem' }}>
-                  {prod.name}
+                  {mandate.title}
                 </h3>
 
-                <p style={{ fontSize: '0.86rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
-                  {prod.desc}
+                <p style={{ fontSize: '0.88rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
+                  {mandate.desc}
                 </p>
               </div>
             ))}
@@ -801,7 +699,7 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 7: CASE STUDIES ("Few of Our Apps Adored by millions of users!")
+          SECTION 7: CASE STUDIES / PORTFOLIO
           ========================================================================= */}
       <section
         className="section-full section-py"
@@ -813,7 +711,6 @@ export default function Home() {
       >
         <div className="container">
 
-          {/* 2-Column Header */}
           <div
             style={{
               display: 'grid',
@@ -825,15 +722,15 @@ export default function Home() {
           >
             <div>
               <div className="ct-sub-title style-line-right">
-                <span>Case Studies</span>
+                <span>Proven Execution</span>
               </div>
               <h2 className="nuventraa-section-title" style={{ margin: 0 }}>
-                Few of Our Apps Adored by <cite className="ct-text-highlight">millions of users!</cite>
+                Featured Industrial <cite className="ct-text-highlight">Clearances &amp; Claims</cite>
               </h2>
             </div>
             <div>
               <p style={{ fontSize: '0.94rem', color: '#64748B', lineHeight: 1.65, margin: 0 }}>
-                We show only the best websites and portfolios built completely with passion, simplicity &amp; creativity. Our team have designed game changing products, consulted for companies as well.
+                A track record of structured execution across manufacturing, textiles, agro-processing, and heavy engineering hubs across the region.
               </p>
             </div>
           </div>
@@ -848,12 +745,11 @@ export default function Home() {
             }}
           >
             {[
-              { key: 'all', label: 'All' },
-              { key: 'cloud', label: 'Cloud Services' },
-              { key: 'cyber', label: 'Cyber Security' },
-              { key: 'security', label: 'IT Security' },
-              { key: 'networking', label: 'Networking' },
-              { key: 'engineering', label: 'Product Engineering' }
+              { key: 'all', label: 'All Domains' },
+              { key: 'subsidies', label: 'Subsidies & Claims' },
+              { key: 'licensing', label: 'Statutory Licensing' },
+              { key: 'singlewindow', label: 'Single Window' },
+              { key: 'sectoral', label: 'Sectoral Advisory' }
             ].map((f) => (
               <button
                 key={f.key}
@@ -876,7 +772,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* 6 Portfolio Cards */}
+          {/* Portfolio Cards */}
           <div
             style={{
               display: 'grid',
@@ -924,12 +820,11 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 8: TESTIMONIALS ("What Our Happy Clients Say")
+          SECTION 8: TESTIMONIALS (Real Client Testimonials)
           ========================================================================= */}
       <section className="section-full section-py" style={{ background: '#FFFFFF' }}>
         <div className="container">
 
-          {/* 2-Column Header */}
           <div
             style={{
               display: 'grid',
@@ -941,20 +836,19 @@ export default function Home() {
           >
             <div>
               <div className="ct-sub-title style-line-right">
-                <span>Testimonials</span>
+                <span>Client Feedback</span>
               </div>
               <h2 className="nuventraa-section-title" style={{ margin: 0 }}>
-                What Our Happy Clients Say
+                What Industry Leaders Say
               </h2>
             </div>
             <div>
               <p style={{ fontSize: '0.94rem', color: '#64748B', lineHeight: 1.65, margin: 0 }}>
-                We value the experimentation, the reformation of the message, and the smart incentives. We offer a variety of services and solutions Worldwide and this is at the heart of how we approach our.
+                Trusted by manufacturing enterprises, agro-processing units, and industrial investors to navigate complex state regulations and deliver maximum approved claims.
               </p>
             </div>
           </div>
 
-          {/* 4 Testimonial Cards */}
           <div
             style={{
               display: 'grid',
@@ -1009,23 +903,21 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 9: BLOG ("Trending IT Solution Article & Tips" - 9 SLIDING BLOGS)
+          SECTION 9: BLOG
           ========================================================================= */}
       <section className="section-full nuventraa-blog-section">
         <div className="container">
 
-          {/* Section Header with Navigation Controls */}
           <div className="nuventraa-blog-header-wrap">
             <div>
               <div className="ct-sub-title style-line-right">
-                <span>Blog</span>
+                <span>Insights &amp; Advisory</span>
               </div>
               <h2 className="nuventraa-section-title" style={{ margin: 0 }}>
-                Trending IT <cite className="ct-text-highlight">Solution</cite> Article &amp; Tips
+                Industrial Policy, <cite className="ct-text-highlight">Subsidies</cite> &amp; Regulatory Updates
               </h2>
             </div>
 
-            {/* Left / Right Slider Arrows */}
             <div className="nuventraa-blog-nav-btns">
               <button
                 onClick={prevBlogSlide}
@@ -1044,7 +936,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Carousel Viewport */}
           <div
             className="nuventraa-blog-carousel-container"
             onMouseEnter={() => setIsBlogHovered(true)}
@@ -1066,7 +957,6 @@ export default function Home() {
                   }}
                 >
                   <div className="nuventraa-blog-card">
-                    {/* Featured Image with Zoom & Date Badge */}
                     <div className="nuventraa-blog-thumb">
                       <Link to={blog.link}>
                         <img
@@ -1081,9 +971,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Card Body */}
                     <div className="nuventraa-blog-body">
-                      {/* Meta Information */}
                       <div className="nuventraa-blog-meta">
                         <div className="nuventraa-blog-meta-item">
                           <span className="nuventraa-blog-meta-icon">
@@ -1102,19 +990,16 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* Title */}
                       <h3 className="nuventraa-blog-title">
                         <Link to={blog.link} style={{ color: 'inherit', textDecoration: 'none' }}>
                           {blog.title}
                         </Link>
                       </h3>
 
-                      {/* Excerpt */}
                       <p className="nuventraa-blog-excerpt">
                         {blog.excerpt}
                       </p>
 
-                      {/* Read More Button */}
                       <Link to={blog.link} className="nuventraa-blog-readmore">
                         <span>Read More</span>
                         <Plus size={14} />
@@ -1126,7 +1011,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Slick Navigation Dots */}
           <div className="nuventraa-blog-dots">
             {Array.from({ length: maxBlogIndex + 1 }).map((_, idx) => (
               <button

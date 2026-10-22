@@ -12,7 +12,6 @@ import Incentives from './pages/Incentives';
 import Process from './pages/Process';
 import Contact from './pages/Contact';
 import Consulting from './pages/Consulting';
-import SoftwareConsulting from './pages/SoftwareConsulting';
 import ServiceDetails from './pages/ServiceDetails';
 import BlogDetails from './pages/BlogDetails';
 
@@ -39,7 +38,8 @@ export default function App() {
             <Route path="/service/:slug" element={<ServiceDetails />} />
             <Route path="/services/:slug" element={<ServiceDetails />} />
             <Route path="/consulting" element={<Consulting />} />
-            <Route path="/software-consulting" element={<SoftwareConsulting />} />
+            <Route path="/industry-consulting" element={<Consulting />} />
+            <Route path="/software-consulting" element={<Navigate to="/consulting" replace />} />
             <Route path="/incentives" element={<Incentives />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />

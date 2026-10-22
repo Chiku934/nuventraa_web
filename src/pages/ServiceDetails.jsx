@@ -23,7 +23,7 @@ import './ServiceDetails.css';
 
 export default function ServiceDetails() {
   const { slug } = useParams();
-  const service = getServiceBySlug(slug || 'erp-solutions');
+  const service = getServiceBySlug(slug || 'industrial-investment-policy-advisory');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -77,9 +77,9 @@ export default function ServiceDetails() {
                 <div className="nuventraa-sidebar-help-icon">
                   <Headphones size={26} />
                 </div>
-                <h4 className="nuventraa-sidebar-help-title">Need Any Help?</h4>
+                <h4 className="nuventraa-sidebar-help-title">Need Advisory Support?</h4>
                 <p className="nuventraa-sidebar-help-desc">
-                  Speak directly with our enterprise consultants and technical architects.
+                  Speak directly with our senior industrial consultants and policy advisors.
                 </p>
                 <div style={{ marginBottom: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem' }}>
                   <a href="tel:+919090123562" style={{ color: '#FFFFFF', textDecoration: 'none', fontWeight: 700 }}>

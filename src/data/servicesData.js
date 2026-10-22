@@ -1,321 +1,322 @@
+// Real Industrial Consulting Services Data matching Industry Consulting, Sectoral Leadership & Silvercrest Consulting frameworks
 export const servicesData = [
   {
     id: 1,
-    slug: 'custom-software-development',
-    altSlugs: ['custom-software'],
-    title: 'Custom Software Development',
-    subtitle: '═ Custom Software ═',
-    heroImage: '/assets/nuventraa/person-front-computer-working-html-1-scaled-220x220.jpg',
-    intro: 'At Nuventraa, we design and develop customized software solutions that meet the unique requirements of your business. From concept to deployment, our expert developers deliver robust, scalable, and secure applications tailored to your operational realities.',
+    slug: 'industrial-investment-policy-advisory',
+    altSlugs: ['policy-advisory', 'custom-software-development', 'custom-software'],
+    title: 'Industrial Investment & Policy Advisory',
+    subtitle: '═ Policy & Single Window Clearances ═',
+    heroImage: '/assets/consulting-boardroom.jpg',
+    intro: 'We support enterprises to establish, structure, and scale within policy-driven ecosystems. Our team guides industries through institutional frameworks, government coordination, and statutory alignment.',
     descriptionParagraphs: [
-      'In a competitive and rapidly changing digital ecosystem, off-the-shelf software rarely fits the nuanced workflows of evolving enterprises. Our custom software development service provides tailor-made applications engineered from the ground up to solve your exact operational bottlenecks.',
-      'We combine modern engineering frameworks, cloud-native scalability, and agile sprints to guarantee high velocity, clean architecture, and long-term maintainability for mission-critical operations.'
+      'Establishing a manufacturing or industrial enterprise requires navigating complex multi-tiered regulatory frameworks, departmental approvals, and policy guidelines. Nuventraa operates at the intersection of industrial policy, technology, and execution to deliver predictable, audit-ready outcomes.',
+      'From Industrial Entrepreneur Memorandum (IEM) registration under DPIIT to high-level clearances via Single Window authorities (DLSWCA, SLSWCA, HLCA and IPICOL), we provide strategic handholding at every phase of your enterprise roadmap.'
     ],
-    featuresTitle: 'What We Offer',
+    featuresTitle: 'Key Advisory Capabilities',
     features: [
       {
-        title: 'Full-Stack Architecture',
-        desc: 'End-to-end frontend and backend development with high throughput and modern tech stacks.'
+        title: 'Single Window Clearance (GO-SWIFT / IPICOL)',
+        desc: 'End-to-end processing and liaison across District (DLSWCA) and State (SLSWCA/HLCA) Single Window Committees.'
       },
       {
-        title: 'Cloud-Native Scalability',
-        desc: 'Built for cloud environments with microservices, containerization, and seamless elasticity.'
+        title: 'Policy Framework Alignment',
+        desc: 'Detailed benchmarking and structuring under Odisha Industrial Policy Resolution (IPR-2022) and OATTP-2022.'
       },
       {
-        title: 'High Security & Compliance',
-        desc: 'Enterprise-grade encryption, role-based access control, and complete regulatory compliance.'
+        title: 'Industrial Project Structuring',
+        desc: 'Structuring capital investment, technology choices, and project capacity to maximize statutory advantages and fiscal viability.'
       },
       {
-        title: 'Legacy Modernization',
-        desc: 'Re-engineering legacy systems into high-performance, modern web and mobile applications.'
+        title: 'Government Agency Coordination',
+        desc: 'Direct interface with IPICOL, IDCO, Directorate of Industries, MSME departments, and statutory ministries.'
       },
       {
-        title: 'API & Systems Integration',
-        desc: 'Effortlessly connect disparate internal databases, external APIs, and third-party SaaS tools.'
+        title: 'Regulatory & Compliance Advisory',
+        desc: 'Proactive compliance audits to eliminate procedural delays, prevent statutory penalties, and guarantee project continuity.'
       }
     ],
-    whyChooseTitle: 'Why Choose Us',
+    whyChooseTitle: 'Why Choose Nuventraa for Policy Advisory',
     whyChooseUs: [
       {
-        title: 'Dedicated Engineering Team',
-        desc: 'Senior full-stack architects and domain engineers dedicated to your project success.'
+        title: 'Deep Institutional Understanding',
+        desc: 'Over four decades of senior sectoral governance and industrial policy leadership.'
       },
       {
-        title: 'Agile & Transparent',
-        desc: 'Bi-weekly sprint demos, milestone tracking, and transparent project communication.'
+        title: 'Single-Point Interface',
+        desc: 'One unified advisory partner managing multi-departmental communications and government protocols.'
       },
       {
-        title: 'Post-Deployment Assurance',
-        desc: 'Comprehensive testing, SLA-backed uptime, and continuous performance tuning.'
+        title: 'Time & Cost Optimization',
+        desc: 'Substantially compressed approval turnaround times through defect-free application documentation.'
       }
     ],
-    ctaTitle: 'Let’s build your custom software with precision'
+    ctaTitle: 'Ready to align your industrial project with state policy incentives?'
   },
   {
     id: 2,
-    slug: 'industry-specific-solutions',
-    altSlugs: ['web-app-development'],
-    title: 'Industry-Specific Solutions',
-    subtitle: '═ Domain Expertise ═',
-    heroImage: '/assets/nuventraa/standard-quality-control-concept-m-scaled-220x220.jpg',
-    intro: 'We understand that every industry comes with its own challenges and opportunities. That’s why we offer industry-specific software solutions that are not only robust and secure but also finely tuned to your operational realities.',
+    slug: 'regulatory-incentive-enablement',
+    altSlugs: ['incentives-subsidies', 'industry-specific-solutions', 'web-app-development'],
+    title: 'Regulatory & Incentive Enablement',
+    subtitle: '═ Industrial Subsidies & Fiscal Realization ═',
+    heroImage: '/assets/textile-plant.jpg',
+    intro: 'We help manufacturing enterprises navigate government regulations and convert policy eligibility into sanctioned claims and direct bank disbursements under state and sectoral policies.',
     descriptionParagraphs: [
-      'At Nuventraa, we believe that software should adapt to your industry — not the other way around. That’s why we build industry-specific solutions that go beyond generic platforms, offering technology that truly understands your operational needs.',
-      'Whether you’re in education, healthcare, or government, our solutions are designed to empower your team with features and functionalities tailored to your workflows. We also serve retail, manufacturing, finance, hospitality, logistics, utilities, and real estate — offering customized platforms that digitize everything from supply chain management to customer relationships.'
+      'State industrial policies offer lucrative fiscal incentives to attract investments, including capital subsidies, tax reimbursements, and operational rebates. However, stringent documentation and strict audit requirements often prevent units from realizing their full legal entitlements.',
+      'Nuventraa provides specialized scrutiny and dossier preparation to recover maximum capital expenditure and operating costs under Odisha IPR-2022, OATTP-2022, and sectoral schemes.'
     ],
-    featuresTitle: 'What We Offer',
+    featuresTitle: 'Incentives & Fiscal Support Covered',
     features: [
       {
-        title: 'Education & LMS Platforms',
-        desc: 'Interactive student management, live virtual classrooms, and examination portals.'
+        title: 'Capital Investment Subsidy (CIS)',
+        desc: 'Up to 30% reimbursement on eligible Plant & Machinery investments through rigorous invoice-level asset scrutiny.'
       },
       {
-        title: 'Healthcare & Patient Management',
-        desc: 'Electronic health records, appointment scheduling, and HIPAA/statutory data handling.'
+        title: 'Net SGST Tax Reimbursement',
+        desc: 'Up to 100% refund of net State GST paid on intra-state sales of finished goods for 5 to 7 operational years.'
       },
       {
-        title: 'E-Governance Portals',
-        desc: 'Citizen delivery portals, digital license workflows, and inter-departmental transparency.'
+        title: 'Employment Cost Subsidy (EPF/ESI)',
+        desc: '100% reimbursement of employer statutory contributions towards EPF and ESI for domicile workforce.'
       },
       {
-        title: 'Manufacturing & Supply Chain',
-        desc: 'Shop-floor monitoring, inventory reconciliation, and distribution tracking.'
+        title: 'Power Tariff Relief & Duty Waiver',
+        desc: 'Concessional power tariff (₹1–2 per unit) and 100% exemption from Electricity Duty during the eligible operative window.'
       },
       {
-        title: 'Retail & Hospitality Systems',
-        desc: 'Omnichannel POS, reservation engines, and loyalty analytics engineered for speed.'
+        title: 'Treasury Disbursement Tracking',
+        desc: 'Continuous follow-up through single-window portals and finance departments until funds hit client commercial bank accounts.'
       }
     ],
-    whyChooseTitle: 'Why Choose Us',
+    whyChooseTitle: 'Why Choose Us for Incentive Realization',
     whyChooseUs: [
       {
-        title: 'Domain-Centric Knowledge',
-        desc: 'Software built with deep understanding of statutory protocols and sector benchmarks.'
+        title: 'Defect-Free Dossiers',
+        desc: 'Pre-audited asset registers and bank sanction reconciliation that withstand departmental scrutiny.'
       },
       {
-        title: 'Rapid Deployment Blueprints',
-        desc: 'Proven architecture blueprints that reduce implementation time and deployment risks.'
+        title: 'Zero Claim Leakage',
+        desc: 'Identification of every eligible gazetted provision to maximize approved subsidy quantum.'
       },
       {
-        title: 'Seamless Adoption',
-        desc: 'Intuitive user experiences crafted for rapid employee onboarding and high user retention.'
+        title: 'Direct Treasury Liaison',
+        desc: 'Proactive engagement from initial claim filing through formal sanction to final bank credit.'
       }
     ],
-    ctaTitle: 'Let’s build industry-grade software for your domain'
+    ctaTitle: 'Discover your project’s eligible subsidy quantum today'
   },
   {
     id: 3,
-    slug: 'co-operative-society-software',
-    altSlugs: ['mobile-app-development'],
-    title: 'Co-operative Society Software',
-    subtitle: '═ Co-Optive FinTech ═',
-    heroImage: '/assets/nuventraa/5f8b7e99-45f7-488b-ad14-d2b8ef42ce7f-220x220.jpg',
-    intro: 'Simplify credit operations, enhance efficiency and establish compliance with Co-optive — Advanced Fintech Solution. Begin today and expand your cooperative’s success!',
+    slug: 'project-consultancy-planning',
+    altSlugs: ['co-operative-society-software', 'mobile-app-development'],
+    title: 'Project Consultancy & Planning',
+    subtitle: '═ Feasibility, DPR & Project Structuring ═',
+    heroImage: '/assets/audit-desk.jpg',
+    intro: 'We ensure structured project execution from initial feasibility assessments to commissioning, bank funding alignment, and full operational readiness.',
     descriptionParagraphs: [
-      'A Credit Cooperative Society Software simplifies and automates tasks for cooperative societies. It manages member registration, deposits, loans, financial transactions, and statutory reporting.',
-      'The software ensures compliance, streamlines payments, reduces manual calculation errors, and improves operational transparency. Ideal for credit, thrift, and urban cooperative societies, it enhances productivity and financial governance.'
+      'A successful industrial enterprise begins with a robust, bankable blueprint. Our project consultancy practice bridges technical feasibility, financial viability, and regulatory compliance to deliver end-to-end execution certainty.',
+      'We prepare comprehensive Detailed Project Reports (DPR), coordinate CAPEX budgets with engineering teams, manage vendor deliverables, and institute risk controls that satisfy institutional lenders and government sanctioning committees.'
     ],
-    featuresTitle: 'Key Features of Co-Optive',
+    featuresTitle: 'Project Consultancy Scope',
     features: [
       {
-        title: 'Master Data & Member Management',
-        desc: 'Complete digital KYC, membership records, nominee tracking, and share certificates.'
+        title: 'Detailed Project Reports (DPR / TEV)',
+        desc: 'Techno-Economic Viability reports engineered for bank appraisal, credit sanction, and government subsidy approvals.'
       },
       {
-        title: 'Loan & Deposit Tracking',
-        desc: 'FD, RD, Thrift, and customized loan schemes with automated EMI calculation and interest payout.'
+        title: 'CAPEX & Infrastructure Planning',
+        desc: 'Phased capital expenditure forecasting, plant layout planning, and utility requirement assessments.'
       },
       {
-        title: 'Cash Exchange & Daily Accounts',
-        desc: 'Real-time cash drawer reconciliation, day-end balancing, and teller management.'
+        title: 'Vendor & Machine Invoice Scrutiny',
+        desc: 'Rigorous vetting of plant & machinery technical specifications, vendor quotes, and payment milestones.'
       },
       {
-        title: 'Audit-Ready Financial Ledgers',
-        desc: 'General ledger, balance sheet, trial balance, and profit & loss generated with one click.'
+        title: 'Implementation Monitoring & Risk Control',
+        desc: 'Milestone-based project management tracking physical construction against financial drawdowns.'
       },
       {
-        title: 'SMS Alerts & Auto Generation',
-        desc: 'Instant transaction SMS alerts, interest maturity notifications, and passbook printing.'
+        title: 'Commissioning & Operational Readiness',
+        desc: 'Trial run documentation, statutory clearance verification, and commercial production commencement protocols.'
       }
     ],
-    whyChooseTitle: 'Why Choose Co-Optive',
+    whyChooseTitle: 'Why Choose Nuventraa for Project Planning',
     whyChooseUs: [
       {
-        title: 'Statutory Compliance',
-        desc: 'Fully aligned with Registrar of Cooperative Societies (RCS) reporting mandates.'
+        title: 'Bankable Enterprise Design',
+        desc: 'Reports and financial models tailored to meet leading public and private financial institution norms.'
       },
       {
-        title: 'Bank-Grade Security',
-        desc: 'Tamper-proof financial logs, role segregation, and daily cloud backup redundancy.'
+        title: 'Holistic Governance',
+        desc: 'Integrating technical, regulatory, and financial workflows under one unified project governance model.'
       },
       {
-        title: 'Easy for Non-Tech Staff',
-        desc: 'Clean bilingual interfaces designed for straightforward day-to-day banking entries.'
+        title: 'On-Ground Execution Focus',
+        desc: 'Practical plant-level advisory that guarantees smooth transition from construction to active manufacturing.'
       }
     ],
-    ctaTitle: 'Expand your cooperative society’s operational success today'
+    ctaTitle: 'Build a bankable, policy-aligned industrial project with us'
   },
   {
     id: 4,
-    slug: 'erp-solutions',
-    altSlugs: ['erp-development'],
-    title: 'ERP Development',
-    subtitle: '═ Unified Operations ═',
-    heroImage: '/assets/nuventraa/enterprise-resource-planning-holographic-interface-220x220.jpg',
-    intro: 'At Nuventraa, we specialize in developing customized ERP solutions that unify your business processes and drive operational excellence. From finance and HR to supply chain and sales, our ERP systems are designed to streamline every function — all from a single, intuitive platform.',
+    slug: 'environmental-operational-licensing',
+    altSlugs: ['erp-solutions', 'erp-development'],
+    title: 'Environmental & Operational Licensing',
+    subtitle: '═ OSPCB Consent & Environmental Permissions ═',
+    heroImage: '/assets/spcb-environmental.jpg',
+    intro: 'Complete support for industrial units requiring statutory environmental clearances, Consent to Establish (CTE), Consent to Operate (CTO), and waste management permissions.',
     descriptionParagraphs: [
-      'Transform the way your organization operates with our robust ERP solutions. By integrating finance, supply chain, inventory, human resources, and customer relationship management into a single centralized system, our ERP eliminates data silos and accelerates management decision-making.',
-      'Our solutions are modular, allowing your business to adopt core capabilities first and add specialized operational modules as your industrial footprint expands.'
+      'Environmental compliance is a fundamental prerequisite for lawful industrial operations. Any oversight in pollution control norms or clearance renewals can lead to severe operational disruptions, regulatory penalties, or factory closure notices.',
+      'Nuventraa provides full lifecycle environmental consulting: from initial site category classification (Red, Orange, Green, White) through pollution control equipment vetting to securing timely CTE and CTO clearances from the State Pollution Control Board (OSPCB).'
     ],
-    featuresTitle: 'What We Offer',
+    featuresTitle: 'Environmental Clearances Managed',
     features: [
       {
-        title: 'Tailored ERP Developed',
-        desc: 'Solutions built around your specific workflows, ensuring a perfect fit for your industry.'
+        title: 'Consent to Establish (CTE - OSPCB)',
+        desc: 'Pre-construction environmental clearance including site suitability review, emission norms, and effluent treatment planning.'
       },
       {
-        title: 'Mobile Accessibility',
-        desc: 'Manage your operations on the go with secure mobile access.'
+        title: 'Consent to Operate (CTO - OSPCB)',
+        desc: 'Pre-operations clearance verifying installed pollution control equipment, stack monitoring, and discharge standards.'
       },
       {
-        title: 'Modular Architecture',
-        desc: 'Easily scalable with modules that grow as your business expands.'
+        title: 'Environmental Clearance (MoEF&CC / SEIAA)',
+        desc: 'Comprehensive EIA documentation, public consultation management, and presentation before state appraisal committees.'
       },
       {
-        title: 'Seamless Integrations',
-        desc: 'Connect with third-party apps, payment gateways, and legacy systems without hassle.'
+        title: 'Waste Management Approvals',
+        desc: 'Authorizations for Hazardous Waste, Plastic Waste, e-Waste, Bio-medical Waste, and Construction & Demolition debris.'
       },
       {
-        title: 'Real-Time Insights',
-        desc: 'Advanced dashboards and reporting to empower data-driven decisions.'
+        title: 'Annual Environmental Audits (Form V)',
+        desc: 'Periodic environmental statement preparation, water balance audits, and statutory annual return filings.'
       }
     ],
-    whyChooseTitle: 'Why Choose Us',
+    whyChooseTitle: 'Why Trust Nuventraa for Environmental Licensing',
     whyChooseUs: [
       {
-        title: '100% Secure',
-        desc: 'Secure, scalable, and fully compliant with industry standards.'
+        title: '100% Regulatory Adherence',
+        desc: 'Deep familiarity with state pollution control boards and central environmental ministry statutes.'
       },
       {
-        title: 'Proven Tracking Method',
-        desc: 'Proven track record of delivering robust ERP systems across sectors.'
+        title: 'Audit-Ready Submissions',
+        desc: 'Eliminating departmental queries and inspection rejections through precise technical schematics.'
       },
       {
-        title: 'User Centric Design',
-        desc: 'User-centric design for faster adoption and minimal training needs.'
+        title: 'Uninterrupted Operations',
+        desc: 'Automated 90-day renewal tracking and proactive compliance shields to keep plant production uninterrupted.'
       }
     ],
-    ctaTitle: 'Let’s transform your business with a smarter ERP solution'
+    ctaTitle: 'Ensure smooth environmental licensing and zero-penalty compliance'
   },
   {
     id: 5,
-    slug: 'learning-management-systems',
-    altSlugs: ['business-process-automation', 'lms'],
-    title: 'Learning Management Systems (LMS)',
-    subtitle: '═ Smart Learning ═',
-    heroImage: '/assets/nuventraa/service-lms.jpg',
-    intro: 'At Nuventraa, our Learning Management System is designed to help educational institutions, training centers, and corporate training teams to manage courses, track progress, and engage learners — all from a single, easy-to-use platform.',
+    slug: 'factory-statutory-compliance',
+    altSlugs: ['learning-management-systems', 'service-lms'],
+    title: 'Factory & Statutory Compliance',
+    subtitle: '═ Boiler Permits, Factory Licenses & Safety ═',
+    heroImage: '/assets/boiler-plant.jpg',
+    intro: 'Streamlining industrial pre-operations licensing: Directorate of Boilers registration, Factories License under Labour & ESI, Building Occupancy, and Fire Safety certificates.',
     descriptionParagraphs: [
-      'From managing courses and live classes to tracking student progress and conducting assessments, our LMS brings together all the tools educators and administrators need in one unified ecosystem.',
-      'Simply organize content into categories, topics, and levels that match your curriculum structure. Integrated live classes, video lectures, and automated quizzes ensure flexibility, high participation, and measurable outcomes for every learner.'
+      'Operating an industrial plant requires multiple statutory licenses across various state departments, each demanding extensive documentation, technical inspection compliance, and adherence to worker safety laws.',
+      'Nuventraa coordinates all pre-operation industrial licenses seamlessly, handling documentation, engineering inspection liaison, and clearance approvals with the Directorate of Boilers, Department of Labour, Fire Services, and urban local bodies.'
     ],
-    featuresTitle: 'Our Key Features',
+    featuresTitle: 'Statutory Licenses Handled',
     features: [
       {
-        title: 'Course Management',
-        desc: 'Create, edit, and organize courses efficiently by classifying content logically for easy discovery.'
+        title: 'Boiler Registration & Permits (Boilers Act)',
+        desc: 'Statutory registration, hydraulic test coordination, and operational licensing under the Labour & ESI Department.'
       },
       {
-        title: 'Courses & Live Classes',
-        desc: 'Combine self-paced video lessons with interactive live classrooms and doubt-clearing sessions.'
+        title: 'Factories License (Factories Act, 1948)',
+        desc: 'Factory building plan approval, safety layout inspection, and licensing under the Chief Inspector of Factories.'
       },
       {
-        title: 'Tests & Quizzes',
-        desc: 'Design timed assessments that evaluate learning outcomes with instant automated report cards.'
+        title: 'Fire Safety Recommendation & FSC (Home Dept)',
+        desc: 'Fire fighting infrastructure vetting, emergency egress planning, and Fire Safety Certificate issuance.'
       },
       {
-        title: 'Analytics & Course Views',
-        desc: 'Detailed student progress charts, engagement heatmaps, and retention metrics.'
+        title: 'Building Occupancy Certificate (IDCO / H&UD)',
+        desc: 'Coordination with industrial development authorities for structural completion and occupancy certification.'
       },
       {
-        title: 'Multi-Role Portals',
-        desc: 'Customized web and mobile dashboards for Students, Instructors, and Campus Administrators.'
+        title: 'Labour & Trade Registrations',
+        desc: 'Registration under Contract Labour Act, BOCW Act, and Shops & Commercial Establishments Act.'
       }
     ],
-    whyChooseTitle: 'Why Choose Our LMS',
+    whyChooseTitle: 'Why Choose Nuventraa for Factory Compliance',
     whyChooseUs: [
       {
-        title: 'Scalable Cloud Hosting',
-        desc: 'Effortlessly supports thousands of concurrent live learners with zero latency.'
+        title: 'Integrated Statutory Portfolio',
+        desc: 'All industrial licenses handled simultaneously under a single coordinated project calendar.'
       },
       {
-        title: 'Interactive Assessment Engine',
-        desc: 'Supports multiple-choice, subjective questions, coding sandboxes, and file submissions.'
+        title: 'Technical Inspection Coordination',
+        desc: 'On-site technical support during physical inspections to resolve departmental observations immediately.'
       },
       {
-        title: 'Bespoke Branding',
-        desc: 'Full white-label branding matching your institution’s identity and color schemes.'
+        title: 'Transparent Execution',
+        desc: 'Clear milestone tracking with full visibility into government protocols and license statuses.'
       }
     ],
-    ctaTitle: 'Empower your educators and learners with our smart LMS'
+    ctaTitle: 'Get your factory licensed and operational without regulatory delays'
   },
   {
     id: 6,
-    slug: 'consulting-and-maintenance',
-    altSlugs: ['cloud-services', 'consulting-maintenance'],
-    title: 'Consulting & Maintenance',
-    subtitle: '═ Ongoing Reliability ═',
-    heroImage: '/assets/nuventraa/service-consulting.jpg',
-    intro: 'At Nuventraa, we know that building great software is just the beginning. Our Consulting & Maintenance services ensure your technology investments continue to deliver value long after launch.',
+    slug: 'infrastructure-utility-clearances',
+    altSlugs: ['consulting-and-maintenance', 'cloud-services'],
+    title: 'Infrastructure & Utility Clearances',
+    subtitle: '═ Land Allocation, Water & Power Infrastructure ═',
+    heroImage: '/assets/heavy-steel-plant.jpg',
+    intro: 'Facilitating industrial land allocation and possession with IDCO, dedicated industrial water connections via DoWR, and operational power approvals through energy distribution utilities.',
     descriptionParagraphs: [
-      'Our experienced consultants partner with you to understand your unique business challenges, map out your digital journey, and recommend solutions that align with your strategic growth. Whether you need guidance on system architecture, technology stack, process optimization, or compliance, our team brings multi-industry expertise.',
-      'We stand by you through ongoing proactive maintenance. From routine updates and bug fixes to performance enhancements and security patches, we keep your systems running smoothly 24/7.'
+      'Reliable access to land, power, and water is the foundation of any manufacturing enterprise. Securing these utilities involves engagement with industrial development corporations, water resource departments, and power distribution utilities.',
+      'We handle the complete infrastructure liaison process: from IDCO land allotment applications and physical possession demarcation to water drawl agreements and electrical inspection clearances from the Chief Electrical Inspector (CEI).'
     ],
-    featuresTitle: 'What We Offer',
+    featuresTitle: 'Utility & Infrastructure Solutions',
     features: [
       {
-        title: 'Architecture & Tech Advisory',
-        desc: 'Strategic technology selection, database design, and cloud scalability reviews.'
+        title: 'IDCO Land Allocation & Possession',
+        desc: 'Application management for industrial plots, land recommendation letters, lease deeds, and physical possession.'
       },
       {
-        title: 'Proactive Bug Fixes & Patches',
-        desc: 'Continuous monitoring, preemptive error remediation, and security patch deployment.'
+        title: 'Industrial Water Allocation (DoWR / IDCO)',
+        desc: 'Water source feasibility, pipeline permission, drawl agreements, and ground water extraction NOC (CGWA).'
       },
       {
-        title: 'Performance & Database Tuning',
-        desc: 'Optimizing SQL queries, indexing, and server response times for peak traffic conditions.'
+        title: 'Operational Power Connection (Energy Dept / Discoms)',
+        desc: 'Temporary construction power, HT/LT industrial power sanction, sub-station clearances, and Discom power supply agreements.'
       },
       {
-        title: 'Data Backup & Disaster Recovery',
-        desc: 'Automated encrypted offsite backups with verified recovery point objectives (RPO).'
+        title: 'Chief Electrical Inspector (CEI) Clearances',
+        desc: 'Statutory inspection and safety certificate of electrical installations before plant energization.'
       },
       {
-        title: 'Dedicated SLA Technical Support',
-        desc: 'Guaranteed turnaround times with tier-1, tier-2, and tier-3 engineering escalation.'
+        title: 'Local Body (ULB) Clearances & Trade Licenses',
+        desc: 'Drainage agreements, STP charging declarations, municipal NOCs, and trade licenses.'
       }
     ],
-    whyChooseTitle: 'Why Choose Us',
+    whyChooseTitle: 'Why Choose Nuventraa for Utility Clearances',
     whyChooseUs: [
       {
-        title: 'True Technology Partner',
-        desc: 'We treat your uptime and security as our primary corporate responsibility.'
+        title: 'Extensive Land Bank Knowledge',
+        desc: 'Comprehensive awareness of IDCO industrial estates, sectoral parks, and concessional land provisions.'
       },
       {
-        title: 'Preventive Over Reactive',
-        desc: 'Continuous monitoring eliminates potential issues before they impact business.'
+        title: 'Utility Fast-Tracking',
+        desc: 'Streamlined coordination with state utility agencies to prevent delays in critical plant infrastructure.'
       },
       {
-        title: 'Flexible Support Retainers',
-        desc: 'Customizable monthly and quarterly maintenance plans aligned with operational scale.'
+        title: 'Turnkey Infrastructure Execution',
+        desc: 'From initial application to physical commissioning of water, power, and land assets.'
       }
     ],
-    ctaTitle: 'Ensure zero downtime with our expert maintenance services'
+    ctaTitle: 'Secure your plant’s land, power, and water infrastructure today'
   }
 ];
 
 export function getServiceBySlug(slug) {
   if (!slug) return servicesData[0];
-  const normalized = slug.toLowerCase().replace(/\/$/, '');
+  const normalized = slug.toLowerCase().trim();
   const found = servicesData.find(s => s.slug === normalized || s.altSlugs?.includes(normalized));
   return found || servicesData[0];
 }

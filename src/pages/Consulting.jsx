@@ -46,16 +46,6 @@ export default function Consulting() {
 
   const leadershipTeam = [
     {
-      name: 'Gaurav Dash (CEO)',
-      role: 'Enterprise and Operations leadership background',
-      img: '/assets/nuventraa/gaurav-dash.jpg'
-    },
-    {
-      name: 'Rahul Panda',
-      role: 'Scalable product and platform delivery expert',
-      img: '/assets/nuventraa/rahul-panda.jpg'
-    },
-    {
       name: 'K. K. Hota',
       role: 'Project Consultant and Industry Advisor',
       img: '/assets/nuventraa/kk-hota.jpg'
@@ -1189,14 +1179,14 @@ export default function Consulting() {
             </h2>
           </div>
 
-          {/* 3 Team Cards Grid */}
+          {/* Team Cards Grid / Centered Single Leader Card */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
-              gap: 'clamp(1.75rem, 3vw, 2.5rem)',
-              maxWidth: '1100px',
-              margin: '0 auto'
+              display: 'flex',
+              justifyContent: 'center',
+              maxWidth: '380px',
+              margin: '0 auto',
+              width: '100%'
             }}
           >
             {leadershipTeam.map((leader, idx) => {
@@ -1207,6 +1197,7 @@ export default function Consulting() {
                   onMouseEnter={() => setHoveredLeader(idx)}
                   onMouseLeave={() => setHoveredLeader(null)}
                   style={{
+                    width: '100%',
                     backgroundColor: '#FFFFFF',
                     borderRadius: '12px',
                     overflow: 'hidden',

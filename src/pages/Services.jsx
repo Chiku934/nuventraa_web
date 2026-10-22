@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Code2,
-  Layers,
-  Database,
-  Cpu,
-  GraduationCap,
-  Headphones
+  Factory,
+  Banknote,
+  Workflow,
+  ShieldCheck,
+  Flame,
+  Building2
 } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 
@@ -15,69 +15,69 @@ export default function Services() {
   const servicesList = [
     {
       id: 1,
-      title: 'Custom Software Development',
-      image: '/assets/nuventraa/person-front-computer-working-html-1-scaled-220x220.jpg',
-      icon: Code2,
-      description: 'At Nuventraa, we design and develop customized software solutions that meet the unique requirements of your business. From concept to deployment, our expert developers deliver robust, scalable, and secure applications.',
-      link: '/service/custom-software-development'
+      title: 'Industrial Investment & Policy Advisory',
+      image: '/assets/consulting-boardroom.jpg',
+      icon: Factory,
+      description: 'End-to-end facilitation across single-window committees (DLSWCA/SLSWCA/IPICOL), DPIIT IEM registration, and policy framework alignment under Odisha IPR-2022 & OATTP-2022.',
+      link: '/service/industrial-investment-policy-advisory'
     },
     {
       id: 2,
-      title: 'Industry-Specific Solutions',
-      image: '/assets/nuventraa/standard-quality-control-concept-m-scaled-220x220.jpg',
-      icon: Layers,
-      description: 'Specializing in diverse domains such as Education, Healthcare, Government, and more, we create software designed to fit your industry’s unique needs. Our expertise helps organizations streamline workflows and scale efficiently.',
-      link: '/service/industry-specific-solutions'
+      title: 'Regulatory & Incentive Enablement',
+      image: '/assets/textile-plant.jpg',
+      icon: Banknote,
+      description: 'Convert policy eligibility into sanctioned claims: Capital Investment Subsidy (CIS up to 30%), 100% Net SGST Reimbursement, 100% EPF/ESI support, and power tariff duty waivers.',
+      link: '/service/regulatory-incentive-enablement'
     },
     {
       id: 3,
-      title: 'Co-operative Society Software',
-      image: '/assets/nuventraa/5f8b7e99-45f7-488b-ad14-d2b8ef42ce7f-220x220.jpg',
-      icon: Database,
-      description: 'Simplify and enhance the management of your cooperative society with our comprehensive software solution - Co-Optive. Designed to support credit operations, deposits, fixed deposits, thrift schemes, and financial accounting.',
-      link: '/service/co-operative-society-software'
+      title: 'Project Consultancy & Planning',
+      image: '/assets/audit-desk.jpg',
+      icon: Workflow,
+      description: 'Bankable Detailed Project Reports (DPR / TEV), CAPEX coordination, machinery invoice scrutiny, implementation monitoring, and turnkey commissioning readiness.',
+      link: '/service/project-consultancy-planning'
     },
     {
       id: 4,
-      title: 'ERP Development',
-      image: '/assets/nuventraa/enterprise-resource-planning-holographic-interface-220x220.jpg',
-      icon: Cpu,
-      description: 'Transform the way your organization operates with our robust ERP solutions. From resource planning to process automation, we create integrated systems that boost efficiency, minimize redundant costs, and unify data.',
-      link: '/service/erp-solutions'
+      title: 'Environmental & Operational Licensing',
+      image: '/assets/spcb-environmental.jpg',
+      icon: ShieldCheck,
+      description: 'Complete lifecycle environmental approvals: Consent to Establish (CTE) & Consent to Operate (CTO) from OSPCB, Environmental Clearances (MoEF&CC), and hazardous waste authorizations.',
+      link: '/service/environmental-operational-licensing'
     },
     {
       id: 5,
-      title: 'Learning Management Systems (LMS)',
-      image: '/assets/nuventraa/service-lms.jpg',
-      icon: GraduationCap,
-      description: 'Redefine education and corporate training with our feature-rich Learning Management Systems. From content delivery and online assessments to performance tracking, our LMS solutions are designed for seamless engagement.',
-      link: '/service/learning-management-systems'
+      title: 'Factory & Statutory Compliance',
+      image: '/assets/boiler-plant.jpg',
+      icon: Flame,
+      description: 'Pre-operations statutory licenses: Boiler registration & permits under Boilers Act (Labour & ESI), Factories License, Fire Safety Certificates, and Building Occupancy approvals.',
+      link: '/service/factory-statutory-compliance'
     },
     {
       id: 6,
-      title: 'Consulting & Maintenance',
-      image: '/assets/nuventraa/service-consulting.jpg',
-      icon: Headphones,
-      description: 'Your journey with Nuventraa doesn’t end at implementation since our consulting and maintenance services ensure your systems are optimized, up-to-date, and running smoothly with 24/7 technical advisory.',
-      link: '/service/consulting-and-maintenance'
+      title: 'Infrastructure & Utility Clearances',
+      image: '/assets/heavy-steel-plant.jpg',
+      icon: Building2,
+      description: 'Land allocation and possession in IDCO industrial estates, industrial water connection via DoWR, Discom operational power sanctions, and Chief Electrical Inspector (CEI) NOCs.',
+      link: '/service/infrastructure-utility-clearances'
     }
   ];
 
   return (
     <div className="nuventraa-page-wrapper">
-      {/* Page Banner matching Nuventraa */}
+      {/* Page Banner */}
       <PageBanner
-        title="Services"
+        title="Industrial Services"
         titleHighlight="Services"
-        description="We provide the necessary technology & software services tailored for your enterprise."
+        description="Comprehensive industrial investment advisory, regulatory licensing, government subsidies, and project execution support."
         breadcrumbCurrent="Services"
       />
 
-      {/* Main Services Grid Section - Exact Section from nuventraa.com/services/ */}
+      {/* Main Services Grid Section */}
       <section className="nuventraa-services-page-section">
         <div className="container">
           {/* Section Header */}
-          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3rem auto' }}>
             <div
               style={{
                 display: 'inline-flex',
@@ -92,22 +92,25 @@ export default function Services() {
               }}
             >
               <span>═</span>
-              <span>Services</span>
+              <span>Our Core Capabilities</span>
               <span>═</span>
             </div>
 
             <h2
               style={{
                 fontFamily: "'Poppins', sans-serif",
-                fontSize: 'clamp(1.75rem, 3.2vw, 2.5rem)',
+                fontSize: 'clamp(1.85rem, 3.2vw, 2.6rem)',
                 fontWeight: 800,
                 color: '#08203A',
                 lineHeight: 1.25,
                 margin: '0.5rem 0 1rem 0'
               }}
             >
-              We provide the necessary services to you
+              Comprehensive Industrial &amp; Policy Solutions
             </h2>
+            <p style={{ color: '#64748B', fontSize: '1rem', lineHeight: 1.6, margin: 0 }}>
+              Guiding enterprises from initial single-window application and statutory licensing to commercial production and government treasury subsidy realization.
+            </p>
           </div>
 
           {/* 6 Grid Cards */}
@@ -116,7 +119,7 @@ export default function Services() {
               const IconComp = service.icon;
               return (
                 <div key={service.id} className="nuventraa-service-card">
-                  {/* Featured Pill Image with Icon Badge */}
+                  {/* Featured Image with Icon Badge */}
                   <Link to={service.link} className="nuventraa-service-featured" style={{ display: 'block', textDecoration: 'none' }}>
                     <img
                       src={service.image}
@@ -145,7 +148,7 @@ export default function Services() {
                     to={service.link}
                     className="nuventraa-service-btn"
                   >
-                    <span>Read more</span>
+                    <span>Read details</span>
                     <ArrowRight size={14} />
                   </Link>
                 </div>

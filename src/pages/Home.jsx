@@ -27,7 +27,10 @@ import {
   Building2,
   FileCheck2,
   Flame,
-  Zap
+  Zap,
+  FileText,
+  BarChart3,
+  Settings
 } from 'lucide-react';
 import './NuventraaHomepage.css';
 import { blogsData } from '../data/blogs';
@@ -197,143 +200,88 @@ export default function Home() {
     <div style={{ background: '#FFFFFF', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
 
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO SECTION (EXACT MOCKUP MATCH)
           ========================================================================= */}
-      <section
-        className="section-full nuventraa-hero-section"
-        style={{
-          backgroundColor: '#FFFFFF',
-          paddingTop: 'clamp(3rem, 6vw, 5.5rem)',
-          paddingBottom: 'clamp(3.5rem, 7vw, 6rem)',
-          borderBottom: '1px solid #EEF2F6',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
-        <div
-          className="nuventraa-hero-bg-layer"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: "url('/assets/hero-tech-bg.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center right',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.5,
-            zIndex: 0,
-            pointerEvents: 'none'
-          }}
-        />
+      <section className="hero-executive-section">
+        {/* Hidden SVG Definitions for Custom Organic Boardroom Image Mask */}
+        <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }} aria-hidden="true">
+          <defs>
+            <clipPath id="heroBoardroomMask" clipPathUnits="objectBoundingBox">
+              <path d="M 0.35 0.0
+                       L 0.98 0.0
+                       C 0.99 0.0, 1.0 0.015, 1.0 0.035
+                       L 1.0 0.86
+                       C 1.0 0.90, 0.98 0.93, 0.95 0.95
+                       C 0.75 0.98, 0.45 0.98, 0.24 0.94
+                       C 0.12 0.91, 0.04 0.86, 0.01 0.80
+                       C -0.01 0.74, 0.01 0.67, 0.03 0.60
+                       L 0.22 0.18
+                       C 0.26 0.08, 0.30 0.02, 0.35 0.0 Z" />
+            </clipPath>
+          </defs>
+        </svg>
 
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
-              gap: 'clamp(2.5rem, 5vw, 4rem)',
-              alignItems: 'center'
-            }}
-          >
-            {/* Left Column */}
-            <div>
-              <div className="ct-sub-title style-line-right">
-                <span>Industrial &amp; Policy Advisory Partner</span>
-              </div>
-
-              <h1
-                className="nuventraa-section-title"
-                style={{
-                  fontSize: 'clamp(2.2rem, 3.8vw, 3.4rem)',
-                  lineHeight: 1.18,
-                  marginBottom: '1.25rem'
-                }}
-              >
-                Enabling <cite className="ct-text-highlight">Industrial Growth</cite><br />
-                &amp; Government-Linked Transformation
-              </h1>
-
-              <p
-                style={{
-                  fontSize: 'clamp(0.95rem, 1.3vw, 1.1rem)',
-                  color: '#475569',
-                  lineHeight: 1.65,
-                  maxWidth: '560px',
-                  marginBottom: '2.25rem'
-                }}
-              >
-                Operating at the intersection of technology, policy, and execution. We guide enterprises through single-window clearances, statutory environmental licensing, and government incentive realization.
-              </p>
-
-              {/* Action Buttons */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem', flexWrap: 'wrap' }}>
-                <Link to="/consulting" className="ct-btn-primary">
-                  <span>Explore Advisory</span>
-                  <Plus size={16} />
-                </Link>
-
-                <Link to="/services" className="ct-btn-secondary">
-                  <span>Our Services</span>
-                  <Plus size={16} />
-                </Link>
-              </div>
+        <div className="hero-executive-layout">
+          {/* Left Column: Typography & CTAs */}
+          <div className="hero-left-col">
+            {/* Eyebrow */}
+            <div className="hero-eyebrow-wrap">
+              <span className="hero-eyebrow-text">
+                Industrial &amp; Policy Advisory Partner
+              </span>
+              <span className="hero-eyebrow-bar" />
             </div>
 
-            {/* Right Column: Carousel */}
-            <div style={{ position: 'relative' }}>
-              <div
-                style={{
-                  position: 'relative',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 20px 45px rgba(15, 29, 51, 0.12)',
-                  aspectRatio: '840 / 630',
-                  background: '#F1F5F9'
-                }}
-              >
-                {heroGallerySlides.map((slide, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      opacity: heroSlideIndex === idx ? 1 : 0,
-                      transform: heroSlideIndex === idx ? 'scale(1)' : 'scale(1.05)',
-                      transition: 'opacity 0.8s ease-in-out, transform 4s cubic-bezier(0.16, 1, 0.3, 1)',
-                      zIndex: heroSlideIndex === idx ? 1 : 0
-                    }}
-                  >
-                    <img
-                      src={slide.img}
-                      alt={slide.title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        display: 'block'
-                      }}
-                    />
-                  </div>
+            {/* Main Headline (Exact 4 lines matching Mockup) */}
+            <h1 className="hero-headline">
+              Enabling<br />
+              <span className="hero-highlight-marker">Industrial Growth</span><br />
+              <span className="hero-nowrap-text">&amp; Government-Linked</span><br />
+              Transformation
+            </h1>
+
+            {/* Short Gold Accent Bar */}
+            <div className="hero-accent-bar" />
+
+            {/* Action Buttons */}
+            <div className="hero-cta-group">
+              <Link to="/consulting" className="hero-btn-primary">
+                <span>Explore Advisory</span>
+                <ArrowRight size={17} />
+              </Link>
+
+              <Link to="/services" className="hero-btn-secondary">
+                <span>Our Services</span>
+                <ArrowRight size={17} color="#DF9E1D" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Visual Full-Bleed Frame */}
+          <div className="hero-right-col">
+            <div className="hero-visual-frame">
+              {/* Thin Diagonal Accent Line */}
+              <div className="hero-diagonal-line" />
+
+              {/* Cream Backing Silhouette */}
+              <div className="hero-cream-backing" />
+
+              {/* Dot Matrix Pattern */}
+              <div className="hero-dot-grid">
+                {Array.from({ length: 20 }).map((_, i) => (
+                  <span key={i} />
                 ))}
               </div>
 
-              {/* Slider Dots */}
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '0.45rem',
-                  marginTop: '1.25rem'
-                }}
-              >
-                {heroGallerySlides.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setHeroSlideIndex(idx)}
-                    className={`nuventraa-dot ${heroSlideIndex === idx ? 'active' : ''}`}
-                    aria-label={`Slide ${idx + 1}`}
-                  />
-                ))}
+              {/* Glowing Golden Orb */}
+              <div className="hero-glowing-orb" />
+
+              {/* The Masked Boardroom Image */}
+              <div className="hero-image-masked-container">
+                <img
+                  src="/assets/consulting-boardroom.jpg"
+                  alt="Enabling Industrial Growth &amp; Advisory"
+                />
               </div>
             </div>
           </div>
@@ -342,72 +290,95 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 2: CONSULTING & POLICY ADVISORY SERVICES
+          SECTION 2: CONSULTING & POLICY ADVISORY SERVICES (STRATEGIC EXECUTION)
           ========================================================================= */}
-      <section className="nuventraa-services-section">
+      <section className="strategic-execution-section">
         <div className="container">
-          <div className="nuventraa-services-grid">
+          <div className="strategic-execution-grid">
 
-            {/* Left Column: Interactive Image Frame */}
-            <div className="nuventraa-services-left">
-              <div className="nuventraa-services-img-frame">
+            {/* Left Column: Stylized Visual Frame matching mockup */}
+            <div className="strategic-visual-wrapper">
+              <div className="strategic-visual-box">
                 <img
-                  src="/assets/nuventraa/industry-consulting-illustration.png"
-                  alt="Industrial Consulting Framework"
-                  className="nuventraa-services-main-img"
-                  style={{ objectFit: 'contain' }}
+                  src="/assets/strategic-execution-visual.png"
+                  alt="Consulting & Policy Advisory Services - Strategic Execution"
+                  className="strategic-visual-img"
                 />
               </div>
             </div>
 
-            {/* Right Column: 4 Vertical Stacked Service Cards */}
-            <div className="nuventraa-services-right">
-              <div>
-                <span className="nuventraa-services-sub">Strategic Execution</span>
+            {/* Right Column: Strategic Execution Content */}
+            <div className="strategic-content-wrapper">
+              {/* Eyebrow */}
+              <div className="strategic-eyebrow">
+                <span className="strategic-eyebrow-line"></span>
+                <span className="strategic-eyebrow-text">STRATEGIC EXECUTION</span>
               </div>
 
-              <h2 className="nuventraa-services-heading">
-                <span className="highlight">Consulting</span> &amp; Policy<br />
-                Advisory Services
+              {/* Heading */}
+              <h2 className="strategic-heading">
+                Consulting &amp;<br />
+                <span className="strategic-heading-gold">Policy Advisory</span> Services
               </h2>
 
-              <p className="nuventraa-services-desc">
-                Nuventraa offers <strong>consulting and policy advisory services</strong> to help industries align with regulatory frameworks &amp; unlock government incentives under state and sectoral policies.
+              {/* Description Paragraph */}
+              <p className="strategic-desc">
+                Nuventraa offers consulting and policy advisory services to help industries align with regulatory frameworks and unlock government incentives.
               </p>
 
-              <div className="nuventraa-services-list">
-                {[
-                  {
-                    title: 'Policy & Incentive Strategy',
-                    desc: 'Identify relevant policies and maximize eligible capital subsidies',
-                    img: '/assets/nuventraa/Policy-Incentive-Strategy-1.png'
-                  },
-                  {
-                    title: 'Project Structuring',
-                    desc: 'Align investments with compliance, TEV viability, and banking norms',
-                    img: '/assets/nuventraa/Project-Structuring.png'
-                  },
-                  {
-                    title: 'Approvals & Coordination',
-                    desc: 'Support single-window documentation, OSPCB CTE/CTO, and departmental clearances',
-                    img: '/assets/nuventraa/Approvals-Coordination.png'
-                  },
-                  {
-                    title: 'Execution & Realization',
-                    desc: 'Enable smooth statutory compliance and timely treasury incentive claims',
-                    img: '/assets/nuventraa/Execution-Realization.png'
-                  }
-                ].map((card, i) => (
-                  <div key={i} className="nuventraa-services-card">
-                    <div className="card-icon">
-                      <img src={card.img} alt={card.title} />
-                    </div>
-                    <div className="card-meta">
-                      <h4 className="card-title">{card.title}</h4>
-                      <p className="card-desc">{card.desc}</p>
-                    </div>
+              {/* 2x2 Feature Cards Grid */}
+              <div className="strategic-cards-grid">
+                {/* Card 1: Policy & Incentive Strategy */}
+                <div className="strategic-card">
+                  <div className="strategic-card-icon-box icon-bg-yellow">
+                    <FileText size={22} className="strategic-icon-yellow" strokeWidth={2.2} />
                   </div>
-                ))}
+                  <div className="strategic-card-body">
+                    <h4 className="strategic-card-title">Policy &amp; Incentive Strategy</h4>
+                    <p className="strategic-card-desc">Identify relevant policies and maximize eligible incentives.</p>
+                  </div>
+                </div>
+
+                {/* Card 2: Project Structuring */}
+                <div className="strategic-card">
+                  <div className="strategic-card-icon-box icon-bg-blue">
+                    <BarChart3 size={22} className="strategic-icon-blue" strokeWidth={2.2} />
+                  </div>
+                  <div className="strategic-card-body">
+                    <h4 className="strategic-card-title">Project Structuring</h4>
+                    <p className="strategic-card-desc">Align investments with compliance and viability norms.</p>
+                  </div>
+                </div>
+
+                {/* Card 3: Approvals & Coordination */}
+                <div className="strategic-card">
+                  <div className="strategic-card-icon-box icon-bg-green">
+                    <Settings size={22} className="strategic-icon-green" strokeWidth={2.2} />
+                  </div>
+                  <div className="strategic-card-body">
+                    <h4 className="strategic-card-title">Approvals &amp; Coordination</h4>
+                    <p className="strategic-card-desc">Support single-window clearances and departmental coordination.</p>
+                  </div>
+                </div>
+
+                {/* Card 4: Execution & Realization */}
+                <div className="strategic-card">
+                  <div className="strategic-card-icon-box icon-bg-purple">
+                    <Users size={22} className="strategic-icon-purple" strokeWidth={2.2} />
+                  </div>
+                  <div className="strategic-card-body">
+                    <h4 className="strategic-card-title">Execution &amp; Realization</h4>
+                    <p className="strategic-card-desc">Enable smooth compliance and timely incentive claims.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="strategic-cta-wrap">
+                <Link to="/consulting" className="strategic-btn">
+                  <span>Know More</span>
+                  <ArrowRight size={18} className="strategic-btn-arrow" />
+                </Link>
               </div>
 
             </div>
@@ -534,28 +505,28 @@ export default function Home() {
                 desc: 'Single Window clearances via GO-SWIFT, IPICOL coordination, and policy alignment under Odisha IPR-2022 & OATTP-2022.',
                 img: '/assets/consulting-boardroom.jpg',
                 link: '/service/industrial-investment-policy-advisory',
-                icon: <Factory size={22} color="#FFFFFF" />
+                icon: <Factory size={22} strokeWidth={2.2} />
               },
               {
                 title: 'Regulatory & Incentive Enablement',
                 desc: 'Maximizing capital investment subsidies (CIS up to 30%), 100% Net SGST reimbursement, and power duty exemptions.',
                 img: '/assets/textile-plant.jpg',
                 link: '/service/regulatory-incentive-enablement',
-                icon: <Banknote size={22} color="#FFFFFF" />
+                icon: <Banknote size={22} strokeWidth={2.2} />
               },
               {
                 title: 'Project Consultancy & Planning',
                 desc: 'Bankable DPR preparation, CAPEX scheduling, plant & machinery invoice scrutiny, and operational readiness.',
                 img: '/assets/audit-desk.jpg',
                 link: '/service/project-consultancy-planning',
-                icon: <Workflow size={22} color="#FFFFFF" />
+                icon: <Workflow size={22} strokeWidth={2.2} />
               },
               {
                 title: 'Environmental & Statutory Licensing',
                 desc: 'Consent to Establish (CTE) & Consent to Operate (CTO) from OSPCB, boiler permits, and factory safety licensing.',
                 img: '/assets/spcb-environmental.jpg',
                 link: '/service/environmental-operational-licensing',
-                icon: <ShieldCheck size={22} color="#FFFFFF" />
+                icon: <ShieldCheck size={22} strokeWidth={2.2} />
               }
             ].map((srv, idx) => (
               <div key={idx} className="nuventraa-service2-card">
@@ -631,13 +602,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '2rem'
-            }}
-          >
+          <div className="statutory-lifecycle-grid">
             {[
               {
                 phase: 'Stage 01',
@@ -660,36 +625,21 @@ export default function Home() {
             ].map((mandate, idx) => (
               <div
                 key={idx}
-                className="nuventraa-card"
-                style={{
-                  padding: '2.5rem 2rem',
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}
+                className="nuventraa-card statutory-lifecycle-card"
               >
-                <div
-                  style={{
-                    height: '70px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '1rem'
-                  }}
-                >
+                <div className="statutory-lifecycle-icon-wrap">
                   {mandate.icon}
                 </div>
 
-                <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#2439ff', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.45rem' }}>
+                <div className="statutory-lifecycle-phase">
                   {mandate.phase}
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F1D33', marginBottom: '0.75rem' }}>
+                <h3 className="statutory-lifecycle-title">
                   {mandate.title}
                 </h3>
 
-                <p style={{ fontSize: '0.88rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
+                <p className="statutory-lifecycle-desc">
                   {mandate.desc}
                 </p>
               </div>

@@ -28,15 +28,52 @@ export default function Contact() {
     'Singapore', 'United Arab Emirates', 'Germany', 'Japan', 'Other'
   ];
 
+  const handlePhoneKeyDown = (e) => {
+    // Allow navigation, editing keys, and keyboard shortcuts
+    const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter', 'Home', 'End'];
+    if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+      return;
+    }
+    // Block non-digit characters strictly
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
+
+  const handlePhonePaste = (e) => {
+    e.preventDefault();
+    const pastedText = e.clipboardData.getData('text');
+    const digitsOnly = pastedText.replace(/\D/g, '').slice(0, 10);
+    setFormData((prev) => ({ ...prev, phone: digitsOnly }));
+
+    if (digitsOnly.length === 0) {
+      setPhoneError('Mobile number is required (10 digits).');
+    } else if (digitsOnly.length < 10) {
+      setPhoneError(`Please enter a complete 10-digit mobile number (${digitsOnly.length}/10 digits).`);
+    } else {
+      setPhoneError('');
+    }
+  };
+
   const handlePhoneChange = (e) => {
     // Only accept numeric digits and strictly limit to 10 digits
     const digitsOnly = e.target.value.replace(/\D/g, '').slice(0, 10);
     setFormData((prev) => ({ ...prev, phone: digitsOnly }));
 
     if (digitsOnly.length === 0) {
-      setPhoneError('Mobile number is required.');
+      setPhoneError('Mobile number is required (10 digits).');
     } else if (digitsOnly.length < 10) {
-      setPhoneError(`Please enter a complete 10-digit mobile number (${digitsOnly.length}/10 entered).`);
+      setPhoneError(`Please enter a complete 10-digit mobile number (${digitsOnly.length}/10 digits).`);
+    } else {
+      setPhoneError('');
+    }
+  };
+
+  const handlePhoneBlur = () => {
+    if (!formData.phone) {
+      setPhoneError('Mobile number is required (10 digits).');
+    } else if (formData.phone.length !== 10) {
+      setPhoneError(`Please enter a complete 10-digit mobile number (${formData.phone.length}/10 digits entered).`);
     } else {
       setPhoneError('');
     }
@@ -52,6 +89,8 @@ export default function Contact() {
     const phoneDigits = formData.phone.replace(/\D/g, '');
     if (!phoneDigits || phoneDigits.length !== 10) {
       setPhoneError('Please enter a valid 10-digit mobile number.');
+      const phoneInput = document.getElementById('contact-phone');
+      if (phoneInput) phoneInput.focus();
       return;
     }
 
@@ -265,13 +304,16 @@ export default function Contact() {
                         pattern="[0-9]{10}"
                         maxLength={10}
                         required
-                        placeholder="Enter 10-digit mobile number*"
+                        placeholder="e.g. 9876543210 (10 digits)"
                         className="nuventraa-form-control"
                         style={{
                           borderColor: phoneError ? '#EF4444' : formData.phone.length === 10 ? '#10B981' : undefined
                         }}
                         value={formData.phone}
                         onChange={handlePhoneChange}
+                        onKeyDown={handlePhoneKeyDown}
+                        onPaste={handlePhonePaste}
+                        onBlur={handlePhoneBlur}
                       />
                       {phoneError && (
                         <span

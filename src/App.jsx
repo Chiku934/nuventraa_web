@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import Consulting from './pages/Consulting';
 import ServiceDetails from './pages/ServiceDetails';
 import BlogDetails from './pages/BlogDetails';
+import LeaderDetails from './pages/LeaderDetails';
 
 export default function App() {
   return (
@@ -43,6 +44,10 @@ export default function App() {
             <Route path="/incentives" element={<Incentives />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/leadership/:id" element={<LeaderDetails />} />
+            <Route path="/leadership" element={<LeaderDetails />} />
+            <Route path="/advisory-leadership/:id" element={<LeaderDetails />} />
+            <Route path="/advisory-leadership" element={<LeaderDetails />} />
             <Route path="/blog/:slug" element={<BlogDetails />} />
             <Route path="/blog" element={<BlogDetails />} />
             <Route path="*" element={<Navigate to="/" replace />} />

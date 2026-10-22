@@ -18,7 +18,6 @@ import PageBanner from '../components/PageBanner';
 
 export default function Consulting() {
   const [hoveredAdvantage, setHoveredAdvantage] = useState(null);
-  const [hoveredLeader, setHoveredLeader] = useState(null);
   const [hoveredEngagement, setHoveredEngagement] = useState(null);
 
   const engagementModels = [
@@ -28,7 +27,7 @@ export default function Consulting() {
     },
     {
       title: 'Program Management Support',
-      desc: 'End-to-end project'
+      desc: 'End-to-end project execution'
     },
     {
       title: 'Technology Implementation',
@@ -41,14 +40,6 @@ export default function Consulting() {
     {
       title: 'Build-Operate-Transfer (BOT)',
       desc: 'Development, operation, and capability transfer'
-    }
-  ];
-
-  const leadershipTeam = [
-    {
-      name: 'K. K. Hota',
-      role: 'Project Consultant and Industry Advisor',
-      img: '/assets/nuventraa/kk-hota.jpg'
     }
   ];
 
@@ -1149,169 +1140,7 @@ export default function Consulting() {
         </div>
       </section>
 
-      {/* =========================================================================
-          SECTION 8: LEADERSHIP GUIDED BY DOMAIN & TECHNICAL EXPERTISE (EXACT SCREENSHOT MATCH)
-          ========================================================================= */}
-      <section
-        style={{
-          padding: 'clamp(4.5rem, 6.5vw, 6.5rem) 0',
-          backgroundColor: '#F8FAFC',
-          borderTop: '1px solid #EEF2F6',
-          borderBottom: '1px solid #EEF2F6',
-          position: 'relative'
-        }}
-      >
-        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-          {/* Section Header */}
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto clamp(2.5rem, 4.5vw, 3.75rem) auto' }}>
-            <h2
-              style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontSize: 'clamp(2.2rem, 3.8vw, 2.9rem)',
-                fontWeight: 800,
-                color: '#08203A',
-                lineHeight: 1.25,
-                margin: 0,
-                letterSpacing: '-0.02em'
-              }}
-            >
-              Leadership Guided By Domain &amp; Technical Expertise
-            </h2>
-          </div>
 
-          {/* Team Cards Grid / Centered Single Leader Card */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              maxWidth: '380px',
-              margin: '0 auto',
-              width: '100%'
-            }}
-          >
-            {leadershipTeam.map((leader, idx) => {
-              const isHovered = hoveredLeader === idx;
-              return (
-                <div
-                  key={idx}
-                  onMouseEnter={() => setHoveredLeader(idx)}
-                  onMouseLeave={() => setHoveredLeader(null)}
-                  style={{
-                    width: '100%',
-                    backgroundColor: '#FFFFFF',
-                    borderRadius: '12px',
-                    overflow: 'hidden',
-                    border: `1px solid ${isHovered ? 'rgba(36, 57, 255, 0.35)' : '#E2E8F0'}`,
-                    boxShadow: isHovered
-                      ? '0 20px 45px -10px rgba(36, 57, 255, 0.16), 0 4px 16px rgba(8, 32, 58, 0.04)'
-                      : '0 8px 24px rgba(8, 32, 58, 0.04)',
-                    transform: isHovered ? 'translateY(-8px)' : 'none',
-                    transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    position: 'relative'
-                  }}
-                >
-                  {/* Top glowing accent border on hover */}
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      height: '3.5px',
-                      background: 'linear-gradient(90deg, #2439ff 0%, #9000ff 100%)',
-                      opacity: isHovered ? 1 : 0,
-                      zIndex: 3,
-                      transition: 'opacity 0.35s ease'
-                    }}
-                  />
-
-                  {/* Image Container */}
-                  <div
-                    style={{
-                      width: '100%',
-                      height: '310px',
-                      overflow: 'hidden',
-                      backgroundColor: '#F1F5F9',
-                      position: 'relative'
-                    }}
-                  >
-                    <img
-                      src={leader.img}
-                      alt={leader.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'top center',
-                        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-                        transition: 'transform 0.4s ease'
-                      }}
-                    />
-                  </div>
-
-                  {/* Meta details */}
-                  <div
-                    style={{
-                      padding: '1.75rem 1.5rem',
-                      textAlign: 'center',
-                      position: 'relative',
-                      flexGrow: 1,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'center',
-                      backgroundColor: '#FFFFFF'
-                    }}
-                  >
-                    <h4
-                      style={{
-                        fontFamily: "'Poppins', sans-serif",
-                        fontSize: '1.25rem',
-                        fontWeight: 700,
-                        color: isHovered ? '#2439ff' : '#08203A',
-                        lineHeight: 1.3,
-                        margin: '0 0 0.5rem 0',
-                        transition: 'color 0.3s ease'
-                      }}
-                    >
-                      {leader.name}
-                    </h4>
-
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: '0.925rem',
-                        color: '#64748B',
-                        lineHeight: 1.5,
-                        maxWidth: '260px',
-                        margin: '0 auto'
-                      }}
-                    >
-                      {leader.role}
-                    </div>
-
-                    {/* Exact folded corner / beveled shape from screenshot (item--shape) */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        left: 0,
-                        width: '50px',
-                        height: '50px',
-                        backgroundColor: isHovered ? 'rgba(36, 57, 255, 0.08)' : '#F1F5F9',
-                        clipPath: 'polygon(0 0, 0 100%, 100% 100%)',
-                        transition: 'background-color 0.3s ease',
-                        pointerEvents: 'none'
-                      }}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
     </div>
   );

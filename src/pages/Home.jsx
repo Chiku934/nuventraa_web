@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import './NuventraaHomepage.css';
 import { blogsData } from '../data/blogs';
+import { leadershipData } from '../data/leadershipData';
 
 export default function Home() {
   // =========================================================================
@@ -820,7 +821,224 @@ export default function Home() {
 
 
       {/* =========================================================================
-          SECTION 8: TESTIMONIALS (Real Client Testimonials)
+          SECTION 8: SECTORAL ADVISORY & FINANCIAL GOVERNANCE LEADERSHIP
+          ========================================================================= */}
+      <section
+        className="section-full"
+        style={{
+          background: '#FFFFFF url("/assets/leadership-bg.jpg") no-repeat center center',
+          backgroundSize: 'cover',
+          borderTop: '1px solid #EEF2F6',
+          borderBottom: '1px solid #EEF2F6',
+          padding: 'clamp(3.75rem, 6vw, 5.5rem) 0',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto clamp(2rem, 3.5vw, 3rem)' }}>
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                background: 'rgba(255, 255, 255, 0.95)',
+                border: '1px solid rgba(197, 155, 39, 0.45)',
+                padding: '0.25rem 0.85rem',
+                borderRadius: '999px',
+                fontSize: '0.725rem',
+                fontWeight: 800,
+                color: '#886411',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                marginBottom: '0.65rem',
+                boxShadow: '0 2px 6px rgba(197, 155, 39, 0.08)'
+              }}
+            >
+              <Sparkles size={12} color="#C59B27" />
+              <span>Institutional Policy &amp; Financial Governance</span>
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontSize: 'clamp(2rem, 3.2vw, 2.75rem)',
+                color: '#0F2744',
+                fontWeight: 800,
+                marginBottom: '0.65rem',
+                lineHeight: 1.2
+              }}
+            >
+              Sectoral Advisory{' '}
+              <span
+                style={{
+                  fontStyle: 'italic',
+                  fontWeight: 700,
+                  background: 'linear-gradient(135deg, #C59B27 0%, #DFB757 50%, #9A7B1C 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}
+              >
+                Leadership
+              </span>
+            </h2>
+
+            <p style={{ fontSize: '0.94rem', color: '#64748B', lineHeight: 1.65, maxWidth: '720px', margin: '0 auto' }}>
+              Guiding industrial enterprises with senior institutional wisdom, central ministry experience, and four decades of manufacturing &amp; fiscal governance across India.
+            </p>
+          </div>
+
+          {/* Leaders Grid (Clean Executive Preview Cards - Minimal & Clutter-Free) */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'stretch',
+              flexWrap: 'wrap',
+              gap: '2.5rem',
+              maxWidth: '860px',
+              margin: '0 auto',
+              width: '100%'
+            }}
+          >
+            {leadershipData.map((leader, idx) => (
+              <div
+                key={leader.id || idx}
+                style={{
+                  width: '100%',
+                  maxWidth: '390px',
+                  flex: '1 1 340px',
+                  background: '#FFFFFF',
+                  borderRadius: '16px',
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 10px 30px rgba(15, 39, 68, 0.06)',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+                  position: 'relative'
+                }}
+              >
+                {/* Photo Frame */}
+                <div
+                  style={{
+                    width: '100%',
+                    height: '320px',
+                    overflow: 'hidden',
+                    background: '#F1F5F9',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      display: 'block'
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '12px',
+                      left: '12px',
+                      background: 'rgba(15, 39, 68, 0.88)',
+                      backdropFilter: 'blur(8px)',
+                      color: '#DFB757',
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      padding: '0.3rem 0.65rem',
+                      borderRadius: '6px',
+                      border: '1px solid rgba(223, 183, 87, 0.3)',
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase'
+                    }}
+                  >
+                    {leader.experienceYears || leader.stats?.[0]?.value || 'Leadership'}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  style={{
+                    padding: '1.75rem 1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexGrow: 1,
+                    textAlign: 'center'
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '0.74rem',
+                      fontWeight: 800,
+                      color: '#C59B27',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      marginBottom: '0.35rem'
+                    }}
+                  >
+                    {leader.domain}
+                  </span>
+
+                  <h3
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                      fontSize: '1.45rem',
+                      fontWeight: 800,
+                      color: '#08203A',
+                      margin: '0 0 0.4rem 0',
+                      lineHeight: 1.25
+                    }}
+                  >
+                    {leader.name}
+                  </h3>
+
+                  <div
+                    style={{
+                      fontSize: '0.865rem',
+                      fontWeight: 600,
+                      color: '#475569',
+                      lineHeight: 1.45,
+                      marginBottom: '1.5rem'
+                    }}
+                  >
+                    {leader.designation}
+                  </div>
+
+                  <div style={{ marginTop: 'auto', paddingTop: '1.25rem', borderTop: '1px solid #F1F5F9' }}>
+                    <Link
+                      to={`/leadership/${leader.id}`}
+                      className="ct-btn-primary"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.5rem',
+                        width: '100%',
+                        padding: '0.75rem 1rem',
+                        fontSize: '0.86rem',
+                        borderRadius: '8px',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      <span>View Full Profile</span>
+                      <ArrowRight size={14} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 9: TESTIMONIALS (Real Client Testimonials)
           ========================================================================= */}
       <section className="section-full section-py" style={{ background: '#FFFFFF' }}>
         <div className="container">

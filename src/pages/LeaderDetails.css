@@ -1,0 +1,309 @@
+/* =========================================================================
+   LEADER DETAILS - EXECUTIVE ADVISOR PROFILE STYLES
+   ========================================================================= */
+
+.leader-details-page {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  color: #0F2744;
+}
+
+/* Animations */
+@keyframes leaderPaneFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leader-pane-fade {
+  animation: leaderPaneFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Selector Tabs */
+.leader-tab-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.leader-tab-nav-btn:hover {
+  background: #0F2744;
+  color: #FFFFFF;
+  border-color: #0F2744;
+}
+
+.leader-tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.leader-tab-item.active {
+  background: #0F2744;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(15, 39, 68, 0.2);
+}
+
+.leader-tab-item.inactive {
+  background: #FFFFFF;
+  color: #0F2744;
+  border: 1px solid #E2E8F0;
+}
+
+.leader-tab-item.inactive:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+/* Portrait Hero Frame with signature angled gold cut */
+.leader-hero-portrait-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: radial-gradient(circle at 60% 40%, rgba(223, 183, 87, 0.25) 0%, rgba(15, 39, 68, 0.05) 70%);
+  border: 1.5px solid rgba(223, 183, 87, 0.35);
+  box-shadow: 0 16px 36px -12px rgba(15, 39, 68, 0.12);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Angled decorative gold ribbons in bottom left corner */
+.leader-hero-portrait-card::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -40px;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #DFB757 0%, #C59B27 60%, #0F2744 100%);
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(197, 155, 39, 0.4);
+}
+
+.leader-hero-portrait-card::after {
+  content: '';
+  position: absolute;
+  bottom: -35px;
+  left: -20px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #0F2744 0%, #1A365D 100%);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.leader-hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+/* Stat Box in Hero */
+.leader-hero-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.85rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justifyContent: center;
+  box-shadow: 0 2px 6px rgba(15, 39, 68, 0.03);
+  transition: all 0.25s ease;
+}
+
+.leader-hero-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(197, 155, 39, 0.5);
+  box-shadow: 0 6px 16px rgba(15, 39, 68, 0.06);
+}
+
+/* Dark Navy Contact Sidebar Card */
+.leader-contact-card {
+  background: linear-gradient(180deg, #0B1B2B 0%, #0F2744 100%);
+  border-radius: 18px;
+  padding: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 16px 36px -8px rgba(11, 27, 43, 0.35);
+  display: flex;
+  flex-direction: column;
+  justifyContent: space-between;
+}
+
+.leader-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+.leader-contact-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  flex-shrink: 0;
+  color: #DFB757;
+}
+
+/* Content White Cards */
+.leader-white-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 6px 24px rgba(15, 39, 68, 0.04);
+  padding: 1.75rem;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.leader-white-card:hover {
+  box-shadow: 0 10px 32px rgba(15, 39, 68, 0.07);
+}
+
+.leader-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.leader-card-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  flex-shrink: 0;
+}
+
+.leader-card-icon-circle.gold {
+  background: rgba(197, 155, 39, 0.12);
+  color: #C59B27;
+}
+
+.leader-card-icon-circle.blue {
+  background: rgba(36, 57, 255, 0.1);
+  color: #2439ff;
+}
+
+.leader-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F2744;
+  margin: 0;
+}
+
+/* Numbered Timeline Pillars */
+.leader-pillar-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.leader-pillar-row:last-child {
+  padding-bottom: 0;
+}
+
+.leader-pillar-num-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFF4D9;
+  color: #886411;
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+}
+
+.leader-pillar-connecting-line {
+  position: absolute;
+  top: 36px;
+  left: 17px;
+  width: 2px;
+  bottom: 0;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+/* Expertise Badge in Mockup Grid */
+.leader-exp-pill-item {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.leader-exp-pill-item:hover {
+  background: #FFFFFF;
+  border-color: rgba(36, 57, 255, 0.35);
+  color: #2439ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(15, 39, 68, 0.05);
+}
+
+/* Notable Association Column Box */
+.leader-assoc-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #F8FAFC;
+  border: 1px solid #EEF2F6;
+  transition: all 0.25s ease;
+}
+
+.leader-assoc-col:hover {
+  background: #FFFFFF;
+  border-color: rgba(197, 155, 39, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 39, 68, 0.05);
+}
